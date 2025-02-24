@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'Google sans';
+    src: url('../fonts/ProductSans-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Google sans';
+    src: url('../fonts/ProductSans-Medium.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Google sans';
+    src: url('../fonts/ProductSans-Bold.ttf');
+    font-weight: 700;
+}
+
+$font-google: 'Google sans', serif;
+
+@mixin media($value) {
+    @if ($value < 0) {
+        @media screen and (min-width: calc($value * (-1)) + 'px') {
+            @content;
+        }
+
+    } @else {
+        @media screen and (max-width: $value + 'px') {
+            @content;
+        }
+    }
+}
