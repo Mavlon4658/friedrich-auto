@@ -17,8 +17,18 @@ const homeSwp = new Swiper('.home .swiper', {
 })
 
 const caseSwp = new Swiper('.cases .swiper', {
-    slidesPerView: 3,
-    spaceBetween: 30,
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+    breakpoints: {
+        1550: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+        },
+        1050: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+        }
+    }
 })
 
 const reviewSwp = new Swiper('.reviews .swiper', {
