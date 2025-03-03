@@ -49,6 +49,17 @@ textarea {
             bottom: 0;
             height: 132px;
             z-index: -1;
+            object-fit: cover;
+        }
+
+        @include media(700) {
+            height: 75px;
+            padding: 0 106px 0 37px;
+            font-size: 13px;
+            
+            .bg-img {
+                height: 103px;
+            }
         }
     }
 
@@ -67,6 +78,15 @@ textarea {
         font-weight: bold;
         line-height: 24px;
         box-shadow: inset 0px 4px 25px rgba(255, 255, 255, 0.15);
+
+        @include media(700) {
+            height: 75px;
+            font-size: 13px;
+
+            img {
+                width: 32px;
+            }
+        }
     }
 
     &-swp {
@@ -142,6 +162,12 @@ textarea {
     width: 100%;
     z-index: 3;
 
+    @include media(700) {
+        top: 0;
+        padding: 28px 0 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
     &-container {
         display: flex;
         align-items: flex-end;
@@ -171,6 +197,39 @@ textarea {
         flex-shrink: 0;
         font-size: 15px;
         line-height: 135%;
+
+        @include media(992) {
+            font-size: 10px;
+            gap: 25px;
+
+            br {
+                display: none;
+            }
+
+            img {
+                width: 98px;
+                flex-shrink: 0;
+            }
+        }
+
+        @include media(700) {
+            font-size: 8px;
+            gap: 15px;
+
+            img {
+                width: 69px;
+            }
+        }
+
+        span {
+            @include media(992) {
+                max-width: 121px;
+            }
+
+            @include media(700) {
+                max-width: 118px;
+            }
+        }
     }
 
     &-location {
@@ -259,6 +318,15 @@ textarea {
         align-items: flex-end;
         gap: 13px;
 
+        @include media(992) {
+            gap: 5px;
+        }
+
+        @include media(700) {
+            display: none;
+            gap: 3px;
+        }
+
         a {
             display: flex;
             align-items: center;
@@ -266,16 +334,45 @@ textarea {
             font-size: 18px;
             line-height: 130%;
 
+            @include media(992) {
+                font-size: 16px;
+
+                img {
+                    width: 16px;
+                }
+            }
+
+            @include media(700) {
+                font-size: 11px;
+                gap: 3px;
+
+                img {
+                    width: 17px;
+                }
+            }
+
             span {
                 display: flex;
                 align-items: flex-end;
                 gap: 5px;
+
+                @include media(700) {
+                    gap: 3px;
+                }
             }
 
             b {
                 font-size: 28px;
                 font-weight: bold;
                 color: #55A1FF;
+
+                @include media(992) {
+                    font-size: 25px;
+                }
+
+                @include media(700) {
+                    font-size: 18px;
+                }
             }
 
             &:hover {
@@ -292,12 +389,32 @@ textarea {
             font-size: 13px;
             line-height: 130%;
 
+            @include media(992) {
+                font-size: 11px;
+                gap: 9px;
+            }
+
+            @include media(700) {
+                font-size: 8px;
+                gap: 3px;
+            }
+
             .icon {
                 width: 7px;
                 height: 7px;
                 border-radius: 50%;
                 background: #5BB57F;
                 position: relative;
+
+                @include media(992) {
+                    width: 6px;
+                    height: 6px;
+                }
+
+                @include media(700) {
+                    width: 5px;
+                    height: 5px;
+                }
                 
                 &::before {
                     content: "";
@@ -309,6 +426,17 @@ textarea {
                     position: absolute;
                     left: -12px;
                     top: 0;
+
+                    @include media(992) {
+                        width: 6px;
+                        height: 6px;
+                    }
+
+                    @include media(700) {
+                        width: 5px;
+                        height: 5px;
+                        left: -8px;
+                    }
                 }
                 
                 &::after {
@@ -321,6 +449,17 @@ textarea {
                     position: absolute;
                     left: -24px;
                     top: 0;
+
+                    @include media(992) {
+                        width: 6px;
+                        height: 6px;
+                    }
+
+                    @include media(700) {
+                        width: 5px;
+                        height: 5px;
+                        left: -16px;
+                    }
                 }
             }
 
@@ -347,6 +486,15 @@ textarea {
         
         @include media(1650) {
             display: flex;
+        }
+
+        @include media(700) {
+            font-size: 15px;
+            gap: 15px;
+
+            img {
+                width: 23px;
+            }
         }
     }
 }
@@ -379,23 +527,132 @@ textarea {
         width: 100%;
         max-width: 347px;
         background: #0C1120;
-        padding: 44px 27px 53px 28px;
+        padding: 0 27px 0 28px;
         display: flex;
         flex-direction: column;
-        gap: 15px;
 
-        &__head {
+        .btn-close {
+            position: absolute;
+            top: 48px;
+            right: 27px;
+            z-index: 2;
+        }
+
+        &__body {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            height: 100%;
+            padding: 44px 0 53px 0;
+            overflow-y: auto;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        h3 {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            gap: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 155%;
+            margin-bottom: 15px;
+        }
 
-            h3 {
-                display: flex;
-                align-items: center;
-                gap: 15px;
-                font-size: 20px;
-                font-weight: bold;
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            a {
+                font-size: 15px;
                 line-height: 155%;
+                color:rgba(255, 255, 255, 0.7);
+            }
+        }
+
+        p {
+            font-size: 15px;
+            line-height: 135%;
+            margin-bottom: 10px;
+        }
+
+        .route-link {
+            color: #55A1FF;
+            font-size: 13px;
+            font-weight: 130%;
+            font-weight: 500;
+            padding-bottom: 4px;
+            border-bottom: 1.5px dotted #55A1FF;
+        }
+    }
+
+    &.active {
+        display: block;
+
+        @keyframes navBgActive {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes navConActive {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        .navigation {
+            &-bg {
+                animation: navBgActive .3s linear 1;
+            }
+
+            &-content {
+                animation: navConActive .3s linear 1
+            }
+        }
+    }
+
+    &.end-active {
+        display: block;
+
+        @keyframes navBgEndActive {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+        @keyframes navConEndActive {
+            from {
+                opacity: 1;
+                transform: translateX(0);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(100%);
+            }
+        }
+
+        .navigation {
+            &-bg {
+                opacity: 0;
+                animation: navBgEndActive .3s linear 1;
+            }
+
+            &-content {
+                opacity: 0;
+                animation: navConEndActive .3s linear 1
             }
         }
     }
@@ -407,6 +664,14 @@ textarea {
     position: relative;
     z-index: 1;
     margin-bottom: 180px;
+
+    @include media(992) {
+        margin-bottom: 120px;
+    }
+
+    @include media(700) {
+        margin-bottom: 60px;
+    }
     
     &-bg {
         position: absolute;
@@ -417,6 +682,30 @@ textarea {
         object-fit: cover;
         z-index: -1;
         object-position: center bottom;
+
+        @include media(992) {
+            display: none;
+        }
+
+        &.md {
+            display: none;
+
+            @include media(992) {
+                display: block;
+            }
+
+            @include media(700) {
+                display: none;
+            }
+        }
+
+        &.mb {
+            display: none;
+
+            @include media(700) {
+                display: block;
+            }
+        }
     }
 
     &-container {
@@ -427,6 +716,16 @@ textarea {
         align-items: flex-start;
         justify-content: space-between;
         position: relative;
+
+        @include media(992) {
+            height: 1015px;
+            padding-top: 164px;
+        }
+
+        @include media(700) {
+            padding-top: 135px;
+            height: 794px;
+        }
     }
 
     &-navs {
@@ -435,6 +734,24 @@ textarea {
         justify-content: space-between;
         width: 100%;
 
+        &__wrap {
+            width: 100%;
+
+            @include media(700) {
+                display: flex;
+                align-items: flex-start;
+            }
+
+            .header-phone {
+                display: none;
+                flex-shrink: 0;
+
+                @include media(700) {
+                    display: flex;
+                }
+            }
+        }
+
         a {
             display: flex;
             align-items: center;
@@ -442,10 +759,27 @@ textarea {
             font-size: 20px;
             opacity: 0.8;
 
+            @include media(700) {
+                font-size: 15px;
+                gap: 10px;
+
+                img {
+                    width: 24px;
+                }
+            }
+
             span {
                 display: flex;
                 align-items: center;
                 gap: 20px;
+
+                @include media(700) {
+                    gap: 15px;
+
+                    img {
+                        width: 8px;
+                    }
+                }
             }
         }
 
@@ -461,6 +795,12 @@ textarea {
             &:hover {
                 .links {
                     display: flex;
+                }
+            }
+
+            &:not(:first-child) {
+                @include media(992) {
+                    display: none;
                 }
             }
         }
@@ -522,6 +862,15 @@ textarea {
         max-width: 649px;
         margin-bottom: 30px;
 
+        @include media(992) {
+            font-size: 56px;
+        }
+
+        @include media(700) {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
         span {
             display: inline;
             font-weight: 500;
@@ -533,6 +882,27 @@ textarea {
         font-weight: 500;
         line-height: 130%;
         margin-bottom: 55px;
+
+        @include media(992) {
+            margin-bottom: 50px;
+        }
+
+        @include media(700) {
+            font-size: 15px;
+            margin-bottom: 30px;
+        }
+    }
+
+    h4 {
+        display: none;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 130%;
+
+        @include media(700) {
+            margin-bottom: 25px;
+            display: block;
+        }
     }
 
     .btns {
@@ -540,6 +910,44 @@ textarea {
         align-items: center;
         gap: 30px;
         margin-bottom: 86px;
+
+        @include media(992) {
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 49px;
+
+            @include media(700) {
+                gap: 15px;
+                margin-bottom: 20px;
+            }
+        }
+        
+        a {
+            @include media(992) {
+                width: 410px;
+            }
+
+            @include media(700) {
+                width: 100%;
+            }
+
+            span {
+                @include media(992) {
+    
+                    &.lg {
+                        display: none;
+                    }
+                }
+    
+                &.mb {
+                    display: none;
+    
+                    @include media(992) {
+                        display: block !important;
+                    }
+                }
+            }
+        }
     }
 
     &-bottom {
@@ -552,6 +960,10 @@ textarea {
 
         &-slide {
             width: 341px;
+
+            @include media(700) {
+                width: 228px;
+            }
         }
     }
 
@@ -559,29 +971,51 @@ textarea {
         background: rgba(29, 33, 47, 0.75);
         border-radius: 15px;
         padding: 25px 27px 25px 25px;
+
+        @include media(700) {
+            border-radius: 10px;
+            padding: 16.77px 18.11px 15.69px 16.77px;
+        }
         
         &__head {
             display: flex;
             align-items: center;
             justify-content: space-between;
             margin-bottom: 10px;
+
+            @include media(700) {
+                margin-bottom: 7.11px;
+            }
         }
 
         .name {
             font-size: 13px;
             font-weight: bold;
             line-height: 130%;
+
+            @include media(700) {
+                font-size: 8px;
+            }
         }
 
         .date {
             font-size: 11px;
             line-height: 130%;
             margin-bottom: 12px;
+
+            @include media(700) {
+                font-size: 7px;
+                margin-bottom: 7px;
+            }
         }
 
         p {
             font-size: 13px;
             line-height: 125%;
+
+            @include media(700) {
+                font-size: 8px;
+            }
         }
     }
 }
@@ -608,6 +1042,16 @@ textarea {
         max-width: 975px;
         margin-bottom: 80px;
 
+        @include media(992) {
+            font-size: 56px;
+            margin-bottom: 60px;
+        }
+
+        @include media(700) {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
         span {
             font-weight: 700;
         }
@@ -619,6 +1063,27 @@ textarea {
         justify-content: space-between;
         gap: 30px;
 
+        @include media(1400) {
+            flex-wrap: wrap;
+            align-items: stretch;
+        }
+
+        @include media(700) {
+            gap: 20px;
+        }
+
+        img {
+            position: absolute;
+            top: 50px;
+            left: 40px;
+
+            @include media(700) {
+                width: 37px;
+                top: 30px;
+                left: 30px;
+            }
+        }
+
         li {
             width: calc(25% - 15px);
             background: linear-gradient(197.7deg, rgba(8, 14, 24, 0.25) -29.73%, rgba(17, 27, 43, 0.25) 47.22%, rgba(8, 14, 24, 0.25) 142.24%), rgba(37, 38, 39, 0.25);
@@ -627,12 +1092,38 @@ textarea {
             padding: 127px 40px 40px;
             position: relative;
 
+            @include media(1400) {
+                width: calc(50% - 15px);
+                margin-top: 0 !important;
+            }
+
+            @include media(992) {
+                width: 100%;
+            }
+
+            @include media(700) {
+                padding: 90px 27px 30px 30px;
+                border-radius: 15px;
+            }
+
             &:nth-child(2) {
                 margin-top: 117px;
+
+                @include media(700) {
+                    img {
+                        width: 40px;
+                    }
+                }
             }
 
             &:nth-child(3) img {
                 top: 40px;
+
+                @include media(700) {
+                    width: 42px;
+                    top: 27px;
+                    left: 27px;
+                }
             }
 
             &:nth-child(4) {
@@ -640,14 +1131,14 @@ textarea {
 
                 img {
                     top: 43px;
+
+                    @include media(700) {
+                        width: 43px;
+                        top: 27px;
+                        left: 26px;
+                    }
                 }
             }
-        }
-
-        img {
-            position: absolute;
-            top: 50px;
-            left: 40px;
         }
 
         .number {
@@ -659,6 +1150,10 @@ textarea {
             font-weight: 500;
             opacity: 0.2;
             color: rgba(255, 255, 255, .7);
+
+            @include media(700) {
+                display: none;
+            }
         }
 
         h3 {
@@ -667,6 +1162,15 @@ textarea {
             font-weight: 400;
             color: rgba(255, 255, 255, .8);
             margin-bottom: 20px;
+
+            @include media(700) {
+                font-size: 20px;
+                margin-bottom: 15px;
+
+                br {
+                    display: none;
+                }
+            }
 
             span {
                 display: inline;
@@ -680,6 +1184,14 @@ textarea {
             line-height: 155%;
             color: rgba(255, 255, 255, .7);
             font-weight: 400;
+
+            @include media(700) {
+                font-size: 13px;
+
+                br {
+                    display: none;
+                }
+            }
 
             span {
                 display: inline;
@@ -697,6 +1209,14 @@ textarea {
     z-index: 1;
     padding: 183px 0 86px;
 
+    @include media(1250) {
+        padding-top: 100px;
+    }
+
+    @include media(700) {
+        padding-top: 60px 0;
+    }
+
     &-bg {
         position: absolute;
         left: 0;
@@ -705,6 +1225,44 @@ textarea {
         height: 100%;
         object-fit: cover;
         z-index: -1;
+
+        @include media(1250) {
+            object-position: left bottom;
+            bottom: 170px;
+            top: auto;
+            height: 821px;
+        }
+
+        @include media(700) {
+            display: none;
+        }
+
+        &.mb {
+            &-1 {
+                display: none;
+
+                @include media(700) {
+                    display: block;
+                    bottom: auto;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    object-position: center center;
+                    height: 466px;
+                }
+            }
+
+            &-2 {
+                display: none;
+
+                @include media(700) {
+                    display: block;
+                    bottom: 0;
+                    width: 100%;
+                    object-position: center top;
+                }
+            }
+        }
     }
 
     .container {
@@ -717,6 +1275,18 @@ textarea {
         top: -63px;
         left: 149px;
         transform: translateY(-100%);
+
+        @include media(1250) {
+            bottom: 614px;
+            left: 44px;
+            top: auto;
+        }
+
+        @include media(700) {
+            left: 0;
+            bottom: 560px;
+            width: 68px;
+        }
     }
 
     &-content {
@@ -724,11 +1294,27 @@ textarea {
         margin: 0 0 0 auto;
         position: relative;
 
+        @include media(1250) {
+            width: 100%;
+        }
+
         &__icon {
             position: absolute;
             top: 25px;
             left: -109px;
             transform: translateX(-100%);
+
+            @include media(1250) {
+                bottom: 795px;
+                top: auto;
+                left: auto;
+                right: 36px;
+            }
+
+            @include media(700) {
+                right: -35px;
+                bottom: 669px;
+            }
         }
 
         h2 {
@@ -737,6 +1323,15 @@ textarea {
             color: rgba(255, 255, 255, .7);
             margin-bottom: 50px;
             max-width: 828px;
+
+            @include media(992) {
+                font-size: 48px;
+            }
+
+            @include media(700) {
+                font-size: 30px;
+                margin-bottom: 20px;
+            }
             
             span {
                 font-weight: 700;
@@ -751,11 +1346,29 @@ textarea {
             gap: 40px;
             margin-bottom: 55px;
 
+            @include media(1250) {
+                margin-bottom: 600px;
+                gap: 30px;
+            }
+
+            @include media(700) {
+                margin-bottom: 495px;
+                gap: 15px;
+            }
+
             li {
                 font-size: 22px;
                 line-height: 155%;
                 color: rgba(255, 255, 255, .7);
                 max-width: 670px;
+
+                @include media(992) {
+                    font-size: 18px;
+                }
+
+                @include media(700) {
+                    font-size: 13px;
+                }
 
                 span {
                     color: white;
@@ -778,12 +1391,35 @@ textarea {
             bottom: 149px;
             left: -270px;
             transform: translateX(-100%);
+
+            @include media(1250) {
+                bottom: 283px;
+                left: 527px;
+                min-width: 180px;
+            }
+
+            @include media(700) {
+                left: 50%;
+                width: 130px;
+                min-width: 130px;
+                bottom: 247px;
+                transform: translateX(calc(-50% + 40px));
+
+                img {
+                    width: 23px;
+                }
+            }
             
             h4 {
                 font-size: 24px;
                 font-weight: bold;
                 line-height: 120%;
                 margin: 20px 0 15px;
+
+                @include media(700) {
+                    font-size: 16px;
+                    margin: 13px 0 10px;
+                }
             }
 
             p {
@@ -791,6 +1427,19 @@ textarea {
                 font-size: 18px;
                 line-height: 145%;
                 opacity: 0.7;
+
+                @include media(700) {
+                    font-size: 13px;
+                }
+            }
+        }
+
+        .btns {
+            @include media(1250) {
+                display: flex;
+                gap: 29px;
+                flex-direction: column-reverse;
+                align-items: flex-start;
             }
         }
 
@@ -801,17 +1450,33 @@ textarea {
             margin-bottom: 57px;
             max-width: 298px;
 
+            @include media(700) {
+                max-width: 292px;
+                padding-left: 140px;
+            }
+
             &-card {
                 position: absolute;
                 left: 0;
                 top: -15px;
                 width: 170px;
+
+                @include media(700) {
+                    width: 130px;
+                    top: -14px;
+                }
             }
 
             &-text {
                 font-size: 15px;
                 color: rgba(255, 255, 255, .7);
                 line-height: 135%;
+
+                @include media(700) {
+                    br {
+                        display: none;
+                    }
+                }
 
                 span {
                     color: white;
@@ -826,6 +1491,57 @@ textarea {
                 right: -13px;
                 transform: translateX(100%);
                 z-index: -1;
+
+                @include media(1250) {
+                    transform: translate(100%, -80%) rotateX(180deg);
+                }
+
+                @include media(700) {
+                    display: none;
+                    transform: translate(100%, 0) rotateX(0);
+                    top: -15px;
+                    right: -7px;
+                }
+
+                &.mb {
+                    display: none;
+
+                    @include media(700) {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        .btn-blue {
+            @include media(700) {
+                padding-left: 37px;
+            }
+
+            .text {
+                &-desk {
+                    @include media(1250) {
+                        display: none;
+                    }
+                }
+
+                &-mb {
+                    display: none;
+                    
+                    @include media(1250) {
+                        display: block;
+                    }
+                }
+            }
+
+            .bg-img {
+                @include media(1250) {
+                    height: 127px;
+                }
+
+                @include media(700) {
+                    height: 103px;
+                }
             }
         }
     }
@@ -837,6 +1553,10 @@ textarea {
     position: relative;
     z-index: 1;
     padding: 100px 0 80px;
+
+    @include media(1200) {
+        padding: 0 0 60px;
+    }
     
     &-bg {
         position: absolute;
@@ -852,11 +1572,38 @@ textarea {
         display: flex;
         align-items: flex-start;
         gap: 30px;
+
+        @include media(1600) {
+            align-items: center;
+        }
+
+        @include media(1200) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    h2 {
+        font-size: 30px;
+
+        @include media(-1200) {
+            display: none;
+        }
     }
 
     &-left {
         width: calc(50% - 15px);
         padding-left: 114px;
+
+        @include media(1600) {
+            width: 40%;
+            flex-shrink: 0;
+            padding-left: 0;
+        }
+
+        @include media(1200) {
+            display: none;
+        }
 
         ul {
             display: flex;
@@ -885,6 +1632,10 @@ textarea {
         h3 {
             font-size: 64px;
             line-height: 120%;
+
+            @include media(1600) {
+                font-size: 54px;
+            }
         }
 
         li:not(:first-child) {
@@ -898,6 +1649,14 @@ textarea {
         flex-direction: column;
         gap: 30px;
 
+        @include media(1600) {
+            width: 100%;
+        }
+
+        @include media(700) {
+            gap: 20px;
+        }
+
         &__card {
             width: 100%;
             display: flex;
@@ -907,6 +1666,11 @@ textarea {
             border-radius: 25px;
             position: relative;
             overflow: hidden;
+
+            @include media(700) {
+                flex-direction: column;
+                border-radius: 15px;
+            }
 
             &::before {
                 border-radius: 25px;
@@ -919,6 +1683,10 @@ textarea {
                 mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
                 mask-composite: exclude;
                 opacity: 0.05;
+
+                @include media(700) {
+                    border-radius: 15px;
+                }
             }
 
             .main-img {
@@ -927,6 +1695,12 @@ textarea {
                 border-radius: 25px;
                 overflow: hidden;
                 flex-shrink: 0;
+                
+                @include media(700) {
+                    width: 100%;
+                    height: 240px;
+                    border-radius: 15px;
+                }
 
                 img {
                     width: 100%;
@@ -941,6 +1715,11 @@ textarea {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 20px;
+
+                @include media(700) {
+                    padding: 30px;
+                    gap: 15px;
+                }
             }
 
             .number {
@@ -948,18 +1727,45 @@ textarea {
                 line-height: 155%;
                 color: rgba(255, 255, 255, .7);
                 opacity: 0.2;
+
+                @include media(700) {
+                    position: absolute;
+                    bottom: 28px;
+                    right: 31px;
+                }
             }
 
             h3 {
                 font-size: 34px;
                 font-weight: bold;
                 line-height: 130%;
+
+                @include media(1600) {
+                    font-size: 28px;
+                }
+
+                @include media(700) {
+                    font-size: 20px;
+                }
             }
 
             p {
                 font-size: 20px;
                 line-height: 155%;
                 color: rgba(255, 255, 255, .7);
+
+                @include media(1600) {
+                    font-size: 18px;
+                }
+
+                @include media(700) {
+                    font-size: 13px;
+                    max-width: calc(100% - 35px);
+
+                    br {
+                        display: none;
+                    }
+                }
 
                 span {
                     font-weight: bold;
@@ -1085,10 +1891,42 @@ textarea {
     padding-top: 85px; 
     margin-bottom: 80px;
 
+    @include media(1250) {
+        margin-top: -57px;
+    }
+
+    @include media(700) {
+        padding-top: 0;
+        position: relative;
+        z-index: 2;
+        margin-bottom: 60px;
+    }
+
     h2 {
         font-size: 64px;
         text-align: center;
         margin-bottom: 80px;
+
+        @include media(1300) {
+            br {
+                display: none;
+            }
+        }
+
+        @include media(992) {
+            font-size: 48px;
+            text-align: left;
+            margin-bottom: 50px;
+        }
+
+        @include media(700) {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        span {
+            display: inline;
+        }
     }
 
     &-card {
@@ -1103,10 +1941,25 @@ textarea {
         align-items: flex-start;
         padding: 40px;
 
+        @include media(700) {
+            height: 240px;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
         &__wrap {
             display: grid;
             grid-template-columns: repeat(4, minmax(0, 1fr));
             gap: 30px;
+
+            @include media(1300) {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 20px;
+            }
+
+            @include media(500) {
+                grid-template-columns: repeat(1, minmax(0, 1fr));
+            }
         }
 
         .main-img {
@@ -1116,6 +1969,12 @@ textarea {
             width: 100%;
             height: 100%;
             z-index: -1;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
 
             span {
                 position: absolute;
@@ -1129,6 +1988,10 @@ textarea {
                 background-size: cover;
                 background-position: center;
 
+                @include media(700) {
+                    border-radius: 15px;
+                }
+
                 &::before {
                     border-radius: 25px;
                     content: "";
@@ -1141,8 +2004,11 @@ textarea {
                     mask-composite: exclude;
                     opacity: 0.05;
                     backdrop-filter: blur(50px);
-                }
 
+                    @include media(700) {
+                        border-radius: 15px;
+                    }
+                }
             }
         }
 
@@ -1152,6 +2018,10 @@ textarea {
             color: white;
             opacity: 0.2;
             font-weight: 500;
+
+            @include media(700) {
+                font-size: 18px;
+            }
         }
 
         &__bottom {
@@ -1159,6 +2029,10 @@ textarea {
             flex-direction: column;
             align-items: flex-start;
             gap: 15px;
+
+            @include media(700) {
+                gap: 0;
+            }
         }
 
         .price {
@@ -1167,6 +2041,12 @@ textarea {
             line-height: 130%;
             opacity: 0.5;
             margin-bottom: 15px;
+
+            @include media(700) {
+                font-size: 13px;
+                margin-bottom: 13px;
+                opacity: 0.7;
+            }
 
             &.free {
                 opacity: 1;
@@ -1178,6 +2058,11 @@ textarea {
             font-size: 24px;
             font-weight: 500;
             line-height: 130%;
+
+            @include media(700) {
+                font-size: 20px;
+                margin-bottom: 15px;
+            }
         }
 
         a {
@@ -1188,26 +2073,33 @@ textarea {
             padding-bottom: 7px;
             border-bottom: 1.5px dotted #55A1FF;
             display: none;
+
+            @include media(700) {
+                display: inline-block
+            }
         }
 
-        &:hover {
-            .number, h4 {
-                opacity: 1;
-            }
 
-            a {
-                display: inline-block;
-            }
-
-            .main-img span {
-                &::before {
-                    inset: 0;
-                    border: 3px solid transparent;
-                    background: linear-gradient(11deg, #2070D2, #0850A8) border-box;
-                    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-                    mask-composite: exclude;
-                    opacity: 0.55;
-                    backdrop-filter: blur(0px);
+        @include media(-700) {
+            &:hover {
+                .number, h4 {
+                    opacity: 1;
+                }
+    
+                a {
+                    display: inline-block;
+                }
+    
+                .main-img span {
+                    &::before {
+                        inset: 0;
+                        border: 3px solid transparent;
+                        background: linear-gradient(11deg, #2070D2, #0850A8) border-box;
+                        mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+                        mask-composite: exclude;
+                        opacity: 0.55;
+                        backdrop-filter: blur(0px);
+                    }
                 }
             }
         }

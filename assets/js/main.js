@@ -1,6 +1,19 @@
+const bodyHidden = () => {
+    document.querySelector('body').style.overflow = 'hidden';
+}
+
+const bodyVisible = () => {
+    document.querySelector('body').style.overflow = 'visible';
+}
+
 const homeSwp = new Swiper('.home .swiper', {
     slidesPerView: 'auto',
-    spaceBetween: 20,
+    spaceBetween: 13,
+    breakpoints: {
+        700: {
+            spaceBetween: 20
+        }
+    }
 })
 
 const caseSwp = new Swiper('.cases .swiper', {
@@ -55,4 +68,28 @@ if (phoneInp.length) {
             mask: '+{7}(000) 000-00-00',
         })
     });
+}
+
+const navs = document.querySelector('.navigation');
+const navsBg = document.querySelector('.navigation-bg');
+const navsCloseBtn = document.querySelector('.navigation .btn-close');
+const navsOpenBtn = document.querySelector('.navigation-open');
+
+if (navs) {
+    navsOpenBtn.onclick = () => {
+        navs.classList.add('active');
+        bodyHidden();
+    }
+
+    const navsClose = () => {
+        navs.classList.remove('active');
+        navs.classList.add('end-active');
+        bodyVisible();
+        setTimeout(() => {
+            navs.classList.remove('end-active');
+        }, 400);
+    }
+
+    navsCloseBtn.onclick = () => navsClose();
+    navsBg.onclick = () => navsClose();
 }
