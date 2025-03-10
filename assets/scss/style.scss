@@ -129,6 +129,10 @@ textarea {
         overflow: hidden;
         background: #1F2539;
 
+        @include media(700) {
+            height: 80px;
+        }
+
         img {
             position: absolute;
             left: 35px;
@@ -136,6 +140,11 @@ textarea {
             transform: translateY(-50%);
             z-index: -1;
             height: 20px;
+
+            @include media(700) {
+                height: 17px;
+                left: 30px;
+            }
         }
 
         input {
@@ -145,6 +154,11 @@ textarea {
             font-size: 20px;
             line-height: 155%;
             color: white;
+
+            @include media(700) {
+                font-size: 15px;
+                padding: 0 20px 0 60px;
+            }
 
             &::placeholder {
                 color: white;
@@ -839,7 +853,8 @@ textarea {
                 line-height: 155%;
 
                 &:hover {
-                    font-weight: bold !important;
+                    -webkit-text-stroke: 0.7px #01040F;
+                    // -webkit-text-fill-color: transparent;
                     position: relative;
 
                     &::after {
@@ -2218,6 +2233,14 @@ textarea {
 .cases {
     margin-bottom: 180px;
 
+    @include media(1050) {
+        margin-bottom: 100px;
+    }
+
+    @include media(700) {
+        margin-bottom: 59px;
+    }
+
     h2 {
         text-align: center;
         font-size: 64px;
@@ -2226,9 +2249,14 @@ textarea {
         margin-bottom: 80px;
 
         @include media(1050) {
-            font-size: 20px;
-            line-height: 130%;
-            margin-bottom: 15px;
+            font-size: 48px;
+            margin-bottom: 50px;
+        }
+
+        @include media(700) {
+            font-size: 30px;
+            margin-bottom: 30px;
+            text-align: left;
         }
 
         span {
@@ -2267,6 +2295,10 @@ textarea {
         position: relative;
         z-index: 1;
 
+        @include media(1050) {
+            border-radius: 15px;
+        }
+
         &::before {
             border-radius: 25px;
             content: "";
@@ -2286,6 +2318,10 @@ textarea {
             position: relative;
             z-index: 1;
 
+            @include media(1050) {
+                height: 200px;
+            }
+
             &::before {
                 border-radius: 25px;
                 content: "";
@@ -2297,6 +2333,10 @@ textarea {
                 mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
                 mask-composite: exclude;
                 opacity: 0.35;
+
+                @include media(1050) {
+                    border-radius: 15px;
+                }
             }
 
             img {
@@ -2304,17 +2344,31 @@ textarea {
                 height: 100%;
                 object-fit: cover;
                 border-radius: 25px;
+
+                @include media(1050) {
+                    border-radius: 15px;
+                }
             }
         }
 
         &__body {
             padding: 45px 30px 45px 40px;
+
+            @include media(1050) {
+                padding: 30px;
+            }
         }
 
         h3 {
             font-size: 28px;
             line-height: 130%;
             margin-bottom: 20px;
+
+            @include media(1050) {
+                font-size: 20px;
+                max-width: 199px;
+                margin-bottom: 15px;
+            }
         }
 
         p {
@@ -2322,6 +2376,11 @@ textarea {
             font-size: 18px;
             line-height: 155%;
             margin-bottom: 25px;
+
+            @include media(1050) {
+                font-size: 13px;
+                margin-bottom: 16px;
+            }
         }
 
         a {
@@ -2339,7 +2398,7 @@ textarea {
             justify-content: center;
 
             @include media(1050) {
-                padding: 40px 30px;
+                padding: 20px 15px;
             }
 
             .cases-card__body {
@@ -2361,6 +2420,11 @@ textarea {
                 font-size: 22px;
                 line-height: 155%;
                 margin-bottom: 30px;
+
+                @include media(1050) {
+                    font-size: 18px;
+                    margin-bottom: 15px;
+                }
             }
 
             ul {
@@ -2369,15 +2433,29 @@ textarea {
                 gap: 15px;
                 margin-bottom: 54px;
 
+                @include media(1050) {
+                    margin-bottom: 20px;
+                    gap: 15px;
+                }
+
                 li {
                     display: flex;
                     align-items: flex-start;
                     gap: 20px;
+
+                    @include media(1050) {
+                        gap: 10px;
+                    }
                 }
 
                 img {
                     margin-top: 4px;
                     flex-shrink: 0;
+
+                    @include media(1050) {
+                        width: 15px;
+                        margin-top: 2px;
+                    }
                 }
 
                 span {
@@ -2385,6 +2463,10 @@ textarea {
                     line-height: 155%;
                     color: rgba(255, 255, 255, .7);
                     font-weight: 400;
+
+                    @include media(1050) {
+                        font-size: 13px;
+                    }
 
                     b {
                         font-weight: bold;
@@ -2400,6 +2482,16 @@ textarea {
                 border-bottom: 0;
                 font-size: 16px;
                 font-weight: bold;
+
+                @include media(1050) {
+                    padding: 0 15px;
+                    height: 50px;
+                    font-size: 14px;
+
+                    img {
+                        display: none;
+                    }
+                }
             }
         }
     }
@@ -2430,18 +2522,39 @@ textarea {
 .reviews {
     margin-bottom: 180px; 
 
+    @include media(1050) {
+        margin-bottom: 100px;
+    }
+
+    @include media(700) {
+        margin-bottom: 60px;
+    }
+
     &-head {
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin-bottom: 60px;
 
+        @include media(1050) {
+            align-items: flex-start;
+            margin-bottom: 40px;
+        }
+
+        @include media(700) {
+            margin-bottom: 23px;
+        }
+
         h2 {
             font-size: 64px;
             line-height: 120%;
-            
-            b {
-                font-weight: bold;
+
+            @include media(1050) {
+                font-size: 48px;
+            }
+
+            @include media(700) {
+                font-size: 30px;
             }
         }
 
@@ -2450,12 +2563,42 @@ textarea {
             align-items: center;
             gap: 105px;
 
+            @include media(1500) {
+                gap: 50px;
+            }
+
+            @include media(1350) {
+                gap: 20px;
+            }
+
+            @include media(1280) {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            @include media(1050) {
+                flex-direction: column-reverse;
+                align-items: flex-start;
+                gap: 10px;
+                padding-right: 27px;
+                flex-shrink: 0;
+            }
+
             .text {
                 p {
                     font-size: 18px;
                     line-height: 125%;
                     color: rgba(255, 255, 255, .7);
                     margin-bottom: 10px;
+
+                    @include media(1050) {
+                        font-size: 16px;
+                        margin-bottom: 5px;
+                    }
+
+                    @include media(700) {
+                        font-size: 13px;
+                    }
                 }
 
                 h3 {
@@ -2468,9 +2611,25 @@ textarea {
                     text-fill-color: transparent;
                     color: transparent;
 
+                    @include media(1050) {
+                        font-size: 64px;
+                    }
+
+                    @include media(700) {
+                        font-size: 56px;
+                    }
+
                     span {
                         font-size: 30px;
                         font-weight: bold;
+
+                        @include media(1050) {
+                            font-size: 24px;
+                        }
+
+                        @include media(700) {
+                            font-size: 20px;
+                        }
                     }
                 }
             }
@@ -2487,12 +2646,36 @@ textarea {
                 background-clip: text;
                 text-fill-color: transparent;
                 color: transparent;
+
+                img {
+                    &:last-child {
+                        display: none;
+                    }
+                }
+
+                @include media(1050) {
+                    span {
+                        display: none;
+                    }
+
+                    img {
+                        display: none;
+
+                        &:last-child {
+                            display: block;
+                        }
+                    }
+                }
             }
 
             .btns {
                 display: flex;
                 align-items: center;
                 gap: 30px;
+
+                @include media(1280) {
+                    display: none;
+                }
             }
         }
 
@@ -2503,6 +2686,10 @@ textarea {
         overflow: visible;
         max-width: 851px;
         margin: 0;
+
+        @include media(1050) {
+            max-width: 100%;
+        }
 
         &::after {
             content: "";
@@ -2516,10 +2703,18 @@ textarea {
             background: linear-gradient(180deg, #01040F 0%, rgba(1, 4, 15, 0) 100%);
             mix-blend-mode: normal;
             filter: blur(50px);
+
+            @include media(1050) {
+                display: none;
+            }
         }
 
         &-slide {
             width: 402px;
+
+            @include media(700) {
+                width: 230px;
+            }
         }
     }
 }
@@ -2529,21 +2724,99 @@ textarea {
 .car-service {
     padding-bottom: 80px;
 
+    @include media(1050) {
+        padding-bottom: 70px;
+    }
+
+    @include media(700) {
+        padding-bottom: 60px;
+    }
+
     &__container {
         display: flex;
         align-items: center;
+
+        @include media(1280) {
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        @include media(700) {
+            gap: 30px;
+        }
+    }
+
+    h2 {
+        font-size: 60px;
+        line-height: 120%;
+        margin-bottom: 50px;
+        display: none;
+
+        @include media(1280) {
+            display: block;
+            margin-bottom: 40px;
+        }
+
+        @include media(1050) {
+            font-size: 48px;
+        }
+
+        @include media(700) {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
     }
 
     &__swp {
         position: relative;
         border-radius: 25px;
         overflow: hidden;
+        margin-bottom: 17px;
+
+        @include media(1050) {
+            border-radius: 20px;
+            margin-bottom: 12px;
+        }
+
+        @include media(700) {
+            border-radius: 15px;
+            margin-bottom: 7px;
+        }
+
+        .swiper {
+            &-slide {
+                height: 522px;
+
+                @include media(1050) {
+                    height: 370px;
+                }
+
+                @include media(700) {
+                    height: 220px;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
     }
 
     &__left {
         width: calc(50%);
         padding-right: 55px;
         position: relative;
+
+        @include media(1400) {
+            width: 55%;
+        }
+
+        @include media(1280) {
+            width: 100%;
+            padding-right: 0;
+        }
 
         .btns {
             position: absolute;
@@ -2553,12 +2826,57 @@ textarea {
             display: flex;
             align-items: center;
             gap: 20px;
+
+            @include media(1050) {
+                right: 30px;
+                bottom: 30px;
+            }
+
+            @include media(700) {
+                position: static;
+            }
+
+            button {
+                @include media(1050) {
+                    width: 60px;
+                    height: 60px;
+                }
+
+                @include media(700) {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    z-index: 2;
+                    width: 40px;
+                    height: 40px;
+
+                    img {
+                        width: 7px;
+                    }
+
+                    &.btn-prev {
+                        left: 20px;
+                    }
+
+                    &.btn-next {
+                        right: 20px;
+                    }
+                }
+            }
         }
 
         ul {
             display: grid;
             grid-template-columns: repeat(4, minmax(0, 1fr));
             gap: 17px;
+
+            @include media(1280) {
+                gap: 12px;
+            }
+
+            @include media(700) {
+                gap: 7px;
+            }
 
             li {
                 height: 138px;
@@ -2568,6 +2886,15 @@ textarea {
                 overflow: hidden;
                 cursor: pointer;
                 user-select: none;
+
+                @include media(1280) {
+                    height: 98px;
+                }
+
+                @include media(700) {
+                    height: 58px;
+                    border-radius: 7px;
+                }
 
                 img {
                     width: 100%;
@@ -2597,6 +2924,10 @@ textarea {
                     mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
                     mask-composite: exclude;
                     opacity: 0.07;
+
+                    @include media(700) {
+                        border-radius: 7px;
+                    }
                 }
 
                 &.active {
@@ -2609,13 +2940,25 @@ textarea {
     }
 
     &__right {
-        width: calc(50%);
+        width: 50%;
+
+        @include media(1400) {
+            width: 45%;
+        }
+
+        @include media(1280) {
+            width: 100%;
+        }
 
         .logo {
             display: flex;
             align-items: center;
             gap: 30px;
             margin-bottom: 50px;
+
+            @include media(1280) {
+                display: none;
+            }
 
             img {
                 width: 98px;
@@ -2629,11 +2972,12 @@ textarea {
         }
 
         h2 {
-            font-size: 60px;
-            line-height: 120%;
-            margin-bottom: 50px;
-        }
+            display: block;
 
+            @include media(1280) {
+                display: none;
+            }
+        }
 
         .list {
             h3 {
@@ -2641,6 +2985,17 @@ textarea {
                 font-weight: bold;
                 line-height: 155%;
                 margin-bottom: 30px;
+
+                @include media(1050) {
+                    font-size: 24px;
+                    margin-bottom: 25px;
+                }
+
+                @include media(700) {
+                    font-size: 20px;
+                    margin-bottom: 20px;
+                    max-width: 195px;
+                }
             }
 
             ul {
@@ -2649,10 +3004,37 @@ textarea {
                 gap: 60px 30px;
                 max-width: 543px;
 
+                @include media(700) {
+                    gap: 20px 25px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                }
+
                 li {
                     display: flex;
                     align-items: center;
                     gap: 20px;
+
+                    @include media(700) {
+                        gap: 15px;
+
+                        &:nth-child(1) {
+                            order: 1;
+                        }
+
+                        &:nth-child(2) {
+                            order: 4;
+                        }
+
+                        &:nth-child(3) {
+                            order: 2;
+                        }
+                        
+                        &:nth-child(4) {
+                            order: 3;
+                        }
+                    }
                 }
                 
                 img {
@@ -2662,17 +3044,40 @@ textarea {
                 p {
                     font-size: 20px;
                     line-height: 155%;
+
+                    @include media(700) {
+                        max-width: 116px;
+                        font-size: 13px;
+                        line-height: 135%;
+                    }
                 }
             }
 
             &:last-child {
                 margin-top: 59px;
 
+                @include media(1050) {
+                    margin-top: 40px;
+                }
+
+                @include media(700) {
+                    margin-top: 25px;
+                }
+
                 ul {
                     max-width: 566px;
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
+
+                    @include media(700) {
+                        justify-content: flex-start;
+                        flex-wrap: nowrap;
+
+                        li:last-child p {
+                            max-width: 56px;
+                        }
+                    }
                 }
             }
         }
@@ -2685,6 +3090,10 @@ textarea {
     padding: 97px 0 120px;
     position: relative;
 
+    @include media(1050) {
+        padding: 0;
+    }
+
     &-bg {
         position: absolute;
         top: 0;
@@ -2693,12 +3102,27 @@ textarea {
         height: 100%;
         z-index: -1;
         object-fit: cover;
+
+        @include media(576) {
+            height: 420px;
+            width: auto;
+            top: 64px;
+        }
     }
 
     &-container {
         padding-left: 110px;
+        padding-right: 260px;
         position: relative;
         z-index: 1;
+
+        @include media(1280) {
+            padding-left: 0;
+        }
+
+        @include media(1050) {
+            padding-right: 0;
+        }
     }
 
     h2 {
@@ -2706,6 +3130,16 @@ textarea {
         line-height: 120%;
         max-width: 806px;
         margin-bottom: 30px;
+
+        @include media(1050) {
+            font-size: 48px;
+            margin-bottom: 24px;
+        }
+
+        @include media(700) {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
     }
 
     h3 {
@@ -2714,19 +3148,45 @@ textarea {
         color: rgba(255, 255, 255, .7);
         margin-bottom: 44px;
 
+        @include media(1050) {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        @include media(700) {
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
         span {
             color: white;
             font-weight: bold;
+
+            @include media(700) {
+                display: block;
+            }
         }
     }
 
     ul {
+        @include media(1050) {
+            margin-bottom: 40px;
+        }
+
+        @include media(700) {
+            margin-bottom: 30px;
+        }
+        
         li {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             gap: 20px;
             position: absolute;
+
+            @include media(1050) {
+                gap: 15px;
+            }
 
             &:nth-child(1) {
                 right: 0;
@@ -2745,12 +3205,30 @@ textarea {
                 left: 756px;
                 max-width: 314px;
             }
+
+            @include media(1050) {
+                position: static !important;
+            }
+        }
+
+        img {
+            @include media(1050) {
+                width: 24px;
+            }
+            
+            @include media(700) {
+                width: 18px;
+            }
         }
 
         p {
             font-size: 18px;
             line-height: 155%;
             color: rgba(255, 255, 255, .7);
+
+            @include media(700) {
+                font-size: 13px;
+            }
 
             span {
                 color: white;
@@ -2767,6 +3245,11 @@ textarea {
         padding: 40px 40px 50px;
         position: relative;
         z-index: 1;
+
+        @include media(700) {
+            max-width: 100%;
+            padding: 40px 20px 30px;
+        }
 
         &::before {
             border-radius: 25px;
@@ -2791,41 +3274,93 @@ textarea {
             gap: 15px;
             margin-bottom: 31px;
 
+            @include media(700) {
+                height: 87px;
+                margin-bottom: 25px;
+                padding-left: 173px;
+            }
+
             img {
                 position: absolute;
                 left: 0;
                 top: 0;
                 width: 213px;
+
+                @include media(700) {
+                    width: 150px;
+                }
             }
 
             span {
                 font-size: 20px;
                 font-weight: bold;
                 line-height: 135%;
+
+                @include media(700) {
+                    display: none;
+                }
             }
 
             p {
                 font-size: 20px;
                 line-height: 135%;
                 color: rgba(255, 255, 255, .7);
+
+                @include media(700) {
+                    font-size: 13px;
+                }
                 
                 span {
                     color: white;
+
+                    @include media(700) {
+                        font-size: 13px;
+                        display: inline;
+                    }
                 }
             }
         }
 
         .form-inp {
             margin-bottom: 20px;
+
+            @include media(700) {
+                margin-bottom: 10px;
+            }
         }
 
         .btn-blue {
             width: 100%;
             font-size: 16px;
+
+            @include media(700) {
+                font-size: 12px;
+                padding: 0 90px 0 23px;
+            }
+
+            @include media(400) {
+                img {
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
         }
     }
 }
 // Diagnostic end
+
+// Rental
+.rental {
+    padding-top: 60px;
+
+    h2 {
+        font-size: 60px;
+        line-height: 120%;
+        margin-bottom: 80px;
+        text-align: center;
+    }
+}
+// Rental end
 
 // Contact
 .contact {

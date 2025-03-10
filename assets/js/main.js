@@ -9,6 +9,7 @@ const bodyVisible = () => {
 const homeSwp = new Swiper('.home .swiper', {
     slidesPerView: 'auto',
     spaceBetween: 13,
+    freeMode: true,
     breakpoints: {
         700: {
             spaceBetween: 20
@@ -19,21 +20,31 @@ const homeSwp = new Swiper('.home .swiper', {
 const caseSwp = new Swiper('.cases .swiper', {
     slidesPerView: 'auto',
     spaceBetween: 20,
+    freeMode: true,
     breakpoints: {
         1550: {
             slidesPerView: 3,
             spaceBetween: 30,
+            freeMode: false,
         },
         1050: {
             slidesPerView: 2,
             spaceBetween: 30,
+            freeMode: false,
         }
     }
 })
 
 const reviewSwp = new Swiper('.reviews .swiper', {
     slidesPerView: 'auto',
-    spaceBetween: 24,
+    spaceBetween: 10,
+    freeMode: true,
+    breakpoints: {
+        700: {
+            spaceBetween: 24,
+            freeMode: false,
+        }
+    },
     navigation: {
         nextEl: '.reviews .btn-next',
         prevEl: '.reviews .btn-prev',
