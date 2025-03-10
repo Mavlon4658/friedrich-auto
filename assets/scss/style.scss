@@ -3550,6 +3550,10 @@ textarea {
     position: relative;
     z-index: 1;
 
+    @include media(1050) {
+        margin-bottom: 60px;
+    }
+
     &-bg {
         position: absolute;
         top: 0;
@@ -3558,17 +3562,55 @@ textarea {
         height: 100%;
         object-fit: cover;
         z-index: -1;
+
+        @include media(1280) {
+            object-position: 30% center;
+        }
+
+        @include media(1050) {
+            height: 700px;
+            object-position: left center;
+        }
+
+        @include media(700) {
+            height: 503px;
+        }
+
+        @include media(450) {
+            object-position: 15% center;
+        }
     }
 
     &-container {
         display: flex;
         align-items: flex-end;
         justify-content: flex-end;
-        padding: 220px 235px 140px 0 
+        padding: 220px 235px 140px 0;
+
+        @include media(1480) {
+            padding-right: 0;
+        }
+
+        @include media(1050) {
+            padding: 100px 0 0;
+        }
+
+        @include media(700) {
+            padding-top: 60px;
+        }
     }
 
-    &-contact {
+    &-content {
         max-width: 562px;
+
+        @include media(1200) {
+            max-width: 390px;
+        }
+
+        @include media(1050) {
+            max-width: 100%;
+            width: 100%;
+        }
     }
 
     h2 {
@@ -3577,6 +3619,24 @@ textarea {
         line-height: 130%;
         margin-bottom: 40px;
         display: inline-block;
+
+        @include media(1050) {
+            font-size: 34px;
+            margin-bottom: 300px;
+        }
+
+        @include media(700) {
+            font-size: 30px;
+            margin-bottom: 218px;
+        }
+    }
+
+    .address-wrap {
+        @include media(1050) {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: flex-start;
+        }
     }
 
     label {
@@ -3585,6 +3645,15 @@ textarea {
         font-size: 18px;
         line-height: 155%;
         margin-bottom: 15px;
+
+        @include media(1050) {
+            font-size: 16px;
+        }
+
+        @include media(700) {
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
     }
 
     address {
@@ -3592,6 +3661,15 @@ textarea {
         line-height: 155%;
         max-width: 509px;
         margin-bottom: 30px;
+
+        @include media(1050) {
+            font-size: 20px;
+        }
+
+        @include media(700) {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
 
         b {
             font-weight: bold;
@@ -3604,13 +3682,42 @@ textarea {
         align-items: center;
         gap: 25px;
         margin-bottom: 40px;
+
+        @include media(700) {
+            margin-bottom: 30px;
+        }
     }
 
     .header-phone {
+        display: flex;
         align-items: flex-start;
 
         p {
             margin-left: 30px;
+        }
+
+        @include media(700) {
+            a {
+                margin-bottom: 5px;
+                gap: 10px;
+
+                img {
+                    width: 18px;
+                }
+
+                span {
+                    font-size: 24px;
+                    gap: 7px;
+                }
+
+                b {
+                    font-size: 36px;
+                }
+            }
+
+            p {
+                font-size: 15px;
+            }
         }
     }
 

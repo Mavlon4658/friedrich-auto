@@ -3592,6 +3592,11 @@ textarea {
   position: relative;
   z-index: 1;
 }
+@media screen and (max-width: 1050px) {
+  .contact {
+    margin-bottom: 60px;
+  }
+}
 .contact-bg {
   position: absolute;
   top: 0;
@@ -3602,14 +3607,64 @@ textarea {
      object-fit: cover;
   z-index: -1;
 }
+@media screen and (max-width: 1280px) {
+  .contact-bg {
+    -o-object-position: 30% center;
+       object-position: 30% center;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .contact-bg {
+    height: 700px;
+    -o-object-position: left center;
+       object-position: left center;
+  }
+}
+@media screen and (max-width: 700px) {
+  .contact-bg {
+    height: 503px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .contact-bg {
+    -o-object-position: 15% center;
+       object-position: 15% center;
+  }
+}
 .contact-container {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
   padding: 220px 235px 140px 0;
 }
-.contact-contact {
+@media screen and (max-width: 1480px) {
+  .contact-container {
+    padding-right: 0;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .contact-container {
+    padding: 100px 0 0;
+  }
+}
+@media screen and (max-width: 700px) {
+  .contact-container {
+    padding-top: 60px;
+  }
+}
+.contact-content {
   max-width: 562px;
+}
+@media screen and (max-width: 1200px) {
+  .contact-content {
+    max-width: 390px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .contact-content {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 .contact h2 {
   font-size: 36px;
@@ -3618,6 +3673,25 @@ textarea {
   margin-bottom: 40px;
   display: inline-block;
 }
+@media screen and (max-width: 1050px) {
+  .contact h2 {
+    font-size: 34px;
+    margin-bottom: 300px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .contact h2 {
+    font-size: 30px;
+    margin-bottom: 218px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .contact .address-wrap {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+}
 .contact label {
   display: block;
   opacity: 0.7;
@@ -3625,11 +3699,33 @@ textarea {
   line-height: 155%;
   margin-bottom: 15px;
 }
+@media screen and (max-width: 1050px) {
+  .contact label {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .contact label {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+}
 .contact address {
   font-size: 24px;
   line-height: 155%;
   max-width: 509px;
   margin-bottom: 30px;
+}
+@media screen and (max-width: 1050px) {
+  .contact address {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .contact address {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
 }
 .contact address b {
   font-weight: bold;
@@ -3641,11 +3737,36 @@ textarea {
   gap: 25px;
   margin-bottom: 40px;
 }
+@media screen and (max-width: 700px) {
+  .contact .btn-blue {
+    margin-bottom: 30px;
+  }
+}
 .contact .header-phone {
+  display: flex;
   align-items: flex-start;
 }
 .contact .header-phone p {
   margin-left: 30px;
+}
+@media screen and (max-width: 700px) {
+  .contact .header-phone a {
+    margin-bottom: 5px;
+    gap: 10px;
+  }
+  .contact .header-phone a img {
+    width: 18px;
+  }
+  .contact .header-phone a span {
+    font-size: 24px;
+    gap: 7px;
+  }
+  .contact .header-phone a b {
+    font-size: 36px;
+  }
+  .contact .header-phone p {
+    font-size: 15px;
+  }
 }
 .contact ul {
   display: flex;
