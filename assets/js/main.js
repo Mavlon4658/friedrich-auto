@@ -6,6 +6,25 @@ const bodyVisible = () => {
     document.querySelector('body').style.overflow = 'visible';
 }
 
+const header = document.querySelector('header.header');
+const fixedPanel = document.querySelector('.fixed-panel');
+
+function handleScroll () {
+    if (scrollY > 100) {
+        header.classList.add('fixed');
+        fixedPanel.classList.add('active');
+    } else {
+        header.classList.remove('fixed');
+        fixedPanel.classList.remove('active');
+    }
+}
+
+handleScroll();
+
+window.addEventListener('scroll', function () {
+    handleScroll();
+})
+
 const homeSwp = new Swiper('.home .swiper', {
     slidesPerView: 'auto',
     spaceBetween: 13,
