@@ -6,6 +6,64 @@ const bodyVisible = () => {
     document.querySelector('body').style.overflow = 'visible';
 }
 
+// modals
+const modalCls = ['.diagnostic-modal', '.car-modal'];
+
+modalCls.forEach(cls => {
+    const modal = document.querySelector(cls);
+    const modalOpenBtns = document.querySelectorAll(`${cls}__open`);
+    const modalCloseBtn = document.querySelector(`${cls} .modal-close`);
+    const modalBg = document.querySelector(`${cls} .modal-bg`);
+
+    modalOpenBtns.forEach(btn => {
+        btn.onclick = e => {
+            e.preventDefault();
+            modal.classList.add('active');
+            bodyHidden();
+        }
+    })
+
+    modalCloseBtn.onclick = () => {
+        modal.classList.remove('active');
+        bodyVisible();
+    }
+
+    modalBg.onclick = () => {
+        modal.classList.remove('active');
+        bodyVisible();
+    }
+})
+// modals end
+
+const carModalSwp = new Swiper('.car-modal__left .swiper', {
+    slidesPerView: 1,
+    loop: true,
+    navigation: {
+        nextEl: '.car-modal__left .btn-next',
+        prevEl: '.car-modal__left .btn-prev',
+    }
+})
+
+const carModalCardList = document.querySelectorAll('.car-modal__left ul li');
+
+if (carModalSwp) {
+    carModalCardList.forEach((el, elID) => {
+        el.onclick = () => {
+            carModalSwp.slideTo(elID);
+        }
+    })
+
+    carModalSwp.on('slideChange', function (e) {
+        carModalCardList.forEach((item, itemID) => {
+            if (itemID == carModalSwp.realIndex) {
+                item.classList.add('active');
+            } else {
+                item.classList.remove('active');
+            }
+        })
+    });
+}
+
 const header = document.querySelector('header.header');
 const fixedPanel = document.querySelector('.fixed-panel');
 
@@ -28,7 +86,15 @@ window.addEventListener('scroll', function () {
 const homeSwp = new Swiper('.home .swiper', {
     slidesPerView: 'auto',
     spaceBetween: 13,
-    freeMode: true,
+    speed: 4000,
+    loop: true,
+    autoplay: {
+        delay: 0,
+        reverseDirection: false,
+        disableOnInteraction: false,
+    },
+    watchSlidesProgress: false,
+    allowTouchMove: false,
     breakpoints: {
         700: {
             spaceBetween: 20
@@ -58,6 +124,13 @@ const reviewSwp = new Swiper('.reviews .swiper', {
     slidesPerView: 'auto',
     spaceBetween: 10,
     freeMode: true,
+    speed: 7000,
+    loop: true,
+    autoplay: {
+        delay: 0,
+    },
+    watchSlidesProgress: false,
+    // allowTouchMove: false,
     breakpoints: {
         700: {
             spaceBetween: 24,
