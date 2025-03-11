@@ -482,7 +482,7 @@ textarea {
 .header-phone a b {
   font-size: 28px;
   font-weight: bold;
-  color: #55A1FF;
+  color: #B55B5B;
 }
 @media screen and (max-width: 992px) {
   .header-phone a b {
@@ -493,9 +493,6 @@ textarea {
   .header-phone a b {
     font-size: 18px;
   }
-}
-.header-phone a:hover b {
-  color: #B55B5B;
 }
 .header-phone p {
   display: flex;
@@ -521,6 +518,7 @@ textarea {
   height: 7px;
   border-radius: 50%;
   background: #5BB57F;
+  background: #B55B5B;
   position: relative;
 }
 @media screen and (max-width: 992px) {
@@ -540,7 +538,7 @@ textarea {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #5BB57F;
+  background: #B55B5B;
   opacity: 0.6;
   position: absolute;
   left: -12px;
@@ -564,7 +562,7 @@ textarea {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #5BB57F;
+  background: #B55B5B;
   opacity: 0.3;
   position: absolute;
   left: -24px;
@@ -583,11 +581,23 @@ textarea {
     left: -16px;
   }
 }
-.header-phone p:hover .icon {
-  background: #B55B5B;
+.header-phone p .text-active {
+  display: none;
 }
-.header-phone p:hover .icon::before, .header-phone p:hover .icon::after {
-  background: #B55B5B;
+.header-phone.active a b {
+  color: #55A1FF;
+}
+.header-phone.active p .icon {
+  background: #5BB57F;
+}
+.header-phone.active p .icon::before, .header-phone.active p .icon::after {
+  background: #5BB57F;
+}
+.header-phone.active p .text-active {
+  display: block;
+}
+.header-phone.active p .text-noactive {
+  display: none;
 }
 .header .bars {
   display: none;

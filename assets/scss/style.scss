@@ -386,7 +386,7 @@ textarea {
             b {
                 font-size: 28px;
                 font-weight: bold;
-                color: #55A1FF;
+                color: #B55B5B;
 
                 @include media(992) {
                     font-size: 25px;
@@ -397,11 +397,11 @@ textarea {
                 }
             }
 
-            &:hover {
-                b {
-                    color: #B55B5B;
-                }
-            }
+            // &:hover {
+            //     b {
+            //         color: #B55B5B;
+            //     }
+            // }
         }
 
         p {
@@ -426,6 +426,7 @@ textarea {
                 height: 7px;
                 border-radius: 50%;
                 background: #5BB57F;
+                background: #B55B5B;
                 position: relative;
 
                 @include media(992) {
@@ -443,7 +444,7 @@ textarea {
                     width: 7px;
                     height: 7px;
                     border-radius: 50%;
-                    background: #5BB57F;
+                    background: #B55B5B;
                     opacity: 0.6;
                     position: absolute;
                     left: -12px;
@@ -466,7 +467,7 @@ textarea {
                     width: 7px;
                     height: 7px;
                     border-radius: 50%;
-                    background: #5BB57F;
+                    background: #B55B5B;
                     opacity: 0.3;
                     position: absolute;
                     left: -24px;
@@ -485,13 +486,31 @@ textarea {
                 }
             }
 
-            &:hover {
+            .text-active {
+                display: none;
+            }
+        }
+
+        &.active {
+            a b {
+                color: #55A1FF;
+            }
+
+            p  {
                 .icon {
-                    background: #B55B5B;
+                    background: #5BB57F;
 
                     &::before, &::after {
-                        background: #B55B5B;
+                        background: #5BB57F;
                     }
+                }
+
+                .text-active {
+                    display: block;
+                }
+
+                .text-noactive {
+                    display: none;
                 }
             }
         }

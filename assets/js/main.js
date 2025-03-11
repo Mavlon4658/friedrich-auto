@@ -6,6 +6,29 @@ const bodyVisible = () => {
     document.querySelector('body').style.overflow = 'visible';
 }
 
+function getCurrentTime() {
+    const now = new Date();
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    return { 
+        hour: +hours, 
+        minute: +minutes
+    };
+}
+
+const timeTable = document.querySelectorAll('.header-phone');
+
+
+if (getCurrentTime().hour >= 10 && getCurrentTime().hour < 20) {
+    timeTable.forEach(el => {
+        el.classList.add('active');
+    })
+} else {
+    timeTable.forEach(el => {
+        el.classList.remove('active');
+    })
+}
+
 // modals
 const modalCls = ['.diagnostic-modal', '.car-modal'];
 
