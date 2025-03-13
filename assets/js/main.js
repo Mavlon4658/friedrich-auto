@@ -38,6 +38,15 @@ modalCls.forEach(cls => {
     const modalCloseBtn = document.querySelector(`${cls} .modal-close`);
     const modalBg = document.querySelector(`${cls} .modal-bg`);
 
+    const modalClose = () => {
+        bodyVisible();
+        modal.classList.remove('active');
+        modal.classList.add('end-active');
+        setTimeout(() => {
+            modal.classList.remove('end-active');
+        }, 400);
+    }
+
     modalOpenBtns.forEach(btn => {
         btn.onclick = e => {
             e.preventDefault();
@@ -46,15 +55,9 @@ modalCls.forEach(cls => {
         }
     })
 
-    modalCloseBtn.onclick = () => {
-        modal.classList.remove('active');
-        bodyVisible();
-    }
+    modalCloseBtn.onclick = () => modalClose();
 
-    modalBg.onclick = () => {
-        modal.classList.remove('active');
-        bodyVisible();
-    }
+    modalBg.onclick = () => modalClose();
 })
 // modals end
 

@@ -4407,10 +4407,6 @@ textarea {
     height: 100%;
     z-index: 5;
     display: none;
-
-    &.active {
-        display: block;
-    }
     
     &-bg {
         position: absolute;
@@ -4486,6 +4482,76 @@ textarea {
             mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
             mask-composite: exclude;
             opacity: 0.05;
+        }
+    }
+
+    &.active {
+        display: block;
+
+        @keyframes bgActive {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes dialogActive {
+            from {
+                transform: translateY(-200px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal {
+            &-bg {
+                animation: bgActive .3s linear 1;
+            }
+
+            &-dialog__wrap {
+                animation: dialogActive .3s linear 1;
+            }
+        }
+    }
+
+    &.end-active {
+        display: block;
+
+        @keyframes bgEndActive {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+        @keyframes dialogEndActive {
+            from {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateY(-200px);
+                opacity: 0;
+            }
+        }
+
+        .modal {
+            &-bg {
+                animation: bgEndActive .3s linear 1;
+                opacity: 0;
+            }
+
+            &-dialog__wrap {
+                animation: dialogEndActive .3s linear 1;
+                opacity: 0;
+            }
         }
     }
 }

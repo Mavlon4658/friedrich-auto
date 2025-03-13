@@ -4408,9 +4408,6 @@ textarea {
   z-index: 5;
   display: none;
 }
-.modal.active {
-  display: block;
-}
 .modal-bg {
   position: absolute;
   top: 0;
@@ -4482,6 +4479,62 @@ textarea {
   -webkit-mask-composite: xor;
           mask-composite: exclude;
   opacity: 0.05;
+}
+.modal.active {
+  display: block;
+}
+@keyframes bgActive {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes dialogActive {
+  from {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.modal.active .modal-bg {
+  animation: bgActive 0.3s linear 1;
+}
+.modal.active .modal-dialog__wrap {
+  animation: dialogActive 0.3s linear 1;
+}
+.modal.end-active {
+  display: block;
+}
+@keyframes bgEndActive {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes dialogEndActive {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+}
+.modal.end-active .modal-bg {
+  animation: bgEndActive 0.3s linear 1;
+  opacity: 0;
+}
+.modal.end-active .modal-dialog__wrap {
+  animation: dialogEndActive 0.3s linear 1;
+  opacity: 0;
 }
 
 .diagnostic-modal .modal-content {
