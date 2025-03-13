@@ -1236,6 +1236,21 @@ textarea {
     border-radius: 15px;
   }
 }
+.about ul li::before {
+  border-radius: 25px;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border: 2px solid transparent;
+  background: linear-gradient(-45deg, #FFFFFF, rgba(0, 0, 0, 0)) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+          mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  opacity: 0.05;
+  filter: blur(26px);
+}
 .about ul li:nth-child(2) {
   margin-top: 117px;
 }
@@ -1689,14 +1704,9 @@ textarea {
 }
 .example-container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 30px;
   position: relative;
-}
-@media screen and (max-width: 1600px) {
-  .example-container {
-    align-items: center;
-  }
 }
 @media screen and (max-width: 1200px) {
   .example-container {
@@ -3909,14 +3919,13 @@ textarea {
 
 .footer {
   padding-bottom: 50px;
+  position: relative;
+  z-index: 2;
 }
 @media screen and (max-width: 700px) {
   .footer {
     padding-bottom: 120px;
   }
-}
-.footer-container {
-  background: #000;
 }
 .footer-head {
   display: flex;
