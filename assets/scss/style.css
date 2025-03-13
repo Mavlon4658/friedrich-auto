@@ -1398,7 +1398,8 @@ textarea {
 @media screen and (max-width: 700px) {
   .repairing-bg.mb-2 {
     display: block;
-    bottom: 0;
+    bottom: 196px;
+    height: 511px;
     width: 100%;
     -o-object-position: center top;
        object-position: center top;
@@ -1424,7 +1425,7 @@ textarea {
 @media screen and (max-width: 700px) {
   .repairing .logo {
     left: 0;
-    bottom: 560px;
+    bottom: 493px;
     width: 68px;
   }
 }
@@ -1454,8 +1455,9 @@ textarea {
 }
 @media screen and (max-width: 700px) {
   .repairing-content__icon {
-    right: -35px;
-    bottom: 669px;
+    right: -6px;
+    bottom: 618px;
+    width: 28px;
   }
 }
 .repairing-content h2 {
@@ -1495,7 +1497,7 @@ textarea {
 }
 @media screen and (max-width: 700px) {
   .repairing-content ul {
-    margin-bottom: 570px;
+    margin-bottom: 494px;
     max-width: 266px;
     gap: 15px;
   }
@@ -1545,7 +1547,7 @@ textarea {
     left: 50%;
     width: 130px;
     min-width: 130px;
-    bottom: 247px;
+    bottom: 213px;
     transform: translateX(calc(-50% + 40px));
   }
   .repairing-content .datas img {
@@ -1561,7 +1563,7 @@ textarea {
 @media screen and (max-width: 700px) {
   .repairing-content .datas h4 {
     font-size: 16px;
-    margin: 13px 0 10px;
+    margin: 8px 0 10px;
   }
 }
 .repairing-content .datas p {
@@ -2520,6 +2522,7 @@ textarea {
 @media screen and (max-width: 1050px) {
   .cases-card.other {
     padding: 30px;
+    order: 2;
   }
   .cases-card.other h3 {
     max-width: 100%;
@@ -2743,6 +2746,12 @@ textarea {
     flex-shrink: 0;
   }
 }
+@media screen and (max-width: 700px) {
+  .reviews-head__right {
+    flex-direction: column;
+    gap: 0px;
+  }
+}
 .reviews-head__right .text {
   width: 225px;
 }
@@ -2786,6 +2795,7 @@ textarea {
 @media screen and (max-width: 700px) {
   .reviews-head__right .text h3 {
     font-size: 56px;
+    line-height: 67px;
   }
 }
 .reviews-head__right .text h3 span {
@@ -2805,8 +2815,8 @@ textarea {
 .reviews-head__right h4 {
   display: flex;
   align-items: center;
-  gap: 20px;
-  font-size: 18px;
+  gap: 5px;
+  font-size: 9px;
   line-height: 120%;
   background: linear-gradient(97.28deg, rgba(255, 255, 255, 0.5) 22.84%, rgba(164, 166, 170, 0.5) 50.08%, rgba(255, 255, 255, 0.5) 82.62%), #FFFFFF;
   -webkit-background-clip: text;
@@ -2814,19 +2824,11 @@ textarea {
   background-clip: text;
   text-fill-color: transparent;
   color: transparent;
+  margin-top: -5px;
 }
-.reviews-head__right h4 img:last-child {
-  display: none;
-}
-@media screen and (max-width: 1050px) {
-  .reviews-head__right h4 span {
-    display: none;
-  }
-  .reviews-head__right h4 img {
-    display: none;
-  }
-  .reviews-head__right h4 img:last-child {
-    display: block;
+@media screen and (min-width: 700px) {
+  .reviews-head__right h4 {
+    display: none !important;
   }
 }
 .reviews-head__right .btns {
@@ -3212,6 +3214,18 @@ textarea {
     max-width: 100px;
     font-size: 13px;
     line-height: 135%;
+  }
+}
+.car-service__right .list ul p br {
+  display: none;
+}
+@media screen and (max-width: 700px) {
+  .car-service__right .list:nth-child(3) ul p {
+    max-width: inherit;
+    width: auto;
+  }
+  .car-service__right .list:nth-child(3) ul p br {
+    display: block;
   }
 }
 .car-service__right .list:last-child {

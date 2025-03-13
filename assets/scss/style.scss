@@ -1355,7 +1355,8 @@ textarea {
 
                 @include media(700) {
                     display: block;
-                    bottom: 0;
+                    bottom: 196px;
+                    height: 511px;
                     width: 100%;
                     object-position: center top;
                 }
@@ -1382,7 +1383,7 @@ textarea {
 
         @include media(700) {
             left: 0;
-            bottom: 560px;
+            bottom: 493px;
             width: 68px;
         }
     }
@@ -1410,8 +1411,9 @@ textarea {
             }
 
             @include media(700) {
-                right: -35px;
-                bottom: 669px;
+                right: -6px;
+                bottom: 618px;
+                width: 28px;
             }
         }
 
@@ -1450,7 +1452,7 @@ textarea {
             }
 
             @include media(700) {
-                margin-bottom: 570px;
+                margin-bottom: 494px;
                 max-width: 266px;
                 gap: 15px;
             }
@@ -1501,7 +1503,7 @@ textarea {
                 left: 50%;
                 width: 130px;
                 min-width: 130px;
-                bottom: 247px;
+                bottom: 213px;
                 transform: translateX(calc(-50% + 40px));
 
                 img {
@@ -1517,7 +1519,7 @@ textarea {
 
                 @include media(700) {
                     font-size: 16px;
-                    margin: 13px 0 10px;
+                    margin: 8px 0 10px;
                 }
             }
 
@@ -2486,6 +2488,7 @@ textarea {
 
             @include media(1050) {
                 padding: 30px;
+                order: 2;
 
                 h3 {
                     max-width: 100%;
@@ -2711,6 +2714,11 @@ textarea {
                 flex-shrink: 0;
             }
 
+            @include media(700) {
+                flex-direction: column;
+                gap: 0px;
+            }
+
             .text {
                 width: 225px;
 
@@ -2750,6 +2758,7 @@ textarea {
 
                     @include media(700) {
                         font-size: 56px;
+                        line-height: 67px;
                     }
 
                     span {
@@ -2770,8 +2779,8 @@ textarea {
             h4 {
                 display: flex;
                 align-items: center;
-                gap: 20px;
-                font-size: 18px;
+                gap: 5px;
+                font-size: 9px;
                 line-height: 120%;
                 background: linear-gradient(97.28deg, rgba(255, 255, 255, 0.5) 22.84%, rgba(164, 166, 170, 0.5) 50.08%, rgba(255, 255, 255, 0.5) 82.62%), #FFFFFF;
                 -webkit-background-clip: text;
@@ -2779,25 +2788,10 @@ textarea {
                 background-clip: text;
                 text-fill-color: transparent;
                 color: transparent;
+                margin-top: -5px;
 
-                img {
-                    &:last-child {
-                        display: none;
-                    }
-                }
-
-                @include media(1050) {
-                    span {
-                        display: none;
-                    }
-
-                    img {
-                        display: none;
-
-                        &:last-child {
-                            display: block;
-                        }
-                    }
+                @include media(-700) {
+                    display: none !important;
                 }
             }
 
@@ -3192,6 +3186,23 @@ textarea {
                         max-width: 100px;
                         font-size: 13px;
                         line-height: 135%;
+                    }
+
+                    br {
+                        display: none;
+                    }
+                }
+            }
+
+            &:nth-child(3) {
+                @include media(700) {
+                    ul p {
+                        max-width: inherit;
+                        width: auto;
+
+                        br {
+                            display: block;
+                        }
                     }
                 }
             }
