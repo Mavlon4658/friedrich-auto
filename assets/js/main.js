@@ -147,10 +147,10 @@ const reviewSwp = new Swiper('.reviews .swiper', {
     slidesPerView: 'auto',
     spaceBetween: 10,
     freeMode: true,
-    speed: 7000,
+    speed: 900,
     loop: true,
     autoplay: {
-        delay: 0,
+        delay: 3000,
     },
     watchSlidesProgress: false,
     // allowTouchMove: false,
