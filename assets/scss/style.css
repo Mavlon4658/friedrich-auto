@@ -905,6 +905,9 @@ textarea {
   opacity: 1;
   font-weight: bold;
 }
+.home-navs li:first-child a::after {
+  display: none;
+}
 .home-navs li:hover .links {
   display: flex;
 }
@@ -957,6 +960,7 @@ textarea {
   width: 100%;
   height: 1px;
   border-top: 1.5px dotted #55A1FF;
+  display: block;
 }
 .home h1 {
   font-size: 64px;
@@ -1141,7 +1145,7 @@ textarea {
 
 .about {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 .about-bg {
   position: absolute;
@@ -1154,6 +1158,12 @@ textarea {
   z-index: -1;
   -o-object-position: right center;
      object-position: right center;
+  display: none;
+}
+@media screen and (max-width: 1250px) {
+  .about-bg {
+    display: block;
+  }
 }
 @media screen and (max-width: 700px) {
   .about-bg {
@@ -1362,6 +1372,7 @@ textarea {
   -o-object-fit: cover;
      object-fit: cover;
   z-index: -1;
+  display: none;
 }
 @media screen and (max-width: 1250px) {
   .repairing-bg {
@@ -1370,10 +1381,27 @@ textarea {
     bottom: 170px;
     top: auto;
     height: 821px;
+    display: block;
   }
 }
 @media screen and (max-width: 700px) {
   .repairing-bg {
+    display: none;
+  }
+}
+.repairing-bg.xl {
+  display: block;
+  height: auto;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  top: auto;
+  min-width: 1920px;
+  -o-object-position: center !important;
+     object-position: center !important;
+}
+@media screen and (max-width: 1250px) {
+  .repairing-bg.xl {
     display: none;
   }
 }
@@ -2675,6 +2703,7 @@ textarea {
 
 .reviews {
   margin-bottom: 180px;
+  position: relative;
 }
 @media screen and (max-width: 1050px) {
   .reviews {
@@ -2685,6 +2714,17 @@ textarea {
   .reviews {
     margin-bottom: 60px;
   }
+}
+.reviews-bg {
+  position: absolute;
+  left: 0;
+  bottom: -180px;
+  width: 100%;
+  z-index: -1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 .reviews-head {
   display: flex;
@@ -2854,14 +2894,19 @@ textarea {
   content: "";
   position: absolute;
   z-index: 1;
-  width: 60vw;
-  height: calc(100% + 130px);
-  left: -150px;
-  top: 50%;
-  transform: translate(100%, -50%);
-  background: linear-gradient(180deg, #01040F 0%, rgba(1, 4, 15, 0) 100%);
+  width: 1039px;
+  min-width: 1039px;
+  height: 327px;
+  left: 851px;
+  top: -66px;
+  background: linear-gradient(to right, rgba(1, 4, 15, 0), rgb(1, 4, 15));
   mix-blend-mode: normal;
-  filter: blur(50px);
+}
+@media screen and (min-width: 2000px) {
+  .reviews .swiper::after {
+    width: 60vw;
+    min-width: 60vw;
+  }
 }
 @media screen and (max-width: 1050px) {
   .reviews .swiper::after {
