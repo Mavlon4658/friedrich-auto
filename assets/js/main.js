@@ -232,3 +232,17 @@ if (navs) {
     navsCloseBtn.onclick = () => navsClose();
     navsBg.onclick = () => navsClose();
 }
+
+document.querySelectorAll('.wrapper .tn-atom').forEach(element => {
+    element.classList.add('autoink');
+
+    const pEl = document.createElement('div');
+    pEl.className = 'autoink-icon';
+    
+    let div = document.createElement('div');
+    div.className = 'ink animate';
+    div.style.cssText = 'height: 200px; width: 250px; top: -20px; left: -140px;';
+    
+    pEl.appendChild(div);
+    element.appendChild(pEl);
+});

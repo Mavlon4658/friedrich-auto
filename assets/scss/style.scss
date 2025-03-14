@@ -26,6 +26,55 @@ textarea {
     }
 }
 
+.autoink{
+    position: relative;
+    // overflow: hidden;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+
+    &-icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 100px;
+        overflow: hidden;
+    }
+}
+
+.ink{
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, 1.0);
+    border-radius: 100%;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    z-index: 20;  
+}
+
+.animate {
+    webkit-animation: ripple 4s linear infinite;
+    -moz-animation: ripple 4s linear infinite;
+    -ms-animation: ripple 4s linear infinite;
+    -o-animation: ripple 4s linear infinite;
+    animation: ripple 4s linear infinite;
+}
+
+@keyframes ripple {  
+    20% {
+        opacity: 0;     
+        transform: scale(2.5);
+    }
+    100% {
+        opacity: 0;     
+        transform: scale(2.5);
+    }
+}    
+
+
 .btn {
     &-blue {
         font-size: 16px;
