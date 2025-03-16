@@ -8,8 +8,14 @@ const bodyVisible = () => {
 
 function getCurrentTime() {
     const now = new Date();
-    const hours = now.getHours().toString().padStart(2, '0');
-    const minutes = now.getMinutes().toString().padStart(2, '0');
+
+    const options = { timeZone: "Europe/Moscow", hour: "2-digit", minute: "2-digit", hour12: false };
+    const formatter = new Intl.DateTimeFormat("ru-RU", options);
+
+    const parts = formatter.formatToParts(now);
+    const hours = parts.find(part => part.type === "hour").value;
+    const minutes = parts.find(part => part.type === "minute").value;
+
     return { 
         hour: +hours, 
         minute: +minutes
