@@ -252,3 +252,66 @@ document.querySelectorAll('.wrapper .tn-atom').forEach(element => {
     pEl.appendChild(div);
     element.appendChild(pEl);
 });
+
+const determineText = document.querySelectorAll('.determine-content__right ul li');
+const determineImg = document.querySelectorAll('.determine-content__left .main-img');
+let clrInterval;
+
+if (determineText.length) {
+    const changeDetermineEl = (ID) => {
+        determineText.forEach((el, elID) => {
+            if (ID == elID) {
+                el.classList.add('active');
+            } else {
+                el.classList.remove('active');
+            }
+        })
+        determineImg.forEach((el, elID) => {
+            if (ID == elID) {
+                el.classList.add('active');
+            } else {
+                el.classList.remove('active');
+            }
+        })
+    }
+    let count = 0;
+
+    clrInterval = setInterval(() => {
+        count++;
+        changeDetermineEl(count);
+
+        if (count == 4) {
+            count = -1;
+        }
+    }, 4000);
+
+    determineText.forEach((el, elID) => {
+        el.onclick = () => {
+            clearInterval(clrInterval);
+            changeDetermineEl(elID);
+            count = elID;
+            clrInterval = setInterval(() => {
+                count++;
+                changeDetermineEl(count);
+        
+                if (count == 4) {
+                    count = -1;
+                }
+            }, 4000);
+        }
+    })
+}
+
+const offerSwp = new Swiper('.offer-swp .swiper', {
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+    freeMode: true,
+    breakpoints: {
+        spaceBetween: 30,
+        freeMode: false,
+    },
+    navigation: {
+        nextEl: '.offer .btn-swp__next',
+        prevEl: '.offer .btn-swp__prev',
+    }
+})
