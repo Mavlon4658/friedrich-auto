@@ -1181,7 +1181,7 @@ textarea {
         }
 
         h1 {
-            max-width: 813px;
+            max-width: 872px;
         }
 
         .home-bottom {
@@ -7217,3 +7217,194 @@ textarea {
     }
 }
 // Rediness end
+
+// We determine
+.we-determine {
+    padding-top: 180px;
+    position: relative;
+    z-index: 1;
+
+    @include media(1050) {
+        padding-top: 100px;
+    }
+
+    @include media(700) {
+        padding-top: 60px;
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .container {
+        position: relative;
+    }
+
+    .scroll-block {
+        top: -180px;
+        transform: translateY(0);
+    }
+
+    h2 {
+        font-size: 64px;
+        line-height: 120%;
+        max-width: 1196px;
+        margin: 0 0 80px 200px;
+
+        @include media(1250) {
+            margin-left: 0;
+        }
+
+        @include media(1050) {
+            font-size: 48px;
+            margin-bottom: 60px;
+        }
+
+        @include media(700) {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+    }
+
+    ul {
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        position: relative;
+        z-index: 2;
+
+        @include media(700) {
+            gap: 20px;
+        }
+
+        &.card-2 {
+            gap: 30px 32px;
+
+            @include media(700) {
+                gap: 20px;
+            }
+
+            li {
+                width: calc(100% / 3 - 64px / 3);
+
+                @include media(1280) {
+                    width: calc(50% - 16px);
+                }
+
+                @include media(700) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    li {
+        position: relative;
+        border-radius: 25px;
+        overflow: hidden;
+        height: 478px;
+        width: calc(25% - 90px / 4);
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 40px 37px 39px 40px;
+
+        @include media(1440) {
+            width: calc(100% / 3 - 20px);
+        }
+
+        @include media(1050) {
+            width: calc(50% - 15px);
+        }
+
+        @include media(700) {
+            width: 100%;
+            height: 397px;
+            border-radius: 15px;
+            padding: 30px 27px 30px 30px;
+        }
+
+        .main-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .bg-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.4;
+        }
+
+        &::after {
+            border-radius: 25px;
+            content: "";
+            position: absolute;
+            z-index: -1;
+            inset: 0;
+            border: 3px solid transparent;
+            background: linear-gradient(150deg, #FFF, #A4A6AA 46%, #FFF) border-box;
+            mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+            opacity: 0.05;
+
+            @include media(700) {
+                border-radius: 15px;
+            }
+        }
+
+        .number {
+            font-size: 24px;
+            line-height: 130%;
+            font-weight: 500;
+            opacity: 0.2;
+
+            @include media(700) {
+                font-size: 18px;
+            }
+        }
+
+        h4 {
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 130%;
+            margin-bottom: 20px;
+
+            @include media(700) {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+        }
+
+        p {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 155%;
+            opacity: 0.7;
+
+            @include media(700) {
+                font-size: 15px;
+            }
+        }
+    }
+}
+// We determine end

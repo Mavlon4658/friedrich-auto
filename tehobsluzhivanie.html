@@ -1,0 +1,1689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/images/logo.svg" type="image/x-icon">
+    <title>FRIEDRICH-AUTO</title>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- CSS file -->
+    <link rel="stylesheet" href="./assets/scss/style.css">
+</head>
+<body>
+    
+    <div class="wrapper">
+
+        <!-- Header -->
+        <header class="header">
+            <div class="container header-container">
+                <div class="header-left">
+                    <a href="/" class="header-logo">
+                        <img src="./assets/images/logo.svg" alt="">
+                        <span>
+                            Специализированный автосервис <br>
+                            BMW, MINI, Mercedes-Benz <br>
+                            в Санкт-Петербурге
+                        </span>
+                    </a>
+                    <div class="header-location">
+                        <img src="./assets/images/header-location-icon.svg" alt="">
+                        <div class="header-location__text">
+                            <p>
+                                <span>г. Санкт-Петербург, </span> <br>
+                                Краснопутиловская ул., 46, корп. 7, стр. 3,
+                            </p>
+                            <a href="https://yandex.ru/maps?ll=30.2632440000000002555680112%2C59.92609800000000319641912938&mode=routes&rtext=~59.92609800000000319641912938%2C30.2632440000000002555680112&z=17" target="_blank">построить маршрут</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="header-network">
+                        <img src="./assets/images/header-user-card.png" alt="" class="main-img">
+                        <div class="texts">
+                            <h4>Есть вопросы?</h4>
+                            <p>Ответим через 5 мин</p>
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="https://t.me/fdhauto" target="_blank">
+                                    <img src="./assets/images/telegram.svg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://wa.me/79811851212" target="_blank">
+                                    <img src="./assets/images/whatsapp.svg" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header-phone">
+                        <a href="tel:+7 (812) 317-70-56" target="_blank">
+                            <img src="./assets/images/header-phone.gif" width="32" alt="">
+                            <span>
+                                +7 (812)
+                                <b>317-70-56</b>
+                            </span>
+                        </a>
+                        <p>
+                            <span class="icon"></span>
+                            <span class="text-active">Мы онлайн и на связи до 20:00</span>
+                            <span class="text-noactive">Нас нет на месте, будем с 10:00</span>
+                        </p>
+                    </div>
+                    <button class="bars navigation-open">
+                        <span>Меню</span>
+                        <img src="./assets/images/bars.svg" alt="">
+                    </button>
+                </div>
+            </div>
+        </header>
+        <!-- Header end -->
+
+        <!-- Navigation -->
+        <section class="navigation">
+            <div class="navigation-bg"></div>
+            <div class="navigation-content">
+                <button class="btn-close">
+                    <img src="./assets/images/times-blue.svg" alt="">
+                </button>
+                <div class="navigation-content__head">
+                </div>
+                <div class="navigation-content__body">
+                    <div class="navigation-content__body-item">
+                        <h3>
+                            <img src="./assets/images/bars.svg" alt="">
+                            <span>Навигация</span>
+                        </h3>
+                        <ul>
+                            <li>
+                                <a href="#">О нас</a>
+                            </li>
+                            <li>
+                                <a href="#">Полезные статьи</a>
+                            </li>
+                            <li>
+                                <a href="#">Аренда мототехники</a>
+                            </li>
+                            <li>
+                                <a href="#">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="navigation-content__body-item">
+                        <h3>
+                            <img src="./assets/images/home-icon-1.gif" width="24" alt="">
+                            <span>Все услуги автосервиса</span>
+                        </h3>
+                        <ul>
+                            <li>
+                                <a href="#">Диагностика</a>
+                            </li>
+                            <li>
+                                <a href="#">Ремонт электрики</a>
+                            </li>
+                            <li>
+                                <a href="#">Техобслуживание</a>
+                            </li>
+                            <li>
+                                <a href="#">Ремонт подвески</a>
+                            </li>
+                            <li>
+                                <a href="#">Ремонт двигателя</a>
+                            </li>
+                            <li>
+                                <a href="#">Ремонт АКПП, МКПП</a>
+                            </li>
+                            <li>
+                                <a href="#">Ремонт тормозной системы</a>
+                            </li>
+                            <li>
+                                <a href="#">Ремонт рулевого управления</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="navigation-content__body-item">
+                        <h3>Адрес</h3>
+                        <p>
+                            <b>г. Санкт-Петербург,</b> <br>
+                            Краснопутиловская ул., 46, корп. 7, стр. 3,
+                        </p>
+                        <a href="#" class="route-link">построить маршрут</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Navigation end -->
+
+        <!-- Modals -->
+        <section class="modal diagnostic-modal">
+            <div class="modal-bg"></div>
+            <div class="modal-dialog__wrap">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <button class="modal-close">
+                            <img src="./assets/images/close_icon.svg" alt="">
+                        </button>
+                        <img src="./assets/images/diagnostic-modal-bg.png" alt="" class="modal-bg">
+                        <h2 class="text-gr">
+                            <span>Комплексная диагностика авто</span> <br> по 50+ параметрам
+                        </h2>
+                        <ul class="list-1">
+                            <li>
+                                <img src="./assets/images/tick-icon.svg" alt="">
+                                <p><b>Подробное пояснение</b> в чем проблема</p>
+                            </li>
+                            <li>
+                                <img src="./assets/images/tick-icon.svg" alt="">
+                                <p>Подбор вариантов <b>устранения проблемы</b></p>
+                            </li>
+                            <li>
+                                <img src="./assets/images/tick-icon.svg" alt="">
+                                <p>Расчет <b>стоимости ремонта</b></p>
+                            </li>
+                        </ul>
+                        <ul class="list-2">
+                            <li>
+                                <img src="./assets/images/tick-icon.svg" alt="">
+                                <p><b>Проверяем систему охлаждения,</b> чтобы предотвратить перегрев и возможные проблемы</p>
+                            </li>
+                            <li>
+                                <img src="./assets/images/tick-icon.svg" alt="">
+                                <p><b>Диагностируем электронные системы автомобиля,</b> чтобы убедиться в их корректной работе</p>
+                            </li>
+                            <li>
+                                <img src="./assets/images/tick-icon.svg" alt="">
+                                <p><b>Проверяем двигатель на наличие ошибок и неисправностей,</b> чтобы выявить возможные проблемы на ранней стадии</p>
+                            </li>
+                        </ul>
+                        <form action="" class="modal-form">
+                            <div class="modal-form__head">
+                                <img src="./assets/images/modal-arrow.svg" alt="" class="icon">
+                                <img src="./assets/images/modal-arrow-2.svg" alt="" class="icon-2">
+                                <img src="./assets/images/diagnostic-form-card.png" alt="" class="main-img">
+                                <p>
+                                    <span>Ароматизатор</span> BMW Natural Air <br> <span>в подарок</span>
+                                </p>
+                            </div>
+                            <div class="form-inp">
+                                <img src="./assets/images/form-user-icon.svg" alt="">
+                                <input type="text" placeholder="Введите имя">
+                            </div>
+                            <div class="form-inp">
+                                <img src="./assets/images/form-phone-icon.png" alt="">
+                                <input type="tel" placeholder="+7 (999) 888-77-66">
+                            </div>
+                            <button type="submit" class="btn-blue tn-atom">
+                                <span>Записаться на диагностику</span>
+                                <img src="./assets/images/btn-bg.png" alt="" class="bg-img">
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Car modal -->
+        <section class="modal car-modal">
+            <div class="modal-bg"></div>
+            <div class="modal-dialog__wrap">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <button class="modal-close">
+                            <img src="./assets/images/close_icon.svg" alt="">
+                        </button>
+                        <div class="car-modal__left">
+                            <div class="car-modal__swp">
+                                <div class="swp-btn__wrap">
+                                    <button class="btn-prev btn-swp swp-btn">
+                                        <img src="./assets/images/arrow-left.svg" alt="">
+                                    </button>
+                                    <button class="btn-next btn-swp swp-btn">
+                                        <img src="./assets/images/arrow-right.svg" alt="">
+                                    </button>
+                                </div>
+                                <div class="swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="./assets/images/car-modal-card-1.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./assets/images/car-modal-card-1.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./assets/images/car-modal-card-1.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./assets/images/car-modal-card-1.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./assets/images/car-modal-card-1.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./assets/images/car-modal-card-1.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./assets/images/car-modal-card-1.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./assets/images/car-modal-card-1.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul>
+                                <li class="active">
+                                    <img src="./assets/images/car-modal-card-2.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="./assets/images/car-modal-card-2.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="./assets/images/car-modal-card-2.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="./assets/images/car-modal-card-2.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="./assets/images/car-modal-card-2.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="./assets/images/car-modal-card-2.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="./assets/images/car-modal-card-2.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="./assets/images/car-modal-card-2.png" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="car-modal__right">
+                            <h2 class="text-gr">
+                                <span>BMW 118i E87.</span> Восстановили АКПП <br> в 3 раза дешевле, чем другие сервисы 
+                            </h2>
+                            <ul>
+                                <li>
+                                    <h3>Проблема</h3>
+                                    <ul>
+                                        <li>АКПП работает не стабильно, дергается при ускорении и при переключении передач. В 3 автосервисах указали, что проблема с АКПП, надо чинить, озвучили цену ремонта 100 000 ₽ - 130 000 ₽ и сроки до 1 недели.  </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h3>Выявление причины проблемы</h3>
+                                    <ul>
+                                        <li>Провели комплексную диагностику. Т.к. на уже встречались с подобными проблемами, предложили начать с проверки  мехатроника. Для его проверки не нужно снимать АКПП, что уже снижает стоимость ремонта. </li>
+                                        <li>В мехатронике обнаружили несколько изношенных шариков. Эти шарики работают, как клапаны, регулируют давление масла внутри системы. Их износ вызывает перетечки жидкости, что приводит к множеству проблем.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h3>Решение</h3>
+                                    <ul>
+                                        <li>В течение дня сняли и разобрали мехатроник, заменили изношенные шарики, поменяли масло в коробке и восстановили нормальную работу АКПП. Клиент заплатил всего 45 000₽, вместо 130 000 ₽ за ремонт АКПП в других сервисах.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Car modal end -->
+        <!-- Modals end -->
+
+        <main>
+
+            <!-- Home -->
+            <section class="home other">
+                <img src="./assets/images/remont-bg-6.png" alt="" class="home-bg">
+                <img src="./assets/images/remont-bg-6-mb.png" alt="" class="home-bg mb">
+                <div class="container home-container">
+                    <div class="home-navs__wrap">
+                        <ul class="home-navs">
+                            <li>
+                                <a href="#">
+                                    <img src="./assets/images/home-icon-1.gif" width="46" alt="">
+                                    <span>
+                                        Услуги
+                                        <img src="./assets/images/arrow-down.svg" alt="">
+                                    </span>
+                                </a>
+                                <div class="links">
+                                    <a href="#">Диагностика</a>
+                                    <a href="#">Ремонт электрики</a>
+                                    <a href="#">Техобслуживание</a>
+                                    <a href="#">Ремонт подвески</a>
+                                    <a href="#">Ремонт двигателя</a>
+                                    <a href="#">Ремонт АКПП, МКПП</a>
+                                    <a href="#">Ремонт тормозной системы</a>
+                                    <a href="#">Ремонт рулевого управления</a>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">О нас</a>
+                            </li>
+                            <li>
+                                <a href="#">Полезные статьи</a>
+                            </li>
+                            <li>
+                                <a href="#">Аренда мототехники</a>
+                            </li>
+                            <li>
+                                <a href="#">Контакты</a>
+                            </li>
+                        </ul>
+                        <div class="header-phone">
+                            <a href="#">
+                                <img src="./assets/images/header-phone.gif" width="32" alt="">
+                                <span>
+                                    +7 (812)
+                                    <b>317-70-56</b>
+                                </span>
+                            </a>
+                            <p>
+                                <span class="icon"></span>
+                                <span class="text-active">Мы онлайн и на связи до 20:00</span>
+                                <span class="text-noactive">Нас нет на месте, будем с 10:00</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="home-bottom">
+                        <div class="breadcrumb">
+                            <a href="/">Главная</a>  >  
+                            Техобслуживание
+                        </div>
+                        <h1 style="max-width: 1033px;">
+                            <span>Техническое обслуживание</span> <br> BMW, MINI и Mercedes в день обращения от 30 минут
+                        </h1>
+                        <ul>
+                            <li>
+                                <img src="./assets/images/tick-icon.svg" alt="">
+                                <p><span>Более 10 лет ремонтируем</span> только BMW, MINI и Mercedes</p>
+                            </li>
+                            <li>
+                                <img src="./assets/images/tick-icon.svg" alt="">
+                                <p>Используем <span>оригинальные масла и запчасти</span></p>
+                            </li>
+                            <li>
+                                <img src="./assets/images/tick-icon.svg" alt="">
+                                <p>Предоставляем <span>фото/видеоотчеты</span> по ремонту</p>
+                            </li>
+                            <li>
+                                <img src="./assets/images/tick-icon.svg" alt="">
+                                <p>Комфортная <span>зона ожидания</span></p>
+                            </li>
+                        </ul>
+                        <div class="btns">
+                            <a href="#" class="btn-blue diagnostic-modal__open tn-atom">
+                                <span class="lg">Записаться на бесплатную диагностику</span>
+                                <span class="mb">Записаться на диагностику</span>
+                                <img src="./assets/images/btn-bg.png" class="bg-img" alt="">
+                            </a>
+                            <a href="https://wa.me/79811851212" target="_blank" class="btn-green tn-atom">
+                                <span>Задать вопрос в WhatsApp</span>
+                                <img src="./assets/images/home-icon-2.svg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="home-card">
+                                        <div class="home-card__head">
+                                            <div class="name">10.02.2024, Андрей</div>
+                                            <img src="./assets/images/stars.svg" alt="">
+                                        </div>
+                                        <div class="date">Техобслуживание - BMW X5 G05 3.0D</div>
+                                        <p>Проходил ТО-60, заменили масло, фильтры, тормозную жидкость и антифриз. Проверили ходовую – никаких замечаний. Сервисом доволен, сделали всё за 2 часа!</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="home-card">
+                                        <div class="home-card__head">
+                                            <div class="name">15.02.2024, Сергей</div>
+                                            <img src="./assets/images/stars.svg" alt="">
+                                        </div>
+                                        <div class="date">Техобслуживание - Mercedes-Benz E220 W213</div>
+                                        <p>Заменили тормозные диски, масло в АКПП и свечи. Машина стала тормозить плавнее, спасибо за профессиональный подход.</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="home-card">
+                                        <div class="home-card__head">
+                                            <div class="name">18.02.2024, Александр</div>
+                                            <img src="./assets/images/stars.svg" alt="">
+                                        </div>
+                                        <div class="date">Техобслуживание - BMW 5-Series G30 530i</div>
+                                        <p>Перед поездкой на 2000 км решил сделать ТО. Проверили ходовую, заменили жидкости, дали рекомендации по тормозной системе.</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="home-card">
+                                        <div class="home-card__head">
+                                            <div class="name">20.02.2024, Иван</div>
+                                            <img src="./assets/images/stars.svg" alt="">
+                                        </div>
+                                        <div class="date">Техобслуживание - Mercedes-Benz GLE 450</div>
+                                        <p>ТО перед сезоном: заменили масло, тормозную жидкость и охлаждающую жидкость. Всё прошло быстро и четко!</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="home-card">
+                                        <div class="home-card__head">
+                                            <div class="name">22.02.2024, Олег</div>
+                                            <img src="./assets/images/stars.svg" alt="">
+                                        </div>
+                                        <div class="date">Техобслуживание - Mini Cooper Countryman</div>
+                                        <p>Поменяли масло в коробке, свечи и сделали диагностику двигателя. Никаких нареканий, машина стала отзывчивее.</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="home-card">
+                                        <div class="home-card__head">
+                                            <div class="name">25.02.2024, Андрей</div>
+                                            <img src="./assets/images/stars.svg" alt="">
+                                        </div>
+                                        <div class="date">Техобслуживание - BMW X6 G06 40i</div>
+                                        <p>ТО-30 + диагностика. Никаких проблем не нашли, заменили масло и фильтры, по деньгам вышло адекватно.</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="home-card">
+                                        <div class="home-card__head">
+                                            <div class="name">28.02.2024, Павел</div>
+                                            <img src="./assets/images/stars.svg" alt="">
+                                        </div>
+                                        <div class="date">Техобслуживание - Mercedes-Benz C200</div>
+                                        <p>Поменяли масло, тормозные колодки и проверили ходовую. Машина тормозит идеально, доволен результатом!</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="home-card">
+                                        <div class="home-card__head">
+                                            <div class="name">02.03.2024, Артём</div>
+                                            <img src="./assets/images/stars.svg" alt="">
+                                        </div>
+                                        <div class="date">Техобслуживание - Mini Cooper S R56</div>
+                                        <p>Комплексное ТО: поменяли масло, фильтры, проверили подвеску. Всё объяснили, показали старые запчасти, сервис на уровне.</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="home-card">
+                                        <div class="home-card__head">
+                                            <div class="name">05.03.2024, Николай</div>
+                                            <img src="./assets/images/stars.svg" alt="">
+                                        </div>
+                                        <div class="date">Техобслуживание - BMW 7-Series G12 750Li</div>
+                                        <p>Прошел ТО-80. Поменяли масло, свечи зажигания и антифриз. Всё сделали аккуратно, без спешки, качественный сервис.</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="home-card">
+                                        <div class="home-card__head">
+                                            <div class="name">08.03.2024, Дмитрий</div>
+                                            <img src="./assets/images/stars.svg" alt="">
+                                        </div>
+                                        <div class="date">Техобслуживание - Mercedes-Benz Vito 116</div>
+                                        <p>Регулярное обслуживание рабочего авто. ТО проводят быстро, цены адекватные. Проблем после их работы не возникает.</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="home-card">
+                                        <div class="home-card__head">
+                                            <div class="name">10.03.2024, Святослав</div>
+                                            <img src="./assets/images/stars.svg" alt="">
+                                        </div>
+                                        <div class="date">Техобслуживание - BMW X5 F15 30d</div>
+                                        <p>Заменили масло в коробке, промыли топливную систему, сделали диагностику ходовой. Машина работает отлично!</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="home-card">
+                                        <div class="home-card__head">
+                                            <div class="name">12.03.2024, Василий</div>
+                                            <img src="./assets/images/stars.svg" alt="">
+                                        </div>
+                                        <div class="date">Техобслуживание - Mercedes-Benz S450 W222</div>
+                                        <p>Комплексное обслуживание перед дальним путешествием. Поменяли масло, проверили подвеску и тормозную систему. Всё чётко.</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="home-card">
+                                        <div class="home-card__head">
+                                            <div class="name">14.03.2024, Кирилл</div>
+                                            <img src="./assets/images/stars.svg" alt="">
+                                        </div>
+                                        <div class="date">Техобслуживание - Mini Cooper Clubman R55</div>
+                                        <p>ТО перед весной: заменили масло, тормозные колодки и сделали диагностику двигателя. Теперь можно спокойно ездить.</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="home-card">
+                                        <div class="home-card__head">
+                                            <div class="name">16.03.2024, Владимир</div>
+                                            <img src="./assets/images/stars.svg" alt="">
+                                        </div>
+                                        <div class="date">Техобслуживание - BMW 3-Series F30 320d</div>
+                                        <p>Комплексное ТО перед продажей. Нашли пару мелочей, устранили. Теперь покупатель точно будет доволен.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Home end -->
+
+            <!-- About -->
+            <section class="about">
+                <img src="./assets/images/about-bg.png" alt="" class="about-bg">
+                <div class="container">
+                    <h2>Дилерский уровень сервиса, но&#20;<span>без дилерских наценок</span></h2>
+                    <ul>
+                        <li>
+                            <img src="./assets/images/about-icon-1.gif" width="51" alt="">
+                            <div class="number">01</div>
+                            <h3>Четкое <br> <span>соблюдение регламентов</span> производителя</h3>
+                            <p>Используем <span>профессиональное оборудование</span> дилерского уровня и&nbsp;свежие базы BMW, MINI, Mercedes-Benz</p>
+                        </li>
+                        <li>
+                            <img src="./assets/images/about-icon-2.gif" width="54" alt="">
+                            <div class="number">02</div>
+                            <h3><span>Эксперты</span> BMW, <br> MINI, Mercedes-<br>Benz <span>с опытом работы 10+ лет</span></h3>
+                            <p>Ежедневно ремонтируем <br> только эти&nbsp;марки, <span>знаем <br>все&nbsp;болячки и&nbsp;как устранить</span> <br> их быстро и на долго</p>
+                        </li>
+                        <li>
+                            <img src="./assets/images/about-icon-3.gif" width="72" alt="">
+                            <div class="number">03</div>
+                            <h3>Полная <span>прозрачность ремонта</span> </h3>
+                            <p><span>Видеонаблюдение за&nbsp;ремзоной</span>, ежедневные фото\видеоочтеты <br>с&nbsp;пояснениями, детальные заказ-наряды</p>
+                        </li>
+                        <li>
+                            <img src="./assets/images/about-icon-4.gif" width="65" alt="">
+                            <div class="number">04</div>
+                            <h3><span>Гарантия 1 год,</span> без&nbsp;ограничений по&nbsp;пробегу </h3>
+                            <p>Уверены в&nbsp;качестве своей <br>работы, поэтому предоставляем <span>расширенную гарантию <br>на&nbsp;ремонт и&nbsp;запчасти</span></p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- About end -->
+
+            <!-- Determine -->
+            <section class="we-determine">
+                <img src="./assets/images/we-determine-bg.png" alt="" class="we-determine__bg">
+                <div class="container">
+                    <div class="scroll-block">
+                        <div class="scroll-block__icon">
+                            <img src="./assets/images/mouse-icon.svg" alt="">
+                            <div class="triangles">
+                                <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.8378 2.04482L6.10062 7.64485C5.77497 8.02984 5.22507 8.02984 4.89942 7.64485L0.162234 2.04482C-0.193675 1.62403 0.0744241 0.933594 0.59375 0.933594H10.4062C10.9256 0.933594 11.1937 1.62403 10.8378 2.04482Z" fill="#135BB2"/>
+                                </svg>
+                                <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.8378 2.04482L6.10062 7.64485C5.77497 8.02984 5.22507 8.02984 4.89942 7.64485L0.162234 2.04482C-0.193675 1.62403 0.0744241 0.933594 0.59375 0.933594H10.4062C10.9256 0.933594 11.1937 1.62403 10.8378 2.04482Z" fill="#135BB2"/>
+                                </svg>
+                                <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.8378 2.04482L6.10062 7.64485C5.77497 8.02984 5.22507 8.02984 4.89942 7.64485L0.162234 2.04482C-0.193675 1.62403 0.0744241 0.933594 0.59375 0.933594H10.4062C10.9256 0.933594 11.1937 1.62403 10.8378 2.04482Z" fill="#135BB2"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <p>листай вниз</p>
+                        <p>листай вниз</p>
+                    </div>
+                    <h2 class="text-gr"><span>Выявим все скрытые неисправности до того,</span> как они станут проблемой</h2>
+                    <ul>
+                        <li>
+                            <img src="./assets/images/remont-card-7-1.png" alt="" class="main-img">
+                            <img src="./assets/images/remont-card-bg.png" alt="" class="bg-img">
+                            <div class="number">01</div>
+                            <div>
+                                <h4>Меняем масла и фильтры</h4>
+                                <p>Меняем моторное масло, масляный, воздушный и салонный фильтры для защиты двигателя и чистого воздуха в салоне</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./assets/images/remont-card-7-2.png" alt="" class="main-img">
+                            <img src="./assets/images/remont-card-bg.png" alt="" class="bg-img">
+                            <div class="number">02</div>
+                            <div>
+                                <h4>Проверяем и меняем технические жидкости</h4>
+                                <p>Контролируем уровень и состояние тормозной, охлаждающей жидкости, масла в АКПП и ГУР, и заменяем при необходимости</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./assets/images/remont-card-7-3.png" alt="" class="main-img">
+                            <img src="./assets/images/remont-card-bg.png" alt="" class="bg-img">
+                            <div class="number">03</div>
+                            <div>
+                                <h4>Электронные системы</h4>
+                                <p>Проводим компьютерную диагностику с проверкой ошибок, сканированием блоков управления и обновляем ПО</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./assets/images/remont-card-7-4.png" alt="" class="main-img">
+                            <img src="./assets/images/remont-card-bg.png" alt="" class="bg-img">
+                            <div class="number">04</div>
+                            <div>
+                                <h4>Тормозную систему</h4>
+                                <p>Оцениваем износ тормозных колодок и дисков, состояние суппортов, шлангов и при необходимости заменяем</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./assets/images/remont-card-7-5.png" alt="" class="main-img">
+                            <img src="./assets/images/remont-card-bg.png" alt="" class="bg-img">
+                            <div class="number">05</div>
+                            <div>
+                                <h4>Подвеску и рулевое управление</h4>
+                                <p>Проверяем состояние амортизаторов, рычагов, рулевых тяг, сайлентблоков и ступичных подшипников</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./assets/images/remont-card-7-6.png" alt="" class="main-img">
+                            <img src="./assets/images/remont-card-bg.png" alt="" class="bg-img">
+                            <div class="number">06</div>
+                            <div>
+                                <h4>Систему охлаждения</h4>
+                                <p>Проверяем герметичность радиатора, исправность водяного насоса и термостата, уровень охлаждающей жидкости</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./assets/images/remont-card-7-7.png" alt="" class="main-img">
+                            <img src="./assets/images/remont-card-bg.png" alt="" class="bg-img">
+                            <div class="number">07</div>
+                            <div>
+                                <h4>Трансмиссию и аккумулятор</h4>
+                                <p>Проводим диагностику уровня масла в АКПП или МКПП, оценка работоспособности сцепления и тест состояния аккумулятора</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./assets/images/remont-card-7-8.png" alt="" class="main-img">
+                            <img src="./assets/images/remont-card-bg.png" alt="" class="bg-img">
+                            <div class="number">08</div>
+                            <div>
+                                <h4>Развал-схождение</h4>
+                                <p>Контролируем уровень давления в шинах, степень и равномерность износа протектора и выполняем регулировка углов установки колес</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- Determine end -->
+
+            <!-- Cost -->
+            <section class="cost">
+                <img src="./assets/images/cost-bg.png" alt="" class="cost-bg">
+                <div class="container">
+                    <div class="cost-left">
+                        <h2 class="text-gr"><span>Стоимость работ</span> сервиса</h2>
+                        <ul>
+                            <li>
+                                <span>Диагностика двигателя</span>
+                                <span class="line"></span>
+                                <b>1 500 ₽</b>
+                            </li>
+                            <li>
+                                <span>Капитальный ремонт двигателя</span>
+                                <span class="line"></span>
+                                <b>100 00 ₽</b>
+                            </li>
+                            <li>
+                                <span>Замена поддона картера</span>
+                                <span class="line"></span>
+                                <b>6 000 ₽</b>
+                            </li>
+                            <li>
+                                <span>Замена турбины</span>
+                                <span class="line"></span>
+                                <b>10 000 ₽</b>
+                            </li>
+                            <li>
+                                <span>Ремонт системы охлаждения двигателя</span>
+                                <span class="line"></span>
+                                <b>4 000 ₽</b>
+                            </li>
+                            <li>
+                                <span>Замена подушек двигателя</span>
+                                <span class="line"></span>
+                                <b>8 000 ₽</b>
+                            </li>
+                            <li>
+                                <span>Замена масла в двигателе</span>
+                                <span class="line"></span>
+                                <b>1 500 ₽</b>
+                            </li>
+                            <li>
+                                <span>Ремонт системы охлаждения</span>
+                                <span class="line"></span>
+                                <b>4 000 ₽</b>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cost-right">
+                        <img src="./assets/images/logo.svg" alt="" class="logo">
+                        <h3 class="text-gr"><span>Полный список работ</span> и&#20;цены расскажет мастер-приемщик</h3>
+                        <p><span>Подробно проконсультирует</span> и&#20;запишет на&#20;бесплатную диагностику</p>
+                        <div class="form-inp">
+                            <img src="./assets/images/form-phone-icon.png" alt="">
+                            <input type="tel" placeholder="+7 (999) 888-77-66">
+                        </div>
+                        <button class="btn-blue tn-atom">
+                            <span>Узнать стоимость ремонта</span>
+                            <img src="./assets/images/btn-bg-2.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="cost-card">
+                        <img src="./assets/images/cost-card.png" alt="" class="main-img">
+                        <img src="./assets/images/cost-icon-1.svg" alt="">
+                        <h3 class="text-gr">Олег Смирнов</h3>
+                        <p>Ваш персональный мастер-приемщик Friedrich Auto</p>
+                    </div>
+                </div>
+            </section>
+            <!-- Cost end -->
+
+            <!-- Offer -->
+            <section class="offer">
+                <img src="./assets/images/offer-bg.png" alt="" class="offer-bg">
+                <div class="container">
+                    <div class="offer-head">
+                        <h2 class="text-gr"><span>Актуальные до 24.02</span> спецпредложения</h2>
+                        <div class="offer-head__btn">
+                            <button class="btn-swp btn-swp__prev">
+                                <img src="./assets/images/arrow-left.svg" alt="">
+                            </button>
+                            <button class="btn-swp btn-swp__next">
+                                <img src="./assets/images/arrow-right.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="offer-swp">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide offer-card">
+                                    <div class="main-img">
+                                        <img src="./assets/images/offer-card-bg.png" alt="">
+                                        <img src="./assets/images/offer-card-1.png" alt="">
+                                    </div>
+                                    <div class="offer-card__body">
+                                        <div>
+                                            <h3 class="text-gr"><span>Промывка радиатора</span> со снятием и перезаправкой кондиционера</h3>
+                                        </div>
+                                        <div>
+                                            <div class="price">
+                                                <h4>9 900₽</h4>
+                                                <del>14 900₽</del>
+                                            </div>
+                                            <a href="#" class="btn-blue tn-atom">
+                                                <span>Записаться на замену</span>
+                                                <img src="./assets/images/btn-bg-2.svg" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide offer-card">
+                                    <div class="main-img">
+                                        <img src="./assets/images/offer-card-bg.png" alt="">
+                                        <img src="./assets/images/offer-card-2.png" alt="">
+                                    </div>
+                                    <div class="offer-card__body">
+                                        <div>
+                                            <h3 class="text-gr"><span>Замена масла</span> в двигателе</h3>
+                                            <p>С фильтром и ремкомплектом</p>
+                                        </div>
+                                        <div>
+                                            <div class="price">
+                                                <h4>11 900₽</h4>
+                                                <del>14 900₽</del>
+                                            </div>
+                                            <a href="#" class="btn-blue tn-atom">
+                                                <span>Записаться на замену</span>
+                                                <img src="./assets/images/btn-bg-2.svg" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide offer-card">
+                                    <div class="main-img">
+                                        <img src="./assets/images/offer-card-bg.png" alt="">
+                                        <img src="./assets/images/offer-card-3.png" alt="">
+                                    </div>
+                                    <div class="offer-card__body">
+                                        <div>
+                                            <h3 class="text-gr"><span>Замена колодок</span></h3>
+                                            <p>При покупке колодок у нас -25%</p>
+                                        </div>
+                                        <div>
+                                            <div class="price">
+                                                <h4>1 500₽</h4>
+                                                <del>2 200₽</del>
+                                            </div>
+                                            <a href="#" class="btn-blue tn-atom">
+                                                <span>Записаться на замену</span>
+                                                <img src="./assets/images/btn-bg-2.svg" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide offer-card">
+                                    <div class="main-img">
+                                        <img src="./assets/images/offer-card-bg.png" alt="">
+                                        <img src="./assets/images/offer-card-4.png" alt="">
+                                    </div>
+                                    <div class="offer-card__body">
+                                        <div>
+                                            <h3 class="text-gr"><span>Замена цепи ГРМ</span></h3>
+                                            <p>При покупке цепи у нас</p>
+                                        </div>
+                                        <div>
+                                            <div class="price">
+                                                <h4>20 000₽</h4>
+                                                <del>22 000₽</del>
+                                            </div>
+                                            <a href="#" class="btn-blue tn-atom">
+                                                <span>Записаться на замену</span>
+                                                <img src="./assets/images/btn-bg-2.svg" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide offer-card">
+                                    <div class="main-img">
+                                        <img src="./assets/images/offer-card-bg.png" alt="">
+                                        <img src="./assets/images/offer-card-5.png" alt="">
+                                    </div>
+                                    <div class="offer-card__body">
+                                        <div>
+                                            <h3 class="text-gr"><span>Замена масла</span> в коробке</h3>
+                                            <p>С запчастями и расходниками</p>
+                                        </div>
+                                        <div>
+                                            <div class="price">
+                                                <h4>25 000₽</h4>
+                                                <del>28 000₽</del>
+                                            </div>
+                                            <a href="#" class="btn-blue tn-atom">
+                                                <span>Записаться на замену</span>
+                                                <img src="./assets/images/btn-bg-2.svg" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="offer-foot">
+                        <h4>
+                            <img src="./assets/images/pointer.gif" width="28" alt="">
+                            <span class="text-gr">Листайте дальше</span>
+                        </h4>
+                        <div class="btns">
+                            <button class="btn-swp btn-swp__prev">
+                                <img src="./assets/images/arrow-left.svg" alt="">
+                            </button>
+                            <button class="btn-swp btn-swp__next">
+                                <img src="./assets/images/arrow-right.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Offer end -->
+
+            <!-- Example -->
+            <section class="example">
+                <img src="./assets/images/example-bg.png" alt="" class="example-bg">
+                <div class="container example-container">
+                    <div class="scroll-block">
+                        <div class="scroll-block__icon">
+                            <img src="./assets/images/mouse-icon.svg" alt="">
+                            <div class="triangles">
+                                <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.8378 2.04482L6.10062 7.64485C5.77497 8.02984 5.22507 8.02984 4.89942 7.64485L0.162234 2.04482C-0.193675 1.62403 0.0744241 0.933594 0.59375 0.933594H10.4062C10.9256 0.933594 11.1937 1.62403 10.8378 2.04482Z" fill="#135BB2"/>
+                                </svg>
+                                <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.8378 2.04482L6.10062 7.64485C5.77497 8.02984 5.22507 8.02984 4.89942 7.64485L0.162234 2.04482C-0.193675 1.62403 0.0744241 0.933594 0.59375 0.933594H10.4062C10.9256 0.933594 11.1937 1.62403 10.8378 2.04482Z" fill="#135BB2"/>
+                                </svg>
+                                <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.8378 2.04482L6.10062 7.64485C5.77497 8.02984 5.22507 8.02984 4.89942 7.64485L0.162234 2.04482C-0.193675 1.62403 0.0744241 0.933594 0.59375 0.933594H10.4062C10.9256 0.933594 11.1937 1.62403 10.8378 2.04482Z" fill="#135BB2"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <p>листай вниз</p>
+                        <p>листай вниз</p>
+                    </div>
+                    <h2 class="text-gr">
+                        <span>Открытый подход к&#20;ремонту</span> и&#20;никаких неожиданностей
+                    </h2>
+                    <div class="example-left">
+                        <ul>
+                            <li>
+                                <div class="logo">
+                                    <img src="./assets/images/logo.svg" alt="">
+                                    <p>
+                                        Специализированный автосервис
+                                        BMW, MINI, Mercedes-Benz
+                                        в Санкт-Петербурге
+                                    </p>
+                                </div>
+                                <h3 class="text-gr">
+                                    <span>Открытый подход <br> к ремонту</span> и никаких неожиданностей
+                                </h3>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="example-right">
+                        <li class="example-right__card">
+                            <div class="main-img">
+                                <img src="./assets/images/example-card-1.png" alt="">
+                            </div>
+                            <div class="example-right__card-content">
+                                <div class="number">01</div>
+                                <h3>Никакого навязывания</h3>
+                                <p>
+                                    <span>При диагностике подробно все&#20;поясняем.</span> <br>
+                                    И&#20;даем полную картину - что&#20;заменить, <br>
+                                    что&#20;в&#20;ремонт, что&#20;пока подождет
+                                </p>
+                            </div>
+                        </li>
+                        <li class="example-right__card">
+                            <div class="main-img">
+                                <img src="./assets/images/example-card-2.png" alt="">
+                            </div>
+                            <div class="example-right__card-content">
+                                <div class="number">02</div>
+                                <h3>Цены без сюрпризов</h3>
+                                <p>
+                                    Калькулируем ремонт и&#20;<span>составляем <br> детальный заказ-наряд,</span> при <br> необходимости согласовываем доработки
+                                </p>
+                            </div>
+                        </li>
+                        <li class="example-right__card">
+                            <div class="main-img">
+                                <img src="./assets/images/example-card-3.png" alt="">
+                            </div>
+                            <div class="example-right__card-content">
+                                <div class="number">03</div>
+                                <h3>Адекватный прайс работ</h3>
+                                <p>
+                                    За 10+ лет работы оптимизировали процессы <br> и&#20;<span>исключили лишние операции,</span> которые усложняют и&#20;удорожают ремонт
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- Example end -->
+
+            <!-- Inspection -->
+            <section class="inspection">
+                <img src="./assets/images/inspection-bg.png" alt="" class="inspection-bg">
+                <img src="./assets/images/inspection-bg-sm.png" alt="" class="inspection-bg mb">
+                <div class="container inspection-container">
+                    <div class="inspection-left">
+                        <img src="./assets/images/inspection-icon-1.svg" alt="">
+                        <h3>Сергей Орлов</h3>
+                        <p>Ваш персональный автоэксперт и&#20;диагност Friedrich Auto</p>
+                    </div>
+                    <div class="inspection-right">
+                        <h2 class="text-gr">
+                            <span>Поможем разобраться,</span>
+                            что&#20;не так с&#20;автомобилем
+                        </h2>
+                        <h4>На <b>бесплатной</b> комплексной диагностике:</h4>
+                        <ul>
+                            <li>
+                                <img src="./assets/images/inspection-icon-2.svg" alt="">
+                                <p>Диагностика по <b>50+ параметрам</b></p>
+                            </li>
+                            <li>
+                                <img src="./assets/images/inspection-icon-2.svg" alt="">
+                                <p><b>Подробное пояснение</b> в&#20;чем проблема</p>
+                            </li>
+                            <li>
+                                <img src="./assets/images/inspection-icon-2.svg" alt="">
+                                <p>Подбор вариантов <b>устранения проблемы</b></p>
+                            </li>
+                            <li>
+                                <img src="./assets/images/inspection-icon-2.svg" alt="">
+                                <p>Расчет <b>стоимости ремонта</b></p>
+                            </li>
+                        </ul>
+                        <div class="inspection-form">
+                            <div class="form-inp">
+                                <img src="./assets/images/form-phone-icon.png" alt="">
+                                <input type="tel" name="" id="" placeholder="+7 (999) 888-77-66">
+                            </div>
+                            <button class="btn-blue tn-atom">
+                                <span>Записаться на&#20;бесплатную диагностику</span>
+                                <img src="./assets/images/btn-bg.png" alt="" class="bg-img">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Inspection end -->
+
+            <!-- Cases -->
+            <section class="cases">
+                <img src="./assets/images/cases-bg.png" alt="" class="cases-bg">
+                <div class="container">
+                    <h2 class="text-gr"><span>Находим решение</span> даже в&#20;сложных ситуациях</h2>
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide cases-card other">
+                                <div class="cases-card__body">
+                                    <h3 class="text-gr">
+                                        <span>Сервисы</span> отказывают в&#20;ремонте или&#20;<span>заряжают космические цены?</span>
+                                    </h3>
+                                    <p>10+ лет работы с&#20;BMW и&#20;Mercedes помогает точно обнаружить и&#20;устранить проблему</p>
+                                    <h4>
+                                        Узнайте, что у с автомобилем
+                                        на бесплатной диагностике:
+                                    </h4>
+                                    <ul>
+                                        <li>
+                                            <img src="./assets/images/inspection-icon-2.svg" alt="">
+                                            <span>Диагностика по <b>50+ параметрам</b></span>
+                                        </li>
+                                        <li>
+                                            <img src="./assets/images/inspection-icon-2.svg" alt="">
+                                            <span>Подробно все объясним <b>рассчитаем реальную стоимость ремонта</b></span>
+                                            <span class="mb-text"><b>Подробное пояснение</b> в&#20;чем проблема</span>
+                                        </li>
+                                    </ul>
+                                    <a href="#" class="btn-blue tn-atom">
+                                        <span>Записаться на&#20;диагностику</span>
+                                        <img src="./assets/images/btn-bg.png" alt="" class="bg-img">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide cases-card">
+                                <div class="main-img">
+                                    <img src="./assets/images/cases-card-1.png" alt="">
+                                </div>
+                                <div class="cases-card__body">
+                                    <h3 class="text-gr">
+                                        <span>BMW 118i F40.</span> Восстановили АКПП  в&#20;3 раза дешевле, чем&#20;другие сервисы 
+                                    </h3>
+                                    <p>
+                                        Машина становится неуправляемой после 80км/ч,
+                                        в&#20;4 сервисах не&#20;нашли причину проблемы,
+                                        сказали что&#20;по диагностике все в&#20;порядке.
+                                    </p>
+                                    <a href="#" class="car-modal__open">Полная историю ремонта</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide cases-card">
+                                <div class="main-img">
+                                    <img src="./assets/images/cases-card-2.png" alt="">
+                                </div>
+                                <div class="cases-card__body">
+                                    <h3 class="text-gr">
+                                        <span>BMW 118i F40.</span> Восстановили АКПП  в&#20;3 раза дешевле, чем&#20;другие сервисы 
+                                    </h3>
+                                    <p>
+                                        Машина становится неуправляемой после 80км/ч,
+                                        в&#20;4 сервисах не нашли причину проблемы,
+                                        сказали что по&#20;диагностике все в&#20;порядке.
+                                    </p>
+                                    <a href="#" class="car-modal__open">Полная историю ремонта</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="more-link">
+                        <a href="#" class="btn-blue tn-atom">
+                            <span>Показать больше кейсов</span>
+                            <img src="./assets/images/reload-icon.svg" alt="">
+                        </a>
+                    </div> -->
+                </div>
+            </section>
+            <!-- Cases end -->
+
+            <!-- Reviews -->
+            <section class="reviews">
+                <img src="./assets/images/review-bg.png" alt="" class="reviews-bg">
+                <div class="container">
+                    <div class="reviews-head">
+                        <h2 class="text-gr"><span>Реальные отзывы</span> <br> довольных клиентов</h2>
+                        <div class="reviews-head__right">
+                            <div class="text">
+                                <p>возвращаются <br>клиенты</p>
+                                <h3>95 <span>%</span></h3>
+                            </div>
+                            <h4>
+                                <img src="./assets/images/pointer.gif" width="35" alt="">
+                                <span>Листайте дальше</span>
+                            </h4>
+                            <div class="btns">
+                                <button class="btn-swp btn-prev">
+                                    <img src="./assets/images/arrow-left.svg" alt="">
+                                </button>
+                                <button class="btn-swp btn-next">
+                                    <img src="./assets/images/arrow-right.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="home-card">
+                                    <div class="home-card__head">
+                                        <div class="name">10.02.2024, Андрей</div>
+                                        <img src="./assets/images/stars.svg" alt="">
+                                    </div>
+                                    <div class="date">Диагностика - BMW X4 G02 30i</div>
+                                    <p>Обратился на&nbsp;диагностику, так&#20;как двигатель начал троить. Мастера быстро нашли проблему – неисправные форсунки. После замены всё&nbsp;работает идеально!</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="home-card">
+                                    <div class="home-card__head">
+                                        <div class="name">18.02.2024, Дмитрий</div>
+                                        <img src="./assets/images/stars.svg" alt="">
+                                    </div>
+                                    <div class="date">Ремонт электрики - Mini Cooper S F56</div>
+                                    <p>Не работала кнопка запуска двигателя. В&nbsp;сервисе провели диагностику и&nbsp;выяснили, что&nbsp;проблема в&nbsp;замке зажигания. Всё&nbsp;сделали быстро, теперь заводится с&nbsp;пол-оборота!</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="home-card">
+                                    <div class="home-card__head">
+                                        <div class="name">28.02.2024, Павел</div>
+                                        <img src="./assets/images/stars.svg" alt="">
+                                    </div>
+                                    <div class="date">Техобслуживание - Mercedes-Benz C200</div>
+                                    <p>Поменяли масло, тормозные колодки и&nbsp;проверили ходовую. Машина тормозит идеально, доволен результатом!</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="home-card">
+                                    <div class="home-card__head">
+                                        <div class="name">15.02.2024, Олег</div>
+                                        <img src="./assets/images/stars.svg" alt="">
+                                    </div>
+                                    <div class="date">Ремонт МКПП - Mercedes-Benz CLS 350 W218</div>
+                                    <p>При включении 3-й передачи появился хруст. Разобрали коробку – изношен синхронизатор. После замены передачи включаются плавно. </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="home-card">
+                                    <div class="home-card__head">
+                                        <div class="name">05.03.2024, Роман</div>
+                                        <img src="./assets/images/stars.svg" alt="">
+                                    </div>
+                                    <div class="date">Ремонт подвески - Mini Cooper Clubman F54</div>
+                                    <p>На скорости появилась вибрация. Диагностика выявила износ передних рычагов. После замены машина едет&nbsp;ровно.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="home-card">
+                                    <div class="home-card__head">
+                                        <div class="name">15.02.2024, Олег</div>
+                                        <img src="./assets/images/stars.svg" alt="">
+                                    </div>
+                                    <div class="date">Ремонт рулевого - Mercedes-Benz A200 W177</div>
+                                    <p>На неровностях появился стук в&nbsp;рулевой колонке. Оказалось, изношен кардан рулевого вала. После замены всё&nbsp;в&nbsp;порядке.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="home-card">
+                                    <div class="home-card__head">
+                                        <div class="name">25.02.2024, Аркадий</div>
+                                        <img src="./assets/images/stars.svg" alt="">
+                                    </div>
+                                    <div class="date">Ремонт автоэлектрики - Mini Cooper Cabrio</div>
+                                    <p>После зарядки аккумулятора отказал центральный замок. Сбросили ошибки, настроили модуль комфорта – всё&nbsp;снова работает.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="home-card">
+                                    <div class="home-card__head">
+                                        <div class="name">14.03.2024, Антон</div>
+                                        <img src="./assets/images/stars.svg" alt="">
+                                    </div>
+                                    <div class="date">Ремонт автоэлектрики - Mercedes-Benz W176</div>
+                                    <p>После мойки не&nbsp;включались задние фонари. Оказалось, окислились контакты. Почистили, обработали – теперь всё&nbsp;светит.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="home-card">
+                                    <div class="home-card__head">
+                                        <div class="name">10.02.2024, Алексей</div>
+                                        <img src="./assets/images/stars.svg" alt="">
+                                    </div>
+                                    <div class="date">Тормозная система - BMW X4 G02 30i</div>
+                                    <p>При торможении появлялся скрип. Проверка показала износ передних колодок. Заменили колодки и&nbsp;диски – теперь тормоза работают бесшумно.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="home-card">
+                                    <div class="home-card__head">
+                                        <div class="name">18.02.2024, Андрей</div>
+                                        <img src="./assets/images/stars.svg" alt="">
+                                    </div>
+                                    <div class="date">Ремонт АКПП - BMW 4-Series F32 428i</div>
+                                    <p>При переключении с&nbsp;1-й на&nbsp;2-ю появился рывок. Оказалось, перегрето масло в&nbsp;коробке. Поменяли радиатор охлаждения – проблема исчезла.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="home-card">
+                                    <div class="home-card__head">
+                                        <div class="name">02.02.2024, Алексей</div>
+                                        <img src="./assets/images/stars.svg" alt="">
+                                    </div>
+                                    <div class="date">Диагностика - BMW 3-Series G20 330i</div>
+                                    <p>Авто стало дергаться при&nbsp;разгоне. Провели диагностику – выяснили, что&nbsp;проблема в&nbsp;свечах и&nbsp;катушках зажигания. Быстро заменили, машина снова в&nbsp;порядке</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="home-card">
+                                    <div class="home-card__head">
+                                        <div class="name">05.03.2024, Иван</div>
+                                        <img src="./assets/images/stars.svg" alt="">
+                                    </div>
+                                    <div class="date">Ремонт электрики - Mini Cooper S Cabrio R57</div>
+                                    <p>Заглючил стеклоподъемник, не&nbsp;реагировал на&nbsp;кнопки. Разобрали дверь, заменили моторчик – теперь всё&nbsp;отлично!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Reviews end -->
+
+            <!-- Car service -->
+            <section class="car-service">
+                <img src="./assets/images/car-service-bg.png" alt="" class="car-service__bg">
+                <div class="container car-service__container">
+                    <h2 class="text-gr">
+                        <span>Автосервис «FRIEDRICH AUTO»,</span> в&#20;котором приятно оставить автомобиль
+                    </h2>
+                    <div class="car-service__left">
+                        <div class="car-service__swp">
+                            <div class="btns">
+                                <button class="btn-swp btn-prev">
+                                    <img src="./assets/images/arrow-left.svg" alt="">
+                                </button>
+                                <button class="btn-swp btn-next">
+                                    <img src="./assets/images/arrow-right.svg" alt="">
+                                </button>
+                            </div>
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="./assets/images/car-service-card.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./assets/images/car-service-card.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./assets/images/car-service-card.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./assets/images/car-service-card.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./assets/images/car-service-card.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./assets/images/car-service-card.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./assets/images/car-service-card.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./assets/images/car-service-card.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <ul>
+                            <li class="active">
+                                <img src="./assets/images/car-service-card.png" alt="">
+                            </li>
+                            <li>
+                                <img src="./assets/images/car-service-card.png" alt="">
+                            </li>
+                            <li>
+                                <img src="./assets/images/car-service-card.png" alt="">
+                            </li>
+                            <li>
+                                <img src="./assets/images/car-service-card.png" alt="">
+                            </li>
+                            <li>
+                                <img src="./assets/images/car-service-card.png" alt="">
+                            </li>
+                            <li>
+                                <img src="./assets/images/car-service-card.png" alt="">
+                            </li>
+                            <li>
+                                <img src="./assets/images/car-service-card.png" alt="">
+                            </li>
+                            <li>
+                                <img src="./assets/images/car-service-card.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="car-service__right">
+                        <div class="logo">
+                            <img src="./assets/images/logo.svg" alt="">
+                            <p>Специализированный автосервис BMW, MINI, Mercedes-Benz <br>в Санкт-Петербурге</p>
+                        </div>
+                        <h2 class="text-gr">
+                            <span>Автосервис «FRIEDRICH AUTO»,</span> в&#20;котором приятно оставить автомобиль
+                        </h2>
+                        <div class="list">
+                            <h3>Что вы получаете:</h3>
+                            <ul>
+                                <li>
+                                    <img src="./assets/images/car-service-icon-1.svg" alt="">
+                                    <p>Wi-Fi</p>
+                                </li>
+                                <li>
+                                    <img src="./assets/images/car-service-icon-2.svg" alt="">
+                                    <p>Свежесваренный <br> кофе</p>
+                                </li>
+                                <li>
+                                    <img src="./assets/images/car-service-icon-3.svg" alt="">
+                                    <p>Видеотрансляция</p>
+                                </li>
+                                <li>
+                                    <img src="./assets/images/car-service-icon-4.svg" alt="">
+                                    <p>Комфортная <br> мебель</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="list">
+                            <h3>Удобная оплата без&#20;лишних забот:</h3>
+                            <ul>
+                                <li>
+                                    <img src="./assets/images/car-service-icon-5.svg" alt="">
+                                    <p>Оплата удобным способом</p>
+                                </li>
+                                <li>
+                                    <img src="./assets/images/car-service-icon-6.svg" alt="">
+                                    <p>Ремонт в&#20;кредит</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Car service end -->
+
+            <!-- Diagnostic -->
+            <section class="diagnostic">
+                <img src="" alt="">
+                <img src="./assets/images/diagnostic-bg-big.png" alt="" class="diagnostic-bg">
+                <img src="./assets/images/diagnostic-bg.png" alt="" class="diagnostic-bg mb">
+                <div class="container diagnostic-container">
+                    <h2 class="text-gr"><span>Запишитесь</span> на&#20;бесплатную диагностику автомобиля</h2>
+                    <h3><span>и&#20;получите скидку 15%</span> на&#20;первый ремонт</h3>
+                    <ul>
+                        <li>
+                            <img src="./assets/images/tick-icon.svg" alt="">
+                            <p><span>Проверяем двигатель на&#20;наличие ошибок и&#20;неисправностей,</span> чтобы выявить возможные проблемы на&#20;ранней стадии</p>
+                        </li>
+                        <li>
+                            <img src="./assets/images/tick-icon.svg" alt="">
+                            <p><span>Проверяем систему охлаждения,</span> чтобы предотвратить перегрев и&#20;возможные проблемы</p>
+                        </li>
+                        <li>
+                            <img src="./assets/images/tick-icon.svg" alt="">
+                            <p><span>Диагностируем электронные системы автомобиля,</span> чтобы убедиться в&#20;их корректной работе</p>
+                        </li>
+                    </ul>
+                    <form action="" class="diagnostic-form">
+                        <div class="diagnostic-form__head">
+                            <img src="./assets/images/diagnostic-form-card.png" alt="">
+                            <span>+</span>
+                            <p>
+                                <span>Ароматизатор</span> BMW Natural Air <br> <span>в подарок</span>
+                            </p>
+                        </div>
+                        <div class="form-inp">
+                            <img src="./assets/images/form-user-icon.svg" alt="">
+                            <input type="text" placeholder="Введите имя">
+                        </div>
+                        <div class="form-inp">
+                            <img src="./assets/images/form-phone-icon.png" alt="">
+                            <input type="tel" placeholder="+7 (999) 888-77-66">
+                        </div>
+                        <button type="submit" class="btn-blue tn-atom">
+                            <span>Записаться на диагностику</span>
+                            <img src="./assets/images/btn-bg.png" alt="" class="bg-img">
+                        </button>
+                    </form>
+                </div>
+            </section>
+            <!-- Diagnostic end -->
+
+            <!-- Rental -->
+            <!-- <section class="rental">
+                <div class="container">
+                    <h2 class="text-gr"><span>Аренда</span> мототехники</h2>
+                    <div class="rental-content">
+                        <ul class="rental-content__left">
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <div class="rental-content__right">
+                            <h3>Специальные условия для&#20;клиентов сервиса</h3>
+                            <ul>
+                                <li>
+                                    <img src="./assets/images/rental-icon.svg" alt="">
+                                    <p>2 снегохода</p>
+                                </li>
+                                <li>
+                                    <img src="./assets/images/rental-icon.svg" alt="">
+                                    <p>2 квадроцикла</p>
+                                </li>
+                                <li>
+                                    <img src="./assets/images/rental-icon.svg" alt="">
+                                    <p>Защитная экипировка</p>
+                                </li>
+                                <li>
+                                    <img src="./assets/images/rental-icon.svg" alt="">
+                                    <p>Минимальный комплект документов</p>
+                                </li>
+                                <li>
+                                    <img src="./assets/images/rental-icon.svg" alt="">
+                                    <p>Страховка включена в&#20;стоимость</p>
+                                </li>
+                            </ul>
+                            <a href="#" class="btn-blue tn-atom">Узнать подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+            <!-- Rental end -->
+
+            <!-- Contact -->
+            <section class="contact">
+                <img src="./assets/images/contact-bg.png" alt="" class="contact-bg">
+                <div class="container contact-container">
+                    <div class="contact-content">
+                        <h2 class="text-gr"><span>Как</span> добраться</h2>
+                        <div class="address-wrap">
+                            <div>
+                                <label for="">Адрес:</label>
+                                <address>
+                                    <a href="https://yandex.ru/maps/org/fridrikh_avto/22701791744/?ll=30.263244%2C59.926098&z=16" target="_blank">
+                                        <b>г. Санкт-Петербург,</b> 26-я линия Васильевского острова, 3А
+                                    </a>
+                                </address>
+                            </div>
+                            <a href="https://yandex.ru/maps?ll=30.2632440000000002555680112%2C59.92609800000000319641912938&mode=routes&rtext=~59.92609800000000319641912938%2C30.2632440000000002555680112&z=17" target="_blank" class="btn-blue tn-atom">
+                                <span>Построить маршрут </span>
+                                <img src="./assets/images/button-icon.svg" alt="">
+                            </a>
+                        </div>
+                        <label for="">Контакты:</label>
+                        <div class="header-phone">
+                            <a href="tel:+7 (812) 317-70-56" target="_blank">
+                                <img src="./assets/images/phone-gray-icon.png" width="18" alt="">
+                                <span>
+                                    +7 (812)
+                                    <b>317-70-56</b>
+                                </span>
+                            </a>
+                            <p>
+                                <span class="icon"></span>
+                                <span class="text-active">Мы онлайн и на связи до 20:00</span>
+                                <span class="text-noactive">Нас нет на месте, будем с 10:00</span>
+                            </p>
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="https://t.me/fdhauto" target="_blank">
+                                    <img src="./assets/images/telegram.svg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://wa.me/79811851212" target="_blank">
+                                    <img src="./assets/images/whatsapp.svg" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- Contact end -->
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container footer-container">
+                <div class="footer-head">
+                    <div class="footer-left">
+                        <a href="/" class="footer-logo">
+                            <img src="./assets/images/logo.svg" alt="">
+                            <span>FRIEDRICH AUTO</span>
+                        </a>
+                        <p>
+                            Специализированный автосервис <br>
+                            BMW, MINI, Mercedes-Benz <br>
+                            в Санкт-Петербурге
+                        </p>
+                        <ul>
+                            <li>ООО «Фридрих Авто»</li>
+                            <li>ИНН: 7701234567</li>
+                            <li>КПП: 770101001</li>
+                            <li>ОГРН: 1177746123456</li>
+                        </ul>
+                    </div>
+                    <div class="footer-navs">
+                        <div class="footer-navs__item">
+                            <h3>
+                                <img src="./assets/images/footer-icon-1.svg" width="23" alt="">
+                                <span>Навигация</span>
+                            </h3>
+                            <ul>
+                                <li>
+                                    <a href="#">О нас</a>
+                                </li>
+                                <li>
+                                    <a href="#">Полезные статьи</a>
+                                </li>
+                                <li>
+                                    <a href="#">Аренда мототехники</a>
+                                </li>
+                                <li>
+                                    <a href="#">Контакты</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-navs__item">
+                            <h3>
+                                <img src="./assets/images/footer-icon-2.gif" width="35" alt="">
+                                <span>Все услуги автосервиса</span>
+                            </h3>
+                            <ul>
+                                <li>
+                                    <a href="#">Диагностика</a>
+                                </li>
+                                <li>
+                                    <a href="#">Ремонт двигателя</a>
+                                </li>
+                                <li>
+                                    <a href="#">Ремонт электрики</a>
+                                </li>
+                                <li>
+                                    <a href="#">Ремонт АКПП, МКПП</a>
+                                </li>
+                                <li>
+                                    <a href="#">Техобслуживание</a>
+                                </li>
+                                <li>
+                                    <a href="#">Ремонт тормозной системы</a>
+                                </li>
+                                <li>
+                                    <a href="#">Ремонт подвески</a>
+                                </li>
+                                <li>
+                                    <a href="#">Ремонт рулевого управления</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-navs__item">
+                            <h3>
+                                <img src="./assets/images/footer-icon-3.gif" width="35" alt="">
+                                <span>Контакты</span>
+                            </h3>
+                            <p>г. Санкт-Петербург, 26-я линия Васильевского острова, 3А</p>
+                            <div class="time-table">График работы: c 09:00 до 20:00</div>
+                            <div class="links">
+                                <a href="tel:+7 (812) 317-80-56">+7 (812) 317-80-56</a>
+                                <a href="mailto:fdh-auto@yandex.ru" target="_blank">fdh-auto@yandex.ru</a>
+                            </div>
+                            <a href="https://yandex.ru/maps?ll=30.2632440000000002555680112%2C59.92609800000000319641912938&mode=routes&rtext=~59.92609800000000319641912938%2C30.2632440000000002555680112&z=17" target="_blank" class="blue-link">построить маршрут</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-text">
+                    <h3>Реквизиты</h3>
+                    <ul>
+                        <li>ООО «Фридрих Авто»</li>
+                        <li>ИНН: 7701234567</li>
+                        <li>КПП: 770101001</li>
+                        <li>ОГРН: 1177746123456</li>
+                    </ul>
+                </div>
+                <div class="line"></div>
+                <div class="footer-bottom">
+                    <p>Информация об услугах и ценах носит исключительно информационный характер и не является публичной офертой</p>
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="">Маркетинг и разработка code-conversion.com</a>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer end -->
+
+        <section class="fixed-panel">
+            <a href="#" class="btn-green tn-atom">
+                <img src="./assets/images/phone-icon.svg" width="16" alt="">
+                <span>Позвонить</span>
+            </a>
+            <a href="#" class="btn-blue tn-atom">
+                <img src="./assets/images/fixed-panel-icon-2.svg" alt="">
+                <span>Записаться онлайн</span>
+            </a>
+        </section>
+
+    </div>
+
+    <!-- iMask JS file -->
+    <script src="./assets/js/iMask.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- JS file -->
+    <script src="./assets/js/main.js"></script>
+
+</body>
+</html>
