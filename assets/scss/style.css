@@ -242,6 +242,12 @@ textarea {
   box-shadow: inset 0px 5.14286px 32.1429px rgba(255, 255, 255, 0.15);
   border-radius: 702px;
 }
+@media screen and (max-width: 700px) {
+  .btn-swp {
+    width: 60px;
+    height: 60px;
+  }
+}
 
 .text-gr {
   background: linear-gradient(99.4deg, rgba(255, 255, 255, 0.5) 16.04%, rgba(164, 166, 170, 0.5) 40.7%, rgba(255, 255, 255, 0.5) 70.14%), #FFFFFF;
@@ -1198,6 +1204,14 @@ textarea {
 }
 .home.other h1 {
   max-width: 872px;
+}
+@media screen and (max-width: 700px) {
+  .home.other h1 {
+    font-size: 28px;
+  }
+  .home.other h1 br {
+    display: none;
+  }
 }
 .home.other .home-bottom ul {
   display: flex;
@@ -3990,7 +4004,12 @@ textarea {
 }
 @media screen and (max-width: 1050px) {
   .diagnostic {
-    padding: 0;
+    padding: 0 0 100px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .diagnostic {
+    padding-bottom: 60px;
   }
 }
 .diagnostic-bg {

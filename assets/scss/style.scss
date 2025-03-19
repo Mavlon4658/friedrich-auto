@@ -148,6 +148,11 @@ textarea {
         background: linear-gradient(315deg, #2F83EA 25%, #14529E 75%);
         box-shadow: inset 0px 5.14286px 32.1429px rgba(255, 255, 255, 0.15);
         border-radius: 702px;
+
+        @include media(700) {
+            width: 60px;
+            height: 60px;
+        }
     }
 }
 
@@ -1182,6 +1187,14 @@ textarea {
 
         h1 {
             max-width: 872px;
+
+            @include media(700) {
+                font-size: 28px;
+
+                br {
+                    display: none;
+                }
+            }
         }
 
         .home-bottom {
@@ -4013,7 +4026,11 @@ textarea {
     z-index: 2;
 
     @include media(1050) {
-        padding: 0;
+        padding: 0 0 100px;
+    }
+
+    @include media(700) {
+        padding-bottom: 60px;
     }
 
     &-bg {
