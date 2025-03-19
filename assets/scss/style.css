@@ -1471,6 +1471,7 @@ textarea {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 30px;
+  margin-bottom: 0;
 }
 @media screen and (max-width: 1280px) {
   .home.usefull-article__home .home-bottom ul {
@@ -4081,11 +4082,16 @@ textarea {
 @media screen and (max-width: 1050px) {
   .diagnostic ul {
     margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
   }
 }
 @media screen and (max-width: 700px) {
   .diagnostic ul {
     margin-bottom: 30px;
+    gap: 20px;
   }
 }
 .diagnostic ul li {
@@ -4199,7 +4205,21 @@ textarea {
 }
 @media screen and (max-width: 700px) {
   .diagnostic-form__head img {
-    width: 150px;
+    width: 156px;
+    left: 9px;
+  }
+}
+.diagnostic-form__head img.icon {
+  display: none;
+}
+@media screen and (max-width: 700px) {
+  .diagnostic-form__head img.icon {
+    display: block;
+    width: 30px;
+    height: auto;
+    top: auto;
+    bottom: 69px;
+    left: 138px;
   }
 }
 .diagnostic-form__head span {
@@ -5908,6 +5928,7 @@ textarea {
   z-index: 2;
   -o-object-fit: cover;
      object-fit: cover;
+  opacity: 0.4;
 }
 .determine-content__left .main-img {
   width: 100%;
@@ -6782,6 +6803,17 @@ textarea {
   .article h2 {
     font-size: 30px;
     margin-bottom: 20px;
+    font-weight: 400;
+  }
+}
+@media screen and (max-width: 700px) {
+  .article h2.text-lg {
+    display: none;
+  }
+}
+@media screen and (min-width: 700px) {
+  .article h2.text-md {
+    display: none;
   }
 }
 .article h3 {
@@ -6864,9 +6896,6 @@ textarea {
   }
 }
 @media screen and (max-width: 700px) {
-  .article-block {
-    padding-bottom: 217px;
-  }
   .article-block:not(:first-child) {
     position: relative;
   }
@@ -6889,9 +6918,9 @@ textarea {
 }
 @media screen and (max-width: 700px) {
   .article-block__card {
-    height: 215px;
-    padding: 0;
     border-radius: 15px;
+    height: auto;
+    padding: 180px 10px 0;
   }
 }
 .article-block__card .main-img {
@@ -6907,6 +6936,7 @@ textarea {
 }
 @media screen and (max-width: 700px) {
   .article-block__card .main-img {
+    height: 215px;
     border-radius: 15px;
   }
 }
@@ -6925,6 +6955,7 @@ textarea {
 @media screen and (max-width: 700px) {
   .article-block__card .bg-img {
     border-radius: 15px;
+    height: 215px;
   }
 }
 .article-block__card::after {
@@ -6945,6 +6976,7 @@ textarea {
   .article-block__card::after {
     border-radius: 15px;
     border-width: 1px;
+    height: 215px;
   }
 }
 .article-block__card .content {
@@ -6960,12 +6992,10 @@ textarea {
 }
 @media screen and (max-width: 700px) {
   .article-block__card .content {
-    width: calc(100% - 20px);
-    left: 10px;
-    top: 180px;
+    width: 100%;
     padding: 25px;
     border-radius: 15px;
-    height: 252px;
+    height: auto;
   }
 }
 .article-block__card .content::before {

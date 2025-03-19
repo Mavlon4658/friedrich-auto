@@ -1353,6 +1353,7 @@ textarea {
     }
 
     &.usefull-article__home {
+        
         .container {
             gap: 46px;
             padding: 166px 0 0;
@@ -1464,6 +1465,7 @@ textarea {
                 display: grid;
                 grid-template-columns: repeat(3, minmax(0, 1fr));
                 gap: 30px;
+                margin-bottom: 0;
 
                 @include media(1280) {
                     gap: 20px;
@@ -4101,10 +4103,15 @@ textarea {
     ul {
         @include media(1050) {
             margin-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 30px;
         }
 
         @include media(700) {
             margin-bottom: 30px;
+            gap: 20px;
         }
         
         li {
@@ -4217,7 +4224,21 @@ textarea {
                 width: 213px;
 
                 @include media(700) {
-                    width: 150px;
+                    width: 156px;
+                    left: 9px;
+                }
+
+                &.icon {
+                    display: none;
+
+                    @include media(700) {
+                        display: block;
+                        width: 30px;
+                        height: auto;
+                        top: auto;
+                        bottom: 69px;
+                        left: 138px;
+                    }
                 }
             }
 
@@ -5976,6 +5997,7 @@ textarea {
                 height: 100%;
                 z-index: 2;
                 object-fit: cover;
+                opacity: 0.4;
             }
 
             .main-img {
@@ -6846,6 +6868,19 @@ textarea {
         @include media(700) {
             font-size: 30px;
             margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        &.text-lg {
+            @include media(700) {
+                display: none;
+            }
+        }
+
+        &.text-md {
+            @include media(-700) {
+                display: none;
+            }
         }
     }
 
@@ -6925,8 +6960,6 @@ textarea {
 
     &-block {
         @include media(700) {
-            padding-bottom: 217px;
-
             &:not(:first-child) {
                 position: relative;
 
@@ -6950,11 +6983,11 @@ textarea {
             padding: 65px 55px;
 
             @include media(700) {
-                height: 215px;
-                padding: 0;
                 border-radius: 15px;
+                height: auto;
+                padding: 180px 10px 0;
             }
-
+            
             .main-img {
                 position: absolute;
                 top: 0;
@@ -6964,8 +6997,9 @@ textarea {
                 object-fit: cover;
                 z-index: -1;
                 border-radius: 25px;
-
+                
                 @include media(700) {
+                    height: 215px;
                     border-radius: 15px;
                 }
             }
@@ -6983,6 +7017,7 @@ textarea {
                 
                 @include media(700) {
                     border-radius: 15px;
+                    height: 215px;
                 }
             }
 
@@ -7001,6 +7036,7 @@ textarea {
                 @include media(700) {
                     border-radius: 15px;
                     border-width: 1px;
+                    height: 215px;
                 }
             }
 
@@ -7015,12 +7051,10 @@ textarea {
                 padding: 45px 50px 45px 45px;
 
                 @include media(700) {
-                    width: calc(100% - 20px);
-                    left: 10px;
-                    top: 180px;
+                    width: 100%;
                     padding: 25px;
                     border-radius: 15px;
-                    height: 252px;
+                    height: auto;
                 }
 
                 &::before {

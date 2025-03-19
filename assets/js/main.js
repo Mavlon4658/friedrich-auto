@@ -318,3 +318,48 @@ const offerSwp = new Swiper('.offer-swp .swiper', {
         prevEl: '.offer .btn-swp__prev',
     }
 })
+
+function getDateAfterDays() {
+    let today = new Date();
+    today.setDate(today.getDate() + 7);
+    
+    let day = today.getDate().toString().padStart(2, '0');
+    let month = (today.getMonth() + 1).toString().padStart(2, '0');
+    
+    return `${day}.${month}`;
+}
+
+const discoutDay = document.querySelector('.discount-day');
+
+if (discoutDay) {
+    discoutDay.textContent = getDateAfterDays();
+}
+
+function getRandomDateLastTwoMonths() {
+    let today = new Date();
+    let pastDate = new Date();
+    pastDate.setMonth(today.getMonth() - 2);
+
+    let randomTime = pastDate.getTime() + Math.random() * (today.getTime() - pastDate.getTime());
+    let randomDate = new Date(randomTime);
+
+    let day = randomDate.getDate().toString().padStart(2, '0');
+    let month = (randomDate.getMonth() + 1).toString().padStart(2, '0');
+    let year = randomDate.getFullYear();
+
+    return `${day}.${month}.${year}`;
+}
+
+function getRandomName() {
+    var NameAry = ['Николай', 'Александр', 'Андрей', 'Сергей', 'Дмитрий', 'Алексей', 'Игорь', 'Олег', 'Владимир', 'Евгений', 'Антон', 'Павел'];
+    
+    var randomIndex = Math.floor(Math.random() * NameAry.length);
+    return NameAry[randomIndex];
+}
+
+const homeCardHead = document.querySelectorAll('.home-card__head .name');
+if (homeCardHead.length) {
+    homeCardHead.forEach(el => {
+        el.textContent = getRandomDateLastTwoMonths() + ', ' + getRandomName();
+    })
+}
