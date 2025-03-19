@@ -3616,6 +3616,7 @@ textarea {
             top: -66px;
             background: linear-gradient(to right, rgba(1, 4, 15, 0), rgba(1, 4, 15));
             mix-blend-mode: normal;
+            filter: blur(50px);
 
             @include media(-2000) {
                 width: 60vw;
@@ -4590,11 +4591,25 @@ textarea {
         }
     }
 
+    &.other {
+        .container {
+            padding: 62px 0 180px;
+
+            @include media(1050) {
+                padding: 0 0 100px;
+            }
+
+            @include media (700) {
+                padding: 0 0 60px;
+            }
+        }
+    }
+
     &-content {
-        max-width: 562px;
+        width: 741px;
 
         @include media(1200) {
-            max-width: 390px;
+            width: 390px;
         }
 
         @include media(1050) {
@@ -4607,7 +4622,7 @@ textarea {
         font-size: 60px;
         font-weight: bold;
         line-height: 130%;
-        margin-bottom: 40px;
+        margin-bottom: 51px;
         display: inline-block;
 
         @include media(1050) {
@@ -4634,7 +4649,7 @@ textarea {
         opacity: 0.7;
         font-size: 18px;
         line-height: 155%;
-        margin-bottom: 15px;
+        margin-bottom: 16px;
 
         @include media(1050) {
             font-size: 16px;
@@ -4685,9 +4700,39 @@ textarea {
     .header-phone {
         display: flex;
         align-items: flex-start;
+        padding-top: 2px;
+
+        a {
+            font-size: 24px;
+            gap: 8px;
+
+            span {
+                gap: 8px;
+            }
+
+            b {
+                font-size: 36px;
+            }
+        }
 
         p {
-            margin-left: 30px;
+            margin-left: 24px;
+            font-size: 18px;
+
+            .icon {
+                width: 7px;
+                height: 7px;
+
+                &::before {
+                    width: 7px;
+                    height: 7px;
+                }
+
+                &::after {
+                    width: 7px;
+                    height: 7px;
+                }
+            }
         }
 
         @include media(700) {
@@ -4741,7 +4786,7 @@ textarea {
         display: flex;
         align-items: center;
         gap: 15px;
-        margin-top: 25px;
+        margin-top: 27px;
     }
 
     &.thanks-contact {
@@ -7704,7 +7749,8 @@ textarea {
 }
 // Rent end\
 
-.rent-modal {
+.rent-modal,
+.signup-modal {
     .modal-content {
         width: 680px;
         padding: 80px 78px 100px;
@@ -7748,7 +7794,7 @@ textarea {
         }
     }
 
-    &__form {
+    .rent-modal__form {
         max-width: 400px;
         margin: 0 auto;
         display: flex;

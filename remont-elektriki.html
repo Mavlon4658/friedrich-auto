@@ -104,7 +104,7 @@
                                 <a href="/useful-article.html">Полезные статьи</a>
                             </li>
                             <li>
-                                <a href="#rent">Аренда мототехники</a>
+                                <a href="/#rent">Аренда мототехники</a>
                             </li>
                             <li>
                                 <a href="#contact">Контакты</a>
@@ -368,6 +368,42 @@
             </div>
         </div>
         <!-- Rent modal end -->
+
+        <!-- Signup modal -->
+        <div class="modal signup-modal">
+            <div class="modal-bg"></div>
+            <div class="modal-dialog__wrap">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <button class="modal-close">
+                            <img src="./assets/images/close_icon.svg" alt="">
+                        </button>
+                        <h2 class="text-gr">
+                            <span>Аренда</span> мототехники
+                        </h2>
+                        <h3>
+                            <b>Перезвоним в течение 5 минут</b> <br>
+                            и запишем вас на удобное время
+                        </h3>
+                        <div class="rent-modal__form">
+                            <div class="form-inp">
+                                <img src="./assets/images/form-user-icon.svg" alt="">
+                                <input type="text" placeholder="Введите имя">
+                            </div>
+                            <div class="form-inp">
+                                <img src="./assets/images/form-phone-icon.png" alt="">
+                                <input type="tel" placeholder="+7 (999) 888-77-66">
+                            </div>
+                            <button type="submit" class="btn-blue tn-atom">
+                                <span>Записаться на замену</span>
+                                <img src="./assets/images/btn-bg-2.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Signup modal end -->
         <!-- Modals end -->
 
         <main>
@@ -405,7 +441,7 @@
                                 <a href="./useful-article.html">Полезные статьи</a>
                             </li>
                             <li>
-                                <a href="#rent">Аренда мототехники</a>
+                                <a href="/#rent">Аренда мототехники</a>
                             </li>
                             <li>
                                 <a href="#contact">Контакты</a>
@@ -853,7 +889,7 @@
                                                 <h4>9 900₽</h4>
                                                 <del>14 900₽</del>
                                             </div>
-                                            <a href="#" class="btn-blue tn-atom">
+                                            <a href="#" class="btn-blue tn-atom signup-modal__open">
                                                 <span>Записаться на замену</span>
                                                 <img src="./assets/images/btn-bg-2.svg" alt="">
                                             </a>
@@ -875,7 +911,7 @@
                                                 <h4>11 900₽</h4>
                                                 <del>14 900₽</del>
                                             </div>
-                                            <a href="#" class="btn-blue tn-atom">
+                                            <a href="#" class="btn-blue tn-atom signup-modal__open">
                                                 <span>Записаться на замену</span>
                                                 <img src="./assets/images/btn-bg-2.svg" alt="">
                                             </a>
@@ -897,7 +933,7 @@
                                                 <h4>1 500₽</h4>
                                                 <del>2 200₽</del>
                                             </div>
-                                            <a href="#" class="btn-blue tn-atom">
+                                            <a href="#" class="btn-blue tn-atom signup-modal__open">
                                                 <span>Записаться на замену</span>
                                                 <img src="./assets/images/btn-bg-2.svg" alt="">
                                             </a>
@@ -919,7 +955,7 @@
                                                 <h4>20 000₽</h4>
                                                 <del>22 000₽</del>
                                             </div>
-                                            <a href="#" class="btn-blue tn-atom">
+                                            <a href="#" class="btn-blue tn-atom signup-modal__open">
                                                 <span>Записаться на замену</span>
                                                 <img src="./assets/images/btn-bg-2.svg" alt="">
                                             </a>
@@ -941,7 +977,7 @@
                                                 <h4>25 000₽</h4>
                                                 <del>28 000₽</del>
                                             </div>
-                                            <a href="#" class="btn-blue tn-atom">
+                                            <a href="#" class="btn-blue tn-atom signup-modal__open">
                                                 <span>Записаться на замену</span>
                                                 <img src="./assets/images/btn-bg-2.svg" alt="">
                                             </a>
@@ -1503,67 +1539,9 @@
             </section>
             <!-- Diagnostic end -->
 
-            <!-- Rent -->
-            <section class="rent" id="rent">
-                <img src="./assets/images/rent-bg.png" alt="" class="rent-bg">
-                <div class="container">
-                    <div class="rent-head">
-                        <h2 class="text-gr"><span>Аренда</span> мототехники</h2>
-                        <a href="#" class="btn-blue tn-atom rent-modal__open">Получить консультацию по аренде</a>
-                    </div>
-                    <ul class="rent-card__wrap">
-                        <li class="rent-card">
-                            <img src="./assets/images/rent-card-1.png" alt="" class="main-img">
-                            <img src="./assets/images/rent-card-bg.png" alt="" class="bg-img">
-                            <div>
-                                <h4>от 2000 ₽ сутки</h4>
-                                <h3>2 снегохода</h3>
-                            </div>
-                            <ul>
-                                <li>
-                                    <img src="./assets/images/tick-icon.svg" alt="">
-                                    <p>Минимальный комплект документов</p>
-                                </li>
-                                <li>
-                                    <img src="./assets/images/tick-icon.svg" alt="">
-                                    <p>Страховка включена в стоимость</p>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="rent-card">
-                            <img src="./assets/images/rent-card-2.png" alt="" class="main-img">
-                            <img src="./assets/images/rent-card-bg.png" alt="" class="bg-img">
-                            <div>
-                                <h4>от 2000 ₽ сутки</h4>
-                                <h3>2 квадроцикла</h3>
-                            </div>
-                            <ul>
-                                <li>
-                                    <img src="./assets/images/tick-icon.svg" alt="">
-                                    <p>Минимальный комплект документов</p>
-                                </li>
-                                <li>
-                                    <img src="./assets/images/tick-icon.svg" alt="">
-                                    <p>Страховка включена в стоимость</p>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="rent-card">
-                            <img src="./assets/images/rent-card-3.png" alt="" class="main-img">
-                            <img src="./assets/images/rent-card-bg.png" alt="" class="bg-img">
-                            <div>
-                                <h4>входит в стоимость аренды</h4>
-                                <h3>Защитная экипировка</h3>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <!-- Rent end -->
-
             <!-- Contact -->
-            <section class="contact" id="contact">
-                <img src="./assets/images/contact-bg.png" alt="" class="contact-bg">
+            <section class="contact other" id="contact">
+                <img src="./assets/images/contact-bg-2.png" alt="" class="contact-bg">
                 <div class="container contact-container">
                     <div class="contact-content">
                         <h2 class="text-gr"><span>Как</span> добраться</h2>
@@ -1650,7 +1628,7 @@
                                     <a href="./useful-article.html">Полезные статьи</a>
                                 </li>
                                 <li>
-                                    <a href="#rent">Аренда мототехники</a>
+                                    <a href="/#rent">Аренда мототехники</a>
                                 </li>
                                 <li>
                                     <a href="#contact">Контакты</a>

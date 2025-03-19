@@ -36,7 +36,7 @@ if (getCurrentTime().hour >= 10 && getCurrentTime().hour < 20) {
 }
 
 // modals
-const modalCls = ['.diagnostic-modal', '.car-modal', '.rent-modal'];
+const modalCls = ['.diagnostic-modal', '.car-modal', '.rent-modal', '.signup-modal'];
 
 modalCls.forEach(cls => {
     const modal = document.querySelector(cls);

@@ -3606,6 +3606,7 @@ textarea {
   top: -66px;
   background: linear-gradient(to right, rgba(1, 4, 15, 0), rgb(1, 4, 15));
   mix-blend-mode: normal;
+  filter: blur(50px);
 }
 @media screen and (min-width: 2000px) {
   .reviews .swiper::after {
@@ -4590,12 +4591,25 @@ textarea {
     padding-top: 60px;
   }
 }
+.contact.other .container {
+  padding: 62px 0 180px;
+}
+@media screen and (max-width: 1050px) {
+  .contact.other .container {
+    padding: 0 0 100px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .contact.other .container {
+    padding: 0 0 60px;
+  }
+}
 .contact-content {
-  max-width: 562px;
+  width: 741px;
 }
 @media screen and (max-width: 1200px) {
   .contact-content {
-    max-width: 390px;
+    width: 390px;
   }
 }
 @media screen and (max-width: 1050px) {
@@ -4608,7 +4622,7 @@ textarea {
   font-size: 60px;
   font-weight: bold;
   line-height: 130%;
-  margin-bottom: 40px;
+  margin-bottom: 51px;
   display: inline-block;
 }
 @media screen and (max-width: 1050px) {
@@ -4635,7 +4649,7 @@ textarea {
   opacity: 0.7;
   font-size: 18px;
   line-height: 155%;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 }
 @media screen and (max-width: 1050px) {
   .contact label {
@@ -4688,9 +4702,33 @@ textarea {
 .contact .header-phone {
   display: flex;
   align-items: flex-start;
+  padding-top: 2px;
+}
+.contact .header-phone a {
+  font-size: 24px;
+  gap: 8px;
+}
+.contact .header-phone a span {
+  gap: 8px;
+}
+.contact .header-phone a b {
+  font-size: 36px;
 }
 .contact .header-phone p {
-  margin-left: 30px;
+  margin-left: 24px;
+  font-size: 18px;
+}
+.contact .header-phone p .icon {
+  width: 7px;
+  height: 7px;
+}
+.contact .header-phone p .icon::before {
+  width: 7px;
+  height: 7px;
+}
+.contact .header-phone p .icon::after {
+  width: 7px;
+  height: 7px;
 }
 @media screen and (max-width: 700px) {
   .contact .header-phone {
@@ -4735,7 +4773,7 @@ textarea {
   display: flex;
   align-items: center;
   gap: 15px;
-  margin-top: 25px;
+  margin-top: 27px;
 }
 .contact.thanks-contact {
   margin-bottom: 40px;
@@ -7656,49 +7694,57 @@ textarea {
   }
 }
 
-.rent-modal .modal-content {
+.rent-modal .modal-content,
+.signup-modal .modal-content {
   width: 680px;
   padding: 80px 78px 100px;
   min-height: 686px;
 }
 @media screen and (max-width: 700px) {
-  .rent-modal .modal-content {
+  .rent-modal .modal-content,
+  .signup-modal .modal-content {
     padding: 30px 20px;
     min-height: auto;
     border-radius: 15px;
   }
-  .rent-modal .modal-content::before {
+  .rent-modal .modal-content::before,
+  .signup-modal .modal-content::before {
     border-radius: 15px;
   }
 }
-.rent-modal h2 {
+.rent-modal h2,
+.signup-modal h2 {
   text-align: center;
   font-size: 52px;
   line-height: 130%;
   margin-bottom: 26px;
 }
 @media screen and (max-width: 700px) {
-  .rent-modal h2 {
+  .rent-modal h2,
+  .signup-modal h2 {
     font-size: 30px;
     text-align: left;
     margin-bottom: 15px;
   }
 }
-.rent-modal h3 {
+.rent-modal h3,
+.signup-modal h3 {
   text-align: center;
   margin-bottom: 40px;
   font-size: 20px;
   line-height: 155%;
 }
 @media screen and (max-width: 700px) {
-  .rent-modal h3 {
+  .rent-modal h3,
+  .signup-modal h3 {
     max-width: 100%;
     text-align: left;
     font-size: 15px;
     margin-bottom: 30px;
   }
 }
-.rent-modal__form {
+.rent-modal .rent-modal__form,
+.signup-modal .rent-modal__form {
   max-width: 400px;
   margin: 0 auto;
   display: flex;
@@ -7706,12 +7752,14 @@ textarea {
   gap: 20px;
 }
 @media screen and (max-width: 700px) {
-  .rent-modal__form {
+  .rent-modal .rent-modal__form,
+  .signup-modal .rent-modal__form {
     max-width: 100%;
     gap: 10px;
   }
 }
-.rent-modal .btn-blue {
+.rent-modal .btn-blue,
+.signup-modal .btn-blue {
   padding: 0;
   width: 100%;
   text-align: center;
@@ -7719,11 +7767,13 @@ textarea {
   overflow: hidden;
 }
 @media screen and (max-width: 700px) {
-  .rent-modal .btn-blue {
+  .rent-modal .btn-blue,
+  .signup-modal .btn-blue {
     margin-top: 5px;
   }
 }
-.rent-modal .btn-blue img {
+.rent-modal .btn-blue img,
+.signup-modal .btn-blue img {
   position: absolute;
   right: 0;
   top: 50%;
