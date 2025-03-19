@@ -4008,7 +4008,7 @@ textarea {
 .diagnostic {
     padding: 97px 0 120px;
     position: relative;
-    z-index: 1;
+    z-index: 2;
 
     @include media(1050) {
         padding: 0;
@@ -4616,6 +4616,10 @@ textarea {
         @include media(700) {
             margin-bottom: 30px;
         }
+
+        @include media(576) {
+            width: 100%;
+        }
     }
 
     .header-phone {
@@ -4627,6 +4631,9 @@ textarea {
         }
 
         @include media(700) {
+            gap: 14px;
+            padding-top: 8px;
+
             a {
                 margin-bottom: 5px;
                 gap: 10px;
@@ -4647,6 +4654,25 @@ textarea {
 
             p {
                 font-size: 15px;
+                margin-left: 25px;
+                gap: 10px;
+
+                .icon {
+                    width: 7px;
+                    height: 7px;
+
+                    &::before {
+                        width: 7px;
+                        height: 7px;
+                        left: -12px;
+                    }
+
+                    &::after {
+                        width: 7px;
+                        height: 7px;
+                        left: -24px;
+                    }
+                }
             }
         }
     }
@@ -4686,10 +4712,6 @@ textarea {
     
     @include media(700) {
         padding-bottom: 120px;
-    }
-
-    &-container {
-        // background: #000;
     }
 
     &-head {
@@ -4896,7 +4918,7 @@ textarea {
                 ul {
                     @include media(-1050) {
                         display: grid; 
-                        grid-template-columns: repeat(2, minmax(0, 1fr));
+                        grid-template-columns: 171px 276px;
                         gap: 15px 52px;
                     }
                 }
@@ -7408,3 +7430,272 @@ textarea {
     }
 }
 // We determine end
+
+// Rent
+.rent {
+    position: relative;
+    z-index: 1;
+
+    &-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    .container {
+        position: relative;
+
+        @include media(1050) {
+            padding-bottom: 120px;
+        }
+    }
+
+    &-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 69px 0 110px;
+        margin-bottom: 71px;
+
+        @include media(1350) {
+            padding: 0;
+        }
+
+        @include media(1050) {
+            margin-bottom: 50px;
+        }
+
+        @include media(700) {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 60px;
+            line-height: 120%;
+
+            @include media(1050) {
+                font-size: 48px;
+            }
+
+            @include media(700) {
+                font-size: 30px;
+            }
+        }
+
+        a {
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 400px;
+
+            @include media(1050) {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+            }
+        }
+    }
+
+    &-card {
+        height: 460px;
+        position: relative;
+        z-index: 1;
+        border-radius: 25px;
+        overflow: hidden;
+        padding: 50px 45px 45px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        @include media(700) {
+            height: 280px;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        &::after {
+            border-radius: 25px;
+            content: "";
+            position: absolute;
+            z-index: -1;
+            inset: 0;
+            border: 3px solid transparent;
+            background: linear-gradient(150deg, #FFFFFF, #A4A6AA 46%, #FFFFFF) border-box;
+            mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+            opacity: 0.07;
+
+            @include media(700) {
+                border-radius: 15px;
+            }
+        }
+
+        &__wrap {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 30px;
+            
+            @include media(1050) {
+                grid-template-columns: repeat(1, minmax(0, 1fr));
+            }
+
+            @include media(700) {
+                gap: 20px;
+            }
+        }
+
+        .bg-img,
+        .main-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        h4 {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 130%;
+            margin-bottom: 15px;
+            opacity: 0.5;
+
+            @include media(700) {
+                font-size: 15px;
+                margin-bottom: 10px;
+            }
+        }
+
+        h3 {
+            font-size: 28px;
+            font-weight: bold;
+            line-height: 130%;
+
+            @include media(700) {
+                font-size: 20px;
+            }
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            
+            @include media(700) {
+                gap: 10px;
+                max-width: 187px;
+            }
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            img {
+                width: 24px;
+
+                @include media(700) {
+                    width: 18px;
+                }
+            }
+
+            p {
+                font-size: 20px;
+                font-weight: 40;
+                line-height: 130%;
+
+                @include media(700) {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+// Rent end\
+
+.rent-modal {
+    .modal-content {
+        width: 680px;
+        padding: 80px 78px 100px;
+        min-height: 686px;
+
+        @include media(700) {
+            padding: 30px 20px;
+            min-height: auto;
+            border-radius: 15px;
+
+            &::before {
+                border-radius: 15px;
+            }
+        }
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 52px;
+        line-height: 130%;
+        margin-bottom: 26px;
+
+        @include media(700) {
+            font-size: 30px;
+            text-align: left;
+            margin-bottom: 15px;
+        }
+    }
+
+    h3 {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 20px;
+        line-height: 155%;
+
+        @include media(700) {
+            max-width: 100%;
+            text-align: left;
+            font-size: 15px;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__form {
+        max-width: 400px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @include media(700) {
+            max-width: 100%;
+            gap: 10px;
+        }
+    }
+
+    .btn-blue {
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        overflow: hidden;
+
+        @include media(700) {
+            margin-top: 5px;
+        }
+
+        img {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}

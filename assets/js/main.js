@@ -36,7 +36,7 @@ if (getCurrentTime().hour >= 10 && getCurrentTime().hour < 20) {
 }
 
 // modals
-const modalCls = ['.diagnostic-modal', '.car-modal'];
+const modalCls = ['.diagnostic-modal', '.car-modal', '.rent-modal'];
 
 modalCls.forEach(cls => {
     const modal = document.querySelector(cls);
@@ -53,17 +53,20 @@ modalCls.forEach(cls => {
         }, 400);
     }
 
-    modalOpenBtns.forEach(btn => {
-        btn.onclick = e => {
-            e.preventDefault();
-            modal.classList.add('active');
-            bodyHidden();
-        }
-    })
+    if (modalOpenBtns.length) {
+        modalOpenBtns.forEach(btn => {
+            btn.onclick = e => {
+                e.preventDefault();
+                modal.classList.add('active');
+                bodyHidden();
+            }
+        })
+    
+        modalCloseBtn.onclick = () => modalClose();
+    
+        modalBg.onclick = () => modalClose();
+    }
 
-    modalCloseBtn.onclick = () => modalClose();
-
-    modalBg.onclick = () => modalClose();
 })
 // modals end
 

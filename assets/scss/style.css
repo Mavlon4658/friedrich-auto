@@ -3985,7 +3985,7 @@ textarea {
 .diagnostic {
   padding: 97px 0 120px;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 @media screen and (max-width: 1050px) {
   .diagnostic {
@@ -4620,6 +4620,11 @@ textarea {
     margin-bottom: 30px;
   }
 }
+@media screen and (max-width: 576px) {
+  .contact .btn-blue {
+    width: 100%;
+  }
+}
 .contact .header-phone {
   display: flex;
   align-items: flex-start;
@@ -4628,6 +4633,10 @@ textarea {
   margin-left: 30px;
 }
 @media screen and (max-width: 700px) {
+  .contact .header-phone {
+    gap: 14px;
+    padding-top: 8px;
+  }
   .contact .header-phone a {
     margin-bottom: 5px;
     gap: 10px;
@@ -4644,6 +4653,22 @@ textarea {
   }
   .contact .header-phone p {
     font-size: 15px;
+    margin-left: 25px;
+    gap: 10px;
+  }
+  .contact .header-phone p .icon {
+    width: 7px;
+    height: 7px;
+  }
+  .contact .header-phone p .icon::before {
+    width: 7px;
+    height: 7px;
+    left: -12px;
+  }
+  .contact .header-phone p .icon::after {
+    width: 7px;
+    height: 7px;
+    left: -24px;
   }
 }
 .contact ul {
@@ -4889,7 +4914,7 @@ textarea {
 @media screen and (min-width: 1050px) {
   .footer-navs__item:nth-child(2) ul {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 171px 276px;
     gap: 15px 52px;
   }
 }
@@ -7357,4 +7382,272 @@ textarea {
   .we-determine li p {
     font-size: 15px;
   }
+}
+
+.rent {
+  position: relative;
+  z-index: 1;
+}
+.rent-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.rent .container {
+  position: relative;
+}
+@media screen and (max-width: 1050px) {
+  .rent .container {
+    padding-bottom: 120px;
+  }
+}
+.rent-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 69px 0 110px;
+  margin-bottom: 71px;
+}
+@media screen and (max-width: 1350px) {
+  .rent-head {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .rent-head {
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .rent-head {
+    margin-bottom: 30px;
+  }
+}
+.rent-head h2 {
+  font-size: 60px;
+  line-height: 120%;
+}
+@media screen and (max-width: 1050px) {
+  .rent-head h2 {
+    font-size: 48px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .rent-head h2 {
+    font-size: 30px;
+  }
+}
+.rent-head a {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 400px;
+}
+@media screen and (max-width: 1050px) {
+  .rent-head a {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+.rent-card {
+  height: 460px;
+  position: relative;
+  z-index: 1;
+  border-radius: 25px;
+  overflow: hidden;
+  padding: 50px 45px 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+@media screen and (max-width: 700px) {
+  .rent-card {
+    height: 280px;
+    padding: 30px;
+    border-radius: 15px;
+  }
+}
+.rent-card::after {
+  border-radius: 25px;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border: 3px solid transparent;
+  background: linear-gradient(150deg, #FFFFFF, #A4A6AA 46%, #FFFFFF) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+          mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  opacity: 0.07;
+}
+@media screen and (max-width: 700px) {
+  .rent-card::after {
+    border-radius: 15px;
+  }
+}
+.rent-card__wrap {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+}
+@media screen and (max-width: 1050px) {
+  .rent-card__wrap {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+@media screen and (max-width: 700px) {
+  .rent-card__wrap {
+    gap: 20px;
+  }
+}
+.rent-card .bg-img,
+.rent-card .main-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+}
+.rent-card h4 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 130%;
+  margin-bottom: 15px;
+  opacity: 0.5;
+}
+@media screen and (max-width: 700px) {
+  .rent-card h4 {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+}
+.rent-card h3 {
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 130%;
+}
+@media screen and (max-width: 700px) {
+  .rent-card h3 {
+    font-size: 20px;
+  }
+}
+.rent-card ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media screen and (max-width: 700px) {
+  .rent-card ul {
+    gap: 10px;
+    max-width: 187px;
+  }
+}
+.rent-card li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.rent-card li img {
+  width: 24px;
+}
+@media screen and (max-width: 700px) {
+  .rent-card li img {
+    width: 18px;
+  }
+}
+.rent-card li p {
+  font-size: 20px;
+  font-weight: 40;
+  line-height: 130%;
+}
+@media screen and (max-width: 700px) {
+  .rent-card li p {
+    font-size: 13px;
+  }
+}
+
+.rent-modal .modal-content {
+  width: 680px;
+  padding: 80px 78px 100px;
+  min-height: 686px;
+}
+@media screen and (max-width: 700px) {
+  .rent-modal .modal-content {
+    padding: 30px 20px;
+    min-height: auto;
+    border-radius: 15px;
+  }
+  .rent-modal .modal-content::before {
+    border-radius: 15px;
+  }
+}
+.rent-modal h2 {
+  text-align: center;
+  font-size: 52px;
+  line-height: 130%;
+  margin-bottom: 26px;
+}
+@media screen and (max-width: 700px) {
+  .rent-modal h2 {
+    font-size: 30px;
+    text-align: left;
+    margin-bottom: 15px;
+  }
+}
+.rent-modal h3 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 20px;
+  line-height: 155%;
+}
+@media screen and (max-width: 700px) {
+  .rent-modal h3 {
+    max-width: 100%;
+    text-align: left;
+    font-size: 15px;
+    margin-bottom: 30px;
+  }
+}
+.rent-modal__form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media screen and (max-width: 700px) {
+  .rent-modal__form {
+    max-width: 100%;
+    gap: 10px;
+  }
+}
+.rent-modal .btn-blue {
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  overflow: hidden;
+}
+@media screen and (max-width: 700px) {
+  .rent-modal .btn-blue {
+    margin-top: 5px;
+  }
+}
+.rent-modal .btn-blue img {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }/*# sourceMappingURL=style.css.map */

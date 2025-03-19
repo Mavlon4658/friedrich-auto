@@ -98,16 +98,16 @@
                         </h3>
                         <ul>
                             <li>
-                                <a href="#">О нас</a>
+                                <a href="/">О нас</a>
                             </li>
                             <li>
-                                <a href="#">Полезные статьи</a>
+                                <a href="/useful-article.html">Полезные статьи</a>
                             </li>
                             <li>
-                                <a href="#">Аренда мототехники</a>
+                                <a href="#rent">Аренда мототехники</a>
                             </li>
                             <li>
-                                <a href="#">Контакты</a>
+                                <a href="#contact">Контакты</a>
                             </li>
                         </ul>
                     </div>
@@ -118,38 +118,40 @@
                         </h3>
                         <ul>
                             <li>
-                                <a href="#">Диагностика</a>
+                                <a href="./diagnostic.html">Диагностика</a>
                             </li>
                             <li>
-                                <a href="#">Ремонт электрики</a>
+                                <a href="./remont-elektriki.html">Ремонт электрики</a>
                             </li>
                             <li>
-                                <a href="#">Техобслуживание</a>
+                                <a href="./tehobsluzhivanie.html">Техобслуживание</a>
                             </li>
                             <li>
-                                <a href="#">Ремонт подвески</a>
+                                <a href="./remont-podveski.html">Ремонт подвески</a>
                             </li>
                             <li>
-                                <a href="#">Ремонт двигателя</a>
+                                <a href="./remont-dvigatelya.html">Ремонт двигателя</a>
                             </li>
                             <li>
-                                <a href="#">Ремонт АКПП, МКПП</a>
+                                <a href="./remont-akpp-mkpp.html">Ремонт АКПП, МКПП</a>
                             </li>
                             <li>
-                                <a href="#">Ремонт тормозной системы</a>
+                                <a href="./remont-tormozov.html">Ремонт тормозной системы</a>
                             </li>
                             <li>
-                                <a href="#">Ремонт рулевого управления</a>
+                                <a href="./remont-rulevogo.html">Ремонт рулевого управления</a>
                             </li>
                         </ul>
                     </div>
                     <div class="navigation-content__body-item">
                         <h3>Адрес</h3>
                         <p>
-                            <b>г. Санкт-Петербург,</b> <br>
-                            Краснопутиловская ул., 46, корп. 7, стр. 3,
+                            <a href="https://yandex.ru/maps/org/fridrikh_avto/22701791744/?ll=30.263244%2C59.926098&z=16" target="_blank">
+                                <b>г. Санкт-Петербург,</b> <br>
+                                Краснопутиловская ул., 46, корп. 7, стр. 3,
+                            </a>
                         </p>
-                        <a href="#" class="route-link">построить маршрут</a>
+                        <a href="https://yandex.ru/maps?ll=30.2632440000000002555680112%2C59.92609800000000319641912938&mode=routes&rtext=~59.92609800000000319641912938%2C30.2632440000000002555680112&z=17" target="_blank" class="route-link">построить маршрут</a>
                     </div>
                 </div>
             </div>
@@ -330,6 +332,42 @@
             </div>
         </section>
         <!-- Car modal end -->
+
+        <!-- Rent modal -->
+        <div class="modal rent-modal">
+            <div class="modal-bg"></div>
+            <div class="modal-dialog__wrap">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <button class="modal-close">
+                            <img src="./assets/images/close_icon.svg" alt="">
+                        </button>
+                        <h2 class="text-gr">
+                            <span>Аренда</span> мототехники
+                        </h2>
+                        <h3>
+                            <b>Перезвоним в течение 5 минут</b> <br>
+                            и подробно проконсультируем
+                        </h3>
+                        <div class="rent-modal__form">
+                            <div class="form-inp">
+                                <img src="./assets/images/form-user-icon.svg" alt="">
+                                <input type="text" placeholder="Введите имя">
+                            </div>
+                            <div class="form-inp">
+                                <img src="./assets/images/form-phone-icon.png" alt="">
+                                <input type="tel" placeholder="+7 (999) 888-77-66">
+                            </div>
+                            <button type="submit" class="btn-blue tn-atom">
+                                <span>Узнать условия аренды</span>
+                                <img src="./assets/images/btn-bg-2.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Rent modal end -->
         <!-- Modals end -->
 
         <main>
@@ -371,7 +409,7 @@
                                 <a href="/#rent">Аренда мототехники</a>
                             </li>
                             <li>
-                                <a href="./contacts.html">Контакты</a>
+                                <a href="#contact">Контакты</a>
                             </li>
                         </ul>
                         <div class="header-phone">
@@ -700,48 +738,66 @@
             </section>
             <!-- Diagnostic end -->
 
-            <!-- Rental -->
-            <!-- <section class="rental">
+            <!-- Rent -->
+            <section class="rent" id="rent">
+                <img src="./assets/images/rent-bg.png" alt="" class="rent-bg">
                 <div class="container">
-                    <h2 class="text-gr"><span>Аренда</span> мототехники</h2>
-                    <div class="rental-content">
-                        <ul class="rental-content__left">
-                            <li></li>
-                            <li></li>
-                        </ul>
-                        <div class="rental-content__right">
-                            <h3>Специальные условия для&#20;клиентов сервиса</h3>
+                    <div class="rent-head">
+                        <h2 class="text-gr"><span>Аренда</span> мототехники</h2>
+                        <a href="#" class="btn-blue tn-atom rent-modal__open">Получить консультацию по аренде</a>
+                    </div>
+                    <ul class="rent-card__wrap">
+                        <li class="rent-card">
+                            <img src="./assets/images/rent-card-1.png" alt="" class="main-img">
+                            <img src="./assets/images/rent-card-bg.png" alt="" class="bg-img">
+                            <div>
+                                <h4>от 2000 ₽ сутки</h4>
+                                <h3>2 снегохода</h3>
+                            </div>
                             <ul>
                                 <li>
-                                    <img src="./assets/images/rental-icon.svg" alt="">
-                                    <p>2 снегохода</p>
-                                </li>
-                                <li>
-                                    <img src="./assets/images/rental-icon.svg" alt="">
-                                    <p>2 квадроцикла</p>
-                                </li>
-                                <li>
-                                    <img src="./assets/images/rental-icon.svg" alt="">
-                                    <p>Защитная экипировка</p>
-                                </li>
-                                <li>
-                                    <img src="./assets/images/rental-icon.svg" alt="">
+                                    <img src="./assets/images/tick-icon.svg" alt="">
                                     <p>Минимальный комплект документов</p>
                                 </li>
                                 <li>
-                                    <img src="./assets/images/rental-icon.svg" alt="">
-                                    <p>Страховка включена в&#20;стоимость</p>
+                                    <img src="./assets/images/tick-icon.svg" alt="">
+                                    <p>Страховка включена в стоимость</p>
                                 </li>
                             </ul>
-                            <a href="#" class="btn-blue tn-atom">Узнать подробнее</a>
-                        </div>
-                    </div>
+                        </li>
+                        <li class="rent-card">
+                            <img src="./assets/images/rent-card-2.png" alt="" class="main-img">
+                            <img src="./assets/images/rent-card-bg.png" alt="" class="bg-img">
+                            <div>
+                                <h4>от 2000 ₽ сутки</h4>
+                                <h3>2 квадроцикла</h3>
+                            </div>
+                            <ul>
+                                <li>
+                                    <img src="./assets/images/tick-icon.svg" alt="">
+                                    <p>Минимальный комплект документов</p>
+                                </li>
+                                <li>
+                                    <img src="./assets/images/tick-icon.svg" alt="">
+                                    <p>Страховка включена в стоимость</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="rent-card">
+                            <img src="./assets/images/rent-card-3.png" alt="" class="main-img">
+                            <img src="./assets/images/rent-card-bg.png" alt="" class="bg-img">
+                            <div>
+                                <h4>входит в стоимость аренды</h4>
+                                <h3>Защитная экипировка</h3>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-            </section> -->
-            <!-- Rental end -->
+            </section>
+            <!-- Rent end -->
 
             <!-- Contact -->
-            <section class="contact">
+            <section class="contact" id="contact">
                 <img src="./assets/images/contact-bg.png" alt="" class="contact-bg">
                 <div class="container contact-container">
                     <div class="contact-content">
@@ -823,16 +879,16 @@
                             </h3>
                             <ul>
                                 <li>
-                                    <a href="#">О нас</a>
+                                    <a href="/">О нас</a>
                                 </li>
                                 <li>
-                                    <a href="#">Полезные статьи</a>
+                                    <a href="./useful-article.html">Полезные статьи</a>
                                 </li>
                                 <li>
-                                    <a href="#">Аренда мототехники</a>
+                                    <a href="/#rent">Аренда мототехники</a>
                                 </li>
                                 <li>
-                                    <a href="#">Контакты</a>
+                                    <a href="#contact">Контакты</a>
                                 </li>
                             </ul>
                         </div>
@@ -843,28 +899,28 @@
                             </h3>
                             <ul>
                                 <li>
-                                    <a href="#">Диагностика</a>
+                                    <a href="./diagnostic.html">Диагностика</a>
                                 </li>
                                 <li>
-                                    <a href="#">Ремонт двигателя</a>
+                                    <a href="./remont-dvigatelya.html">Ремонт двигателя</a>
                                 </li>
                                 <li>
-                                    <a href="#">Ремонт электрики</a>
+                                    <a href="./remont-elektriki.html">Ремонт электрики</a>
                                 </li>
                                 <li>
-                                    <a href="#">Ремонт АКПП, МКПП</a>
+                                    <a href="./remont-akpp-mkpp.html">Ремонт АКПП, МКПП</a>
                                 </li>
                                 <li>
-                                    <a href="#">Техобслуживание</a>
+                                    <a href="./tehobsluzhivanie.html">Техобслуживание</a>
                                 </li>
                                 <li>
-                                    <a href="#">Ремонт тормозной системы</a>
+                                    <a href="./remont-tormozov.html">Ремонт тормозной системы</a>
                                 </li>
                                 <li>
-                                    <a href="#">Ремонт подвески</a>
+                                    <a href="./remont-podveski.html">Ремонт подвески</a>
                                 </li>
                                 <li>
-                                    <a href="#">Ремонт рулевого управления</a>
+                                    <a href="./remont-rulevogo.html">Ремонт рулевого управления</a>
                                 </li>
                             </ul>
                         </div>
@@ -873,7 +929,11 @@
                                 <img src="./assets/images/footer-icon-3.gif" width="35" alt="">
                                 <span>Контакты</span>
                             </h3>
-                            <p>г. Санкт-Петербург, 26-я линия Васильевского острова, 3А</p>
+                            <p>
+                                <a class="address-link" href="https://yandex.ru/maps/org/fridrikh_avto/22701791744/?ll=30.263244%2C59.926098&z=16" target="_blank">
+                                    г. Санкт-Петербург, 26-я линия Васильевского острова, 3А
+                                </a>
+                            </p>
                             <div class="time-table">График работы: c 09:00 до 20:00</div>
                             <div class="links">
                                 <a href="tel:+7 (812) 317-80-56">+7 (812) 317-80-56</a>
