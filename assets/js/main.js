@@ -335,25 +335,17 @@ if (discoutDay) {
     discoutDay.textContent = getDateAfterDays();
 }
 
+let NameAry = ['Николай', 'Александр', 'Андрей', 'Сергей', 'Дмитрий', 'Алексей', 'Игорь', 'Олег', 'Владимир', 'Евгений', 'Антон', 'Павел'];
+let days = ['13.03.2025', '09.03.2025', '08.03.2025', '03.03.2025', '01.03.2025', '28.02.2025', '27.02.2025', '22.02.2025', '18.02.2025', '10.02.2025', '24.01.2025', '20.01.2025', '15.01.2025', '14.01.2025', '05.01.2025']
+
 function getRandomDateLastTwoMonths() {
-    let today = new Date();
-    let pastDate = new Date();
-    pastDate.setMonth(today.getMonth() - 2);
-
-    let randomTime = pastDate.getTime() + Math.random() * (today.getTime() - pastDate.getTime());
-    let randomDate = new Date(randomTime);
-
-    let day = randomDate.getDate().toString().padStart(2, '0');
-    let month = (randomDate.getMonth() + 1).toString().padStart(2, '0');
-    let year = randomDate.getFullYear();
-
-    return `${day}.${month}.${year}`;
+    let dayIndex = Math.floor(Math.random() * days.length);
+    return days[dayIndex];
 }
 
 function getRandomName() {
-    var NameAry = ['Николай', 'Александр', 'Андрей', 'Сергей', 'Дмитрий', 'Алексей', 'Игорь', 'Олег', 'Владимир', 'Евгений', 'Антон', 'Павел'];
     
-    var randomIndex = Math.floor(Math.random() * NameAry.length);
+    let randomIndex = Math.floor(Math.random() * NameAry.length);
     return NameAry[randomIndex];
 }
 
