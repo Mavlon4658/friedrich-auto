@@ -2400,6 +2400,9 @@ textarea {
     padding-top: 60px;
   }
 }
+.example.other {
+  padding-bottom: 0;
+}
 .example-bg {
   position: absolute;
   top: 0;
@@ -2624,7 +2627,6 @@ textarea {
 .inspection {
   position: relative;
   z-index: 2;
-  margin-bottom: 70px;
   padding: 100px 0 110px;
 }
 @media screen and (max-width: 1200px) {
@@ -2636,6 +2638,24 @@ textarea {
   .inspection {
     padding-top: 0;
     margin-bottom: 50px;
+  }
+}
+.inspection.other {
+  padding: 180px 0;
+}
+@media screen and (max-width: 1050px) {
+  .inspection.other {
+    padding: 100px 0 349px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .inspection.other {
+    padding-top: 60px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .inspection.other .inspection-left {
+    display: none;
   }
 }
 .inspection-bg {
@@ -3069,6 +3089,7 @@ textarea {
   position: absolute;
   bottom: 0;
   left: 0;
+  height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -6258,6 +6279,14 @@ textarea {
 }
 .cost-left li span:not(.line) {
   flex-shrink: 0;
+}
+@media screen and (max-width: 700px) {
+  .cost-left li span:not(.line) {
+    max-width: calc(100% - 100px);
+  }
+  .cost-left li span:not(.line) br {
+    display: none;
+  }
 }
 .cost-left li .line {
   width: 100%;

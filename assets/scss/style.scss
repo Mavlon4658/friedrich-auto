@@ -2395,6 +2395,10 @@ textarea {
     @include media(700) {
         padding-top: 60px;
     }
+
+    &.other {
+        padding-bottom: 0;
+    }
     
     &-bg {
         position: absolute;
@@ -2621,7 +2625,6 @@ textarea {
 .inspection {
     position: relative;
     z-index: 2;
-    margin-bottom: 70px;
     padding: 100px 0 110px;
 
     @include media(1200) {
@@ -2631,6 +2634,24 @@ textarea {
     @include media(700) {
         padding-top: 0;
         margin-bottom: 50px;
+    }
+
+    &.other {
+        padding: 180px 0;
+
+        @include media(1050) {
+            padding: 100px 0 349px;
+        }
+
+        @include media(700) {
+            padding-top: 60px;
+        }
+
+        .inspection-left {
+            @include media(1050) {
+                display: none;
+            }
+        }
     }
 
     &-bg {
@@ -3080,6 +3101,7 @@ textarea {
         position: absolute;
         bottom: 0;
         left: 0;
+        height: 100%;
         width: 100%;
         object-fit: cover;
         z-index: -1;
@@ -6323,6 +6345,14 @@ textarea {
 
             span:not(.line) {
                 flex-shrink: 0;
+
+                @include media(700) {
+                    max-width: calc(100% - 100px);
+                    
+                    br {
+                        display: none;
+                    }
+                }
             }
 
             .line {
