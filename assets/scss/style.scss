@@ -645,6 +645,12 @@ textarea {
             &::-webkit-scrollbar {
                 display: none;
             }
+
+            &-item:nth-child(2) {
+                h3 img {
+                    transform: scale(1.4);
+                }
+            }
         }
 
         h3 {
@@ -888,7 +894,7 @@ textarea {
                     gap: 15px;
 
                     img {
-                        width: 8px;
+                        width: 13px;
                     }
                 }
             }
@@ -896,7 +902,7 @@ textarea {
 
         li {
             position: relative;
-            z-index: 1;
+            z-index: 2;
 
             &:first-child a {
                 opacity: 1;
@@ -932,6 +938,12 @@ textarea {
             flex-direction: column;
             align-items: flex-start;
             gap: 10px;
+
+            @include media(700) {
+                left: 50px;
+                bottom: -10px;
+                z-index: 3;
+            }
             
             &::after {
                 content: "";
@@ -1379,10 +1391,12 @@ textarea {
 
         .home-bg {
             @include media(700) {
-                height: auto;
+                height: 100%;
                 width: 100%;
-                top: 0;
+                top: auto;
                 left: 0;
+                bottom: 0;
+                object-position: center bottom;
             }
         }
 
@@ -1779,6 +1793,116 @@ textarea {
                             left: 0;
                             opacity: 0.4;
                             z-index: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.policy-home {
+        .home-bg {
+            height: auto;
+
+            @include media(700) {
+                display: none;
+            }
+        }
+
+        .container {
+            height: auto;
+            gap: 46px;
+            padding: 166px 0 80px;
+
+            @include media(1050) {
+                padding-bottom: 0;
+            }
+
+            @include media(700) {
+                padding: 135px 0 0;
+                gap: 40px;
+            }
+        }
+
+        .home-bottom {
+            h1 {
+                max-width: 100%;
+                font-size: 64px;
+                font-weight: 500;
+                margin-bottom: 40px;
+
+                @include media(1050) {
+                    font-size: 48px;
+                }
+
+                @include media(700) {
+                    font-size: 30px;
+                    margin-bottom: 30px;
+                }
+            }
+
+            h3 {
+                font-size: 22px;
+                line-height: 130%;
+                font-weight: 400;
+                margin-bottom: 186px;
+
+                @include media(1050) {
+                    font-size: 18px;
+                    margin-bottom: 100px;
+                }
+
+                @include media(700) {
+                    font-size: 16px;
+                    margin-bottom: 60px;
+                }
+            }
+            
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                
+                h5 {
+                    font-size: 32px;
+                    font-weight: bold;
+                    line-height: 130%;
+                    margin-bottom: 30px;
+
+                    @include media(1050) {
+                        font-size: 28px;
+                        margin-bottom: 20px;
+                    }
+
+                    @include media(700) {
+                        font-size: 22px;
+                        margin-bottom: 15px;
+                    }
+                }
+
+                li {
+                    font-size: 22px;
+                    line-height: 130%;
+                    font-weight: 400;
+
+                    @include media(1050) {
+                        font-size: 18px;
+                    }
+
+                    @include media(700) {
+                        font-size: 14px;
+                    }
+                }
+
+                ul {
+                    gap: 0px;
+
+                    ul {
+                        list-style-type: disc;
+                        padding-left: 30px;
+
+                        @include media(700) {
+                            padding-left: 20px;
                         }
                     }
                 }
@@ -4600,7 +4724,7 @@ textarea {
             }
 
             @include media (700) {
-                padding: 0 0 60px;
+                padding: 0;
             }
         }
     }
@@ -6302,6 +6426,10 @@ textarea {
         height: 100%;
         z-index: -1;
         object-fit: cover;
+
+        @include media(700) {
+            display: none;
+        }
     }
 
     .container {
@@ -6386,13 +6514,30 @@ textarea {
 
             @include media(700) {
                 font-size: 13px;
+                position: relative;
+                z-index: 1;
             }
 
             span:not(.line) {
-                flex-shrink: 0;
+                @include media(-700) {
+                    flex-shrink: 0;
+                }
 
                 @include media(700) {
                     max-width: calc(100% - 100px);
+                    // background: #01040F;
+                    // -webkit-text-stroke: 10px #01040F;
+                    // text-stroke: 10px #01040F;
+                    text-shadow: 1px 2px 0 #01040F,
+                                 2px 2px 0 #01040F,
+                                 3px 2px 0 #01040F,
+                                 4px 2px 0 #01040F,
+                                 5px 2px 0 #01040F,
+                                 6px 2px 0 #01040F,
+                                 7px 2px 0 #01040F,
+                                 8px 2px 0 #01040F,
+                                 9px 2px 0 #01040F,
+                                 10px 2px 0 #01040F;
                     
                     br {
                         display: none;
@@ -6412,11 +6557,21 @@ textarea {
 
                 @include media(700) {
                     transform: translateY(-6px);
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    z-index: -1;
                 }
             }
 
             b {
                 flex-shrink: 0;
+
+                @include media(700) {
+                    background: #01040F;
+                    padding-left: 10px;
+                }
             }
         }
     }

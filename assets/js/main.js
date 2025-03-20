@@ -121,7 +121,7 @@ window.addEventListener('scroll', function () {
 const homeSwp = new Swiper('.home .swiper', {
     slidesPerView: 'auto',
     spaceBetween: 13,
-    speed: 4000,
+    speed: 7000,
     loop: true,
     autoplay: {
         delay: 0,
@@ -132,7 +132,8 @@ const homeSwp = new Swiper('.home .swiper', {
     allowTouchMove: false,
     breakpoints: {
         700: {
-            spaceBetween: 20
+            spaceBetween: 20,
+            speed: 4000,
         }
     }
 })
@@ -355,3 +356,12 @@ if (homeCardHead.length) {
         el.textContent = getRandomDateLastTwoMonths() + ', ' + getRandomName();
     })
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    let textContainer = document.querySelectorAll(".cost-left ul li span");
+    if (textContainer.length) {
+        textContainer.forEach(el => {
+            el.setAttribute("data-text", el.innerText);
+        })
+    }
+});
