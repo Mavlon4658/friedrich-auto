@@ -4091,6 +4091,11 @@ textarea {
   font-size: 20px;
   line-height: 155%;
 }
+@media screen and (min-width: 700px) {
+  .car-service__right .list ul p {
+    white-space: nowrap;
+  }
+}
 @media screen and (max-width: 700px) {
   .car-service__right .list ul p {
     max-width: 100px;

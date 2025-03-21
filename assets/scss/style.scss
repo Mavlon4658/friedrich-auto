@@ -4106,6 +4106,10 @@ textarea {
                     font-size: 20px;
                     line-height: 155%;
 
+                    @include media(-700) {
+                        white-space: nowrap;
+                    }
+
                     @include media(700) {
                         max-width: 100px;
                         font-size: 13px;
