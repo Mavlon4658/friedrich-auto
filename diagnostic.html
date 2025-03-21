@@ -1150,7 +1150,7 @@
                                             <span class="mb-text"><b>Подробное пояснение</b> в&nbsp;чем проблема</span>
                                         </li>
                                     </ul>
-                                    <a href="#" class="btn-blue tn-atom">
+                                    <a href="#" class="btn-blue tn-atom diagnostik">
                                         <span>Записаться на&nbsp;диагностику</span>
                                         <img src="./assets/images/btn-bg.png" alt="" class="bg-img">
                                     </a>
@@ -1700,6 +1700,19 @@
 
     </div>
 
+    <script src="https://booking.easyweek.ru/widget.js"></script>
+    <script>
+        var ewWidget = new EasyWeekWidget({
+            url: 'https://booking.easyweek.ru/fridrih-avto', button: { 
+                text: 'Онлайн-запись', 
+                showText: true, color: 
+                '#000822', background: 
+                '#3478CC', textColor: 
+                '#D3D3D4', textBackground: 
+                '#000822' }, 
+                trigger: ".diagnostik"
+        })
+    </script>
     <!-- iMask JS file -->
     <script src="./assets/js/iMask.js"></script>
     <!-- Swiper JS -->

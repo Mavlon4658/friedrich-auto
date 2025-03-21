@@ -1646,7 +1646,7 @@ textarea {
                     background-clip: text;
                     text-fill-color: transparent;
                     -webkit-text-fill-color: transparent;
-                    margin-bottom: 20px;
+                    margin: 0 0 20px;
                     max-width: 440px;
                     text-align: left;
 
@@ -7981,4 +7981,8 @@ textarea {
             transform: translateY(-50%);
         }
     }
+}
+
+.EWBookingWidgetTrigger {
+    display: none !important;
 }
