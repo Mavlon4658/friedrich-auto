@@ -3086,9 +3086,10 @@ textarea {
   height: 100%;
   border-radius: 25px;
   z-index: 2;
-  background: url("../images/service-card-bg.png") no-repeat;
+  background: url("../images/service-card-bg.webp") no-repeat;
   background-size: cover;
   background-position: center;
+  opacity: 0.4;
 }
 @media screen and (max-width: 700px) {
   .service-card .main-img span {
