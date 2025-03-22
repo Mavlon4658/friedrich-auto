@@ -368,6 +368,11 @@ textarea {
   font-size: 15px;
   line-height: 135%;
 }
+.header-logo img {
+  width: 234px;
+  height: auto;
+  flex-shrink: 0;
+}
 @media screen and (max-width: 992px) {
   .header-logo {
     font-size: 10px;
@@ -377,7 +382,7 @@ textarea {
     display: none;
   }
   .header-logo img {
-    width: 98px;
+    width: 200px;
     flex-shrink: 0;
   }
 }
@@ -387,18 +392,11 @@ textarea {
     gap: 15px;
   }
   .header-logo img {
-    width: 69px;
+    width: 156px;
   }
 }
-@media screen and (max-width: 992px) {
-  .header-logo span {
-    max-width: 121px;
-  }
-}
-@media screen and (max-width: 700px) {
-  .header-logo span {
-    max-width: 118px;
-  }
+.header-logo span {
+  display: none !important;
 }
 .header-location {
   display: flex;
@@ -2237,9 +2235,11 @@ textarea {
   top: -63px;
   left: 149px;
   transform: translateY(-100%);
+  width: 188px;
 }
 @media screen and (max-width: 1250px) {
   .repairing .logo {
+    width: 128px;
     bottom: 614px;
     left: 44px;
     top: auto;
@@ -2249,7 +2249,7 @@ textarea {
   .repairing .logo {
     left: 0;
     bottom: 493px;
-    width: 68px;
+    width: 91px;
   }
 }
 .repairing-content {
@@ -2584,11 +2584,11 @@ textarea {
 .example-left .logo {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 35px;
   margin-bottom: 50px;
 }
 .example-left .logo img {
-  width: 98px;
+  width: 158px;
   flex-shrink: 0;
 }
 .example-left .logo p {
@@ -4005,7 +4005,7 @@ textarea {
 .car-service__right .logo {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 35px;
   margin-bottom: 50px;
 }
 @media screen and (max-width: 1280px) {
@@ -4014,7 +4014,8 @@ textarea {
   }
 }
 .car-service__right .logo img {
-  width: 98px;
+  width: 168px;
+  flex-shrink: 0;
 }
 .car-service__right .logo p {
   max-width: 242px;
@@ -4976,17 +4977,20 @@ textarea {
 }
 .footer-logo img {
   flex-shrink: 0;
-  width: 98px;
+  width: 188px;
 }
 @media screen and (max-width: 1050px) {
   .footer-logo img {
-    width: 80px;
+    width: 168px;
   }
 }
 @media screen and (max-width: 700px) {
   .footer-logo img {
-    width: 68px;
+    width: 143px;
   }
+}
+.footer-logo span {
+  display: none !important;
 }
 @media screen and (max-width: 1600px) {
   .footer-left {
@@ -6516,7 +6520,7 @@ textarea {
   }
 }
 .cost-right .logo {
-  width: 146px;
+  width: 252px;
 }
 @media screen and (max-width: 992px) {
   .cost-right .logo {
@@ -6524,7 +6528,7 @@ textarea {
   }
 }
 .cost-right h3 {
-  margin: 45px 0 25px;
+  margin: 43px 0 25px;
   font-size: 36px;
   line-height: 145%;
 }

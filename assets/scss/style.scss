@@ -275,6 +275,12 @@ textarea {
         font-size: 15px;
         line-height: 135%;
 
+        img {
+            width: 234px;
+            height: auto;
+            flex-shrink: 0;
+        }
+
         @include media(992) {
             font-size: 10px;
             gap: 25px;
@@ -284,7 +290,7 @@ textarea {
             }
 
             img {
-                width: 98px;
+                width: 200px;
                 flex-shrink: 0;
             }
         }
@@ -294,18 +300,12 @@ textarea {
             gap: 15px;
 
             img {
-                width: 69px;
+                width: 156px;
             }
         }
 
         span {
-            @include media(992) {
-                max-width: 121px;
-            }
-
-            @include media(700) {
-                max-width: 118px;
-            }
+            display: none !important;
         }
     }
 
@@ -2229,8 +2229,10 @@ textarea {
         top: -63px;
         left: 149px;
         transform: translateY(-100%);
+        width: 188px;
 
         @include media(1250) {
+            width: 128px;
             bottom: 614px;
             left: 44px;
             top: auto;
@@ -2239,7 +2241,7 @@ textarea {
         @include media(700) {
             left: 0;
             bottom: 493px;
-            width: 68px;
+            width: 91px;
         }
     }
 
@@ -2581,11 +2583,11 @@ textarea {
         .logo {
             display: flex;
             align-items: center;
-            gap: 30px;
+            gap: 35px;
             margin-bottom: 50px;
 
             img {
-                width: 98px;
+                width: 158px;
                 flex-shrink: 0;
             }
 
@@ -4014,7 +4016,7 @@ textarea {
         .logo {
             display: flex;
             align-items: center;
-            gap: 30px;
+            gap: 35px;
             margin-bottom: 50px;
 
             @include media(1280) {
@@ -4022,7 +4024,8 @@ textarea {
             }
 
             img {
-                width: 98px;
+                width: 168px;
+                flex-shrink: 0;
             }
 
             p {
@@ -4988,15 +4991,19 @@ textarea {
 
         img {
             flex-shrink: 0;
-            width: 98px;
+            width: 188px;
 
             @include media(1050) {
-                width: 80px;
+                width: 168px;
             }
 
             @include media(700) {
-                width: 68px;
+                width: 143px;
             }
+        }
+        
+        span {
+            display: none !important;
         }
     }
 
@@ -6600,7 +6607,7 @@ textarea {
         }
 
         .logo {
-            width: 146px;
+            width: 252px;
 
             @include media(992) {
                 display: none;
@@ -6608,7 +6615,7 @@ textarea {
         }
 
         h3 {
-            margin: 45px 0 25px;
+            margin: 43px 0 25px;
             font-size: 36px;
             line-height: 145%;
 
