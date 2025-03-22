@@ -263,14 +263,17 @@ textarea {
     &-left {
         display: flex;
         align-items: flex-end;
-
         gap: 80px;
+
+        @include media(1780) {
+            gap: 30px;
+        }
     }
 
     &-logo {
         display: flex;
         align-items: center;
-        gap: 30px;
+        gap: 28px;
         flex-shrink: 0;
         font-size: 15px;
         line-height: 135%;
@@ -305,7 +308,20 @@ textarea {
         }
 
         span {
-            display: none !important;
+            width: 242px;
+
+            @include media(1780) {
+                font-size: 13px;
+                width: 150px;
+                
+                br {
+                    display: none;
+                }
+            }
+
+            @include media(1650) {
+                display: none !important;
+            }
         }
     }
 

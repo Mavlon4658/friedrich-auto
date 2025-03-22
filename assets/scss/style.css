@@ -360,10 +360,15 @@ textarea {
   align-items: flex-end;
   gap: 80px;
 }
+@media screen and (max-width: 1780px) {
+  .header-left {
+    gap: 30px;
+  }
+}
 .header-logo {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 28px;
   flex-shrink: 0;
   font-size: 15px;
   line-height: 135%;
@@ -396,7 +401,21 @@ textarea {
   }
 }
 .header-logo span {
-  display: none !important;
+  width: 242px;
+}
+@media screen and (max-width: 1780px) {
+  .header-logo span {
+    font-size: 13px;
+    width: 150px;
+  }
+  .header-logo span br {
+    display: none;
+  }
+}
+@media screen and (max-width: 1650px) {
+  .header-logo span {
+    display: none !important;
+  }
 }
 .header-location {
   display: flex;
