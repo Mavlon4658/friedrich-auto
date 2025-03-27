@@ -36,7 +36,7 @@ if (getCurrentTime().hour >= 10 && getCurrentTime().hour < 20) {
 }
 
 // modals
-const modalCls = ['.diagnostic-modal', '.car-modal', '.rent-modal', '.signup-modal'];
+const modalCls = ['.diagnostic-modal', '.car-modal-1', '.car-modal-2', '.rent-modal', '.signup-modal'];
 
 modalCls.forEach(cls => {
     const modal = document.querySelector(cls);
@@ -70,34 +70,41 @@ modalCls.forEach(cls => {
 })
 // modals end
 
-const carModalSwp = new Swiper('.car-modal__left .swiper', {
-    slidesPerView: 1,
-    loop: true,
-    navigation: {
-        nextEl: '.car-modal__left .btn-next',
-        prevEl: '.car-modal__left .btn-prev',
-    }
-})
+let carModals = document.querySelectorAll('.car-modal');
 
-const carModalCardList = document.querySelectorAll('.car-modal__left ul li');
-
-if (carModalSwp) {
-    carModalCardList.forEach((el, elID) => {
-        el.onclick = () => {
-            carModalSwp.slideTo(elID);
-        }
-    })
-
-    carModalSwp.on('slideChange', function (e) {
-        carModalCardList.forEach((item, itemID) => {
-            if (itemID == carModalSwp.realIndex) {
-                item.classList.add('active');
-            } else {
-                item.classList.remove('active');
+if (carModals.length) {
+    carModals.forEach(item => {
+        const carModalSwp = new Swiper(item.querySelector('.car-modal__left .swiper'), {
+            slidesPerView: 1,
+            loop: true,
+            navigation: {
+                nextEl: '.car-modal__left .btn-next',
+                prevEl: '.car-modal__left .btn-prev',
             }
         })
-    });
+        
+        const carModalCardList = item.querySelectorAll('.car-modal__left ul li');
+        
+        if (carModalSwp) {
+            carModalCardList.forEach((el, elID) => {
+                el.onclick = () => {
+                    carModalSwp.slideTo(elID);
+                }
+            })
+        
+            carModalSwp.on('slideChange', function (e) {
+                carModalCardList.forEach((item, itemID) => {
+                    if (itemID == carModalSwp.realIndex) {
+                        item.classList.add('active');
+                    } else {
+                        item.classList.remove('active');
+                    }
+                })
+            });
+        }
+    })
 }
+
 
 const header = document.querySelector('header.header');
 const fixedPanel = document.querySelector('.fixed-panel');
@@ -350,12 +357,12 @@ function getRandomName() {
     return NameAry[randomIndex];
 }
 
-const homeCardHead = document.querySelectorAll('.home-card__head .name');
-if (homeCardHead.length) {
-    homeCardHead.forEach(el => {
-        el.textContent = getRandomDateLastTwoMonths() + ', ' + getRandomName();
-    })
-}
+// const homeCardHead = document.querySelectorAll('.home-card__head .name');
+// if (homeCardHead.length) {
+//     homeCardHead.forEach(el => {
+//         el.textContent = getRandomDateLastTwoMonths() + ', ' + getRandomName();
+//     })
+// }
 
 document.addEventListener("DOMContentLoaded", function () {
     let textContainer = document.querySelectorAll(".cost-left ul li span");

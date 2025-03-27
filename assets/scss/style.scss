@@ -1108,6 +1108,127 @@ textarea {
         width: 100%;
     }
 
+    .swp {
+        display: flex;
+        gap: 20px;
+    }
+
+    .rating-card {
+        width: 195px;
+        flex-shrink: 0;
+        background: #1D212F;
+        backdrop-filter: blur(10px);
+        border-radius: 16px;
+        padding: 24px 25px 25px;
+        position: relative;
+        z-index: 2;
+
+        @include media(700) {
+            position: absolute;
+            bottom: -16px;
+            transform: translateY(100%);
+            display: flex;
+            align-items: center;
+            width: auto;
+            background: transparent;
+            backdrop-filter: none;
+            padding: 0;
+        }
+
+        &__head {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+
+            @include media(700) {
+                margin-bottom: 0;
+            }
+
+            img {
+                flex-shrink: 0;
+
+                &:nth-child(2) {
+                    margin: 0 10px 0 4.43px
+                }
+
+                @include media(700) {
+                    width: 14.04px;
+
+                    &:nth-child(2) {
+                        width: 11.23px;
+                        margin: 0 7.31px 0 3.24px;
+                    }
+                }
+            }
+
+            span {
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 130%;
+
+                @include media(700) {
+                    font-size: 10.97px;
+                }
+            }
+        }
+
+        &__value {
+            display: flex;
+            align-items: flex-end;
+            gap: 6px;
+            margin-bottom: 5px;
+
+            @include media(700) {
+                margin: 0 15px 0 92.17px
+            }
+
+            h3 {
+                font-size: 32px;
+                line-height: 130%;
+                margin: 0;
+                font-weight: 400;
+
+                @include media(700) {
+                    font-size: 22.02px;
+                }
+            }
+
+            p {
+                font-size: 15px;
+                line-height: 130%;
+                padding-bottom: 7px;
+
+                @include media(700) {
+                    display: none;
+                }
+            }
+        }
+
+        .star {
+            height: 12px;
+            width: auto;
+            margin-bottom: 15px;
+
+            @include media(700) {
+                position: absolute;
+                top: 50%;
+                left: 83px;
+                transform: translateY(-50%);
+                height: 8.88px;
+            }
+        }
+
+        &__text {
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 125%;
+
+            @include media(700) {
+                font-size: 9px;
+            }
+        }
+    }
+
     .swiper {
         overflow:  visible;
         max-width: 100%;
@@ -1142,16 +1263,40 @@ textarea {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
 
             @include media(700) {
-                margin-bottom: 7px;
+                margin-bottom: 10px;
+            }
+
+            &-left {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                @include media(700) {
+                    gap: 6.27px;
+
+                    img {
+                        height: 5.37px;
+                    }
+                }
+            }
+
+            &-right {
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 130%;
+
+                @include media(700) {
+                    font-size: 8px;
+                }
             }
         }
 
         .name {
             font-size: 13px;
-            font-weight: 400;
+            font-weight: 700;
             line-height: 130%;
 
             @include media(700) {
@@ -1178,9 +1323,28 @@ textarea {
         p {
             font-size: 13px;
             line-height: 125%;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-bottom: 15px;
 
             @include media(700) {
-                font-size: 9px;
+                font-size: 8.72px;
+                margin-bottom: 9.27px;
+            }
+        }
+
+        a {
+            font-size: 13px;
+            font-weight: bold;
+            padding-bottom: 6px;
+            border-bottom: 1.5px dotted #55A1FF;
+
+            @include media(700) {
+                font-size: 8.72px;
+                padding-bottom: 3px;
             }
         }
     }
@@ -3736,6 +3900,15 @@ textarea {
         }
 
 
+    }
+
+    #sw-app-b9f49f7f291f3836556a25fb049c35d8,
+    #sw-app-020b5ec362497b7a500f91716f4d6979 {
+        background: transparent !important;
+
+        .sw-app-body {
+            width: 100%;
+        }
     }
 
     .swiper {
@@ -8013,3 +8186,90 @@ textarea {
 .EWBookingWidgetTrigger {
     display: none !important;
 }
+
+// Gift modal
+.gift-modal {
+    .modal-content {
+        max-width: 751px;
+        min-height: 709px;
+        padding: 80px 66px 80px 80px;
+
+        @include media(700) {
+            padding: 30px 20px;
+            min-height: auto;
+        }
+    }
+
+    h2 {
+        font-size: 52px;
+        line-height: 130%;
+        margin-bottom: 35px;
+
+        @include media(700) {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 50px;
+
+        @include media(700) {
+            margin-bottom: 20px;
+        }
+    }
+
+    li {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        @include media(700) {
+            gap: 18px;
+
+            img {
+                width: 18px;
+            }
+        }
+    }
+
+    p {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 155%;
+
+        @include media(700) {
+            font-size: 13px;
+            gap: 18px;
+        }
+    }
+
+    .modal-form {
+        display: flex;
+        flex-direction: column;
+        max-width: 400px;
+        width: 100%;
+        gap: 20px;
+
+        @include media(700) {
+            gap: 15px;
+        }
+    }
+
+    .btn-blue {
+        width: 100%;
+
+        .bg-img {
+            width: 110px;
+            height: auto;
+
+            @include media(700) {
+                width: 94px;
+            }
+        }
+    }
+}
+// Gift modal end
