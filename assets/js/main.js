@@ -105,28 +105,26 @@ if (carModals.length) {
     })
 }
 
-const giftModal = document.querySelector(".gift-modal");
-let modalShown = false; // Modal faqat bir marta chiqishi uchun
+// const giftModal = document.querySelector(".gift-modal");
+// let modalShown = false;
 
-// Foydalanuvchi kursorni yuqoriga olib chiqsa (exit intent detector)
-document.addEventListener("mouseleave", (event) => {
-    if (event.clientY <= 0 && !modalShown) {
-        giftModal.classList.add('active');
-        bodyHidden();
-        modalShown = true;
-    }
-});
+// document.addEventListener("mouseleave", (event) => {
+//     if (event.clientY <= 0 && !modalShown) {
+//         giftModal.classList.add('active');
+//         bodyHidden();
+//         modalShown = true;
+//     }
+// });
 
-// Foydalanuvchi sahifani tark etsa (beforeunload)
-window.addEventListener("beforeunload", (event) => {
-    if (!modalShown) {
-        event.preventDefault();
-        event.returnValue = "";
-        giftModal.classList.add('active');
-        bodyHidden();
-        modalShown = true;
-    }
-});
+// window.addEventListener("beforeunload", (event) => {
+//     if (!modalShown) {
+//         event.preventDefault();
+//         event.returnValue = "";
+//         giftModal.classList.add('active');
+//         bodyHidden();
+//         modalShown = true;
+//     }
+// });
 
 const header = document.querySelector('header.header');
 const fixedPanel = document.querySelector('.fixed-panel');
@@ -152,13 +150,13 @@ const homeSwp = new Swiper('.home .swiper', {
     spaceBetween: 13,
     speed: 7000,
     loop: true,
-    autoplay: {
-        delay: 0,
-        reverseDirection: false,
-        disableOnInteraction: false,
-    },
+    // autoplay: {
+    //     delay: 0,
+    //     reverseDirection: false,
+    //     disableOnInteraction: false,
+    // },
     watchSlidesProgress: false,
-    allowTouchMove: false,
+    // allowTouchMove: false,
     breakpoints: {
         700: {
             spaceBetween: 20,
