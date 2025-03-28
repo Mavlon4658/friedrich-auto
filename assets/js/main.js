@@ -36,7 +36,7 @@ if (getCurrentTime().hour >= 10 && getCurrentTime().hour < 20) {
 }
 
 // modals
-const modalCls = ['.diagnostic-modal', '.car-modal-1', '.car-modal-2', '.rent-modal', '.signup-modal'];
+const modalCls = ['.diagnostic-modal', '.car-modal-1', '.car-modal-2', '.rent-modal', '.signup-modal', '.gift-modal'];
 
 modalCls.forEach(cls => {
     const modal = document.querySelector(cls);
@@ -61,11 +61,11 @@ modalCls.forEach(cls => {
                 bodyHidden();
             }
         })
-    
-        modalCloseBtn.onclick = () => modalClose();
-    
-        modalBg.onclick = () => modalClose();
     }
+
+    modalCloseBtn.onclick = () => modalClose();
+
+    modalBg.onclick = () => modalClose();
 
 })
 // modals end
@@ -105,6 +105,28 @@ if (carModals.length) {
     })
 }
 
+const giftModal = document.querySelector(".gift-modal");
+let modalShown = false; // Modal faqat bir marta chiqishi uchun
+
+// Foydalanuvchi kursorni yuqoriga olib chiqsa (exit intent detector)
+document.addEventListener("mouseleave", (event) => {
+    if (event.clientY <= 0 && !modalShown) {
+        giftModal.classList.add('active');
+        bodyHidden();
+        modalShown = true;
+    }
+});
+
+// Foydalanuvchi sahifani tark etsa (beforeunload)
+window.addEventListener("beforeunload", (event) => {
+    if (!modalShown) {
+        event.preventDefault();
+        event.returnValue = "";
+        giftModal.classList.add('active');
+        bodyHidden();
+        modalShown = true;
+    }
+});
 
 const header = document.querySelector('header.header');
 const fixedPanel = document.querySelector('.fixed-panel');
