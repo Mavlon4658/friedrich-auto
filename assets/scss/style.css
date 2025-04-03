@@ -604,6 +604,11 @@ html {
   align-items: center;
   gap: 15rem;
 }
+@media screen and (min-width: 1200px) {
+  .header-network ul img {
+    width: 55rem;
+  }
+}
 .header-phone {
   display: flex;
   flex-direction: column;
@@ -643,6 +648,11 @@ html {
   }
   .header-phone a img {
     width: 17rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header-phone a img {
+    width: 32rem;
   }
 }
 .header-phone a span {
